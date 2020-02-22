@@ -15,6 +15,7 @@ plugins: # https://jekyllrb.com/docs/plugins/
   - jekyll-sitemap
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-readme-index # 使用readme作为index
 
 # 以下四个配置项为空时jekyll-github-metadata会帮你生成
 title: wu-kan
