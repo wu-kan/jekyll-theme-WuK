@@ -1,4 +1,4 @@
-title: wu-kan
+title: jekyll-theme-WuK
 description: A content-first, sliding sidebar theme for Jekyll.
 url: https://jekyll-theme-WuK.wu-kan.cn # https://wu-kan.github.io
 baseurl: "" # 假如你的博客是建在某个目录下的，请在这里加上目录名，并且下面配置的所有链接里的`/assets`前也要加，即`/your_baseurl/assets`。这一项结尾不要有'/'。
@@ -129,10 +129,10 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
       nav:
         - title: '<i class="fas fa-home fa-fw"></i> 我的主页'
           href: https://wu-kan.cn/
-        - title: '<i class="fas fa-file-code fa-fw"></i> 文档'
+        - title: '<i class="fas fa-file-code fa-fw"></i> 这篇文档'
           href: /
       simple_jekyll_search:
-        enable:
+        enable: false
         full_text_search: false # 可能导致缓慢的搜索和加载
         alert: |
           <input id="sidebar-search-input" placeholder="搜索博文" />
@@ -162,47 +162,6 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
           <div>
             <i class="fas fa-copyright fa-fw"></i>
             2020 WuK
-          </div>
-        - | # 运行时间
-          <div>
-            <i class="fas fa-cog fa-spin fa-fw"></i>
-            <span id="run_time_day">
-              <i class="fas fa-spinner fa-pulse"></i>
-            </span>天
-            <span id="run_time_hour">
-              <i class="fas fa-spinner fa-pulse"></i>
-            </span>时
-            <span id="run_time_minute">
-              <i class="fas fa-spinner fa-pulse"></i>
-            </span>分
-            <span id="run_time_second">
-              <i class="fas fa-spinner fa-pulse"></i>
-            </span>秒
-            <script>
-              setInterval(function (BirthDay) {
-                function setzero(i) {
-                  if (i < 10) return "0" + i;
-                  return i;
-                }
-                BirthDay = new Date(BirthDay);
-                today = new Date();
-                timeold = (today.getTime() - BirthDay.getTime());
-                sectimeold = timeold / 1000;
-                secondsold = Math.floor(sectimeold);
-                msPerDay = 24 * 60 * 60 * 1000;
-                e_daysold = timeold / msPerDay;
-                daysold = Math.floor(e_daysold);
-                e_hrsold = (e_daysold - daysold) * 24;
-                hrsold = Math.floor(e_hrsold);
-                e_minsold = (e_hrsold - hrsold) * 60;
-                minsold = Math.floor((e_hrsold - hrsold) * 60);
-                seconds = Math.floor((e_minsold - minsold) * 60);
-                document.getElementById("run_time_day").innerHTML = daysold;
-                document.getElementById("run_time_hour").innerHTML = setzero(hrsold);
-                document.getElementById("run_time_minute").innerHTML = setzero(minsold);
-                document.getElementById("run_time_second").innerHTML = setzero(seconds);
-              }, 1000, "10/04/2017 11:03:56") // 这是我第一篇CSDN博客的时间
-            </script>
           </div>
         - | # 不蒜子页面统计
           <div>
@@ -241,18 +200,8 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
           content="width=device-width, initial-scale=1.0, maximum-scale=1"
         />
         <meta
-          http-equiv="X-UA-Compatible"
-          content="IE=edge"
-        />
-        <meta
           http-equiv="content-type"
           content="text/html; charset=utf-8"
-        />
-        <link
-          rel="alternate"
-          href="/feed.xml"
-          title="RSS"
-          type="application/rss+xml"
         />
         <link
           rel="apple-touch-icon-precomposed"
@@ -431,11 +380,6 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
               });
             }'
         ></script>
-      - | # 百度爬虫推送，http站点使用 http://push.zhanzhang.baidu.com/push.js
-        <script
-          src='https://zz.bdstatic.com/linksubmit/push.js'
-          defer='defer'
-        ></script>
       - | # 在这里自定义页面样式吧
         <style>
         pre {
@@ -444,7 +388,7 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
           background-color: rgba(0, 0, 0, 0);
         }
         img {
-          display: inline;
+          display: inline-block;
           margin: 0;
         }
         html,
@@ -458,6 +402,7 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
           font-family: Menlo, Monaco, "Courier New", Microsoft JhengHei, monospace;
         }
         .wrap {
+          display: inline-block;
           background-size: 100vw auto;
           background-position: center top;
           background-repeat: no-repeat;
@@ -557,11 +502,11 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
         /*头像效果-end*/
         </style>
 
-# markdown: kramdown
-# kramdown: # 见https://kramdown.gettalong.org/options.html
-#  input: GFM # 见http://jekyllcn.com/docs/configuration/#kramdown
-#  syntax_highlighter_opts: # 可见https://kramdown.gettalong.org/syntax_highlighter/rouge.html
-#    disable: true # 关掉默认的高亮，换用prismjs
+markdown: kramdown
+kramdown: # 见https://kramdown.gettalong.org/options.html
+  input: GFM # 见http://jekyllcn.com/docs/configuration/#kramdown
+  syntax_highlighter_opts: # 可见https://kramdown.gettalong.org/syntax_highlighter/rouge.html
+    disable: true # 关掉默认的高亮，换用prismjs
 
 # permalink: /_posts/:year-:month-:day-:title/ #生成文章的地址格式，我希望它和_posts目录下的格式一样
 # timezone: Asia/Shanghai # 解决githubpage显示时间不正确的问题，见https://www.iana.org/time-zones
@@ -582,5 +527,7 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
 #  math_engine: mathjax
 #  syntax_highlighter: rouge
 
-#plugins: # https://jekyllrb.com/docs/plugins/ githubpage上支持的插件见https://pages.github.com/versions/
-#  - jekyll-readme-index # 使用readme作为index，暂时失效不知道为啥
+plugins: # https://jekyllrb.com/docs/plugins/ githubpage上支持的插件见https://pages.github.com/versions/
+  - jekyll-readme-index
+  - jekyll-titles-from-headings
+  - jekyll-default-layout
