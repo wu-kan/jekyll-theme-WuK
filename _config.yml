@@ -187,8 +187,6 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
       nav:
         - title: '<i class="fas fa-home fa-fw"></i> 首页'
           href: /
-        - title: '<i class="fab fa-readme fa-fw"></i> 关于'
-          href: /about/
         - title: '<i class="fas fa-comments fa-fw"></i> 留言'
           href: /comments/
         - title: '<i class="fas fa-tags fa-fw"></i> 标签'
@@ -224,16 +222,6 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
             src='https://cdn.jsdelivr.net/npm/html-contents/html-contents.min.js'
             onload="htmlContents('#toc', {listType: 'o'})"
           ></script>
-        - | # github赞数
-          <div>
-            <i class="fab fa-github-alt fa-fw"></i>
-            <a href="https://github.com/wu-kan/wu-kan.github.io">
-              <img src="https://img.shields.io/github/stars/wu-kan/wu-kan.github.io.svg"/>
-            </a>
-            <a href="https://github.com/wu-kan/wu-kan.github.io/fork">
-              <img src="https://img.shields.io/github/forks/wu-kan/wu-kan.github.io.svg"/>
-            </a>
-          </div>
         - | # Copyright
           <div>
             <i class="fas fa-copyright fa-fw"></i>
