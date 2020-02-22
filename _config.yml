@@ -1,64 +1,7 @@
-# 以下为 githubpage上不可修改的参数，见https://help.github.com/en/github/working-with-github-pages/about-github-pages-and-jekyll
-#lsi: false # 为相关文章生成索引
-#safe: true # 禁用自定义插件
-#source: [your repo's top level directory] # Jekyll 读取文件的路径
-#incremental: false # 增量生成
-#highlighter: rouge # 代码高亮器
-#gist:
-#  noscript: false
-#kramdown:
-#  math_engine: mathjax
-#  syntax_highlighter: rouge
-
-#plugins: # https://jekyllrb.com/docs/plugins/ githubpage上支持的插件见https://pages.github.com/versions/
-#  - jekyll-readme-index # 使用readme作为index，暂时失效不知道为啥
-
-# 以下四个配置项为空时jekyll-github-metadata会帮你生成
 title: wu-kan
-description: | # 头像背后的信息，<br/>代表换行
-  SYSU超算17级在读<br/>
-  永远喜欢水野爱<br/>
-  田宫例四驱车<br/>
-  ASC<br/>
-  <a href="mailto:wu.kan@foxmail.com" title="wu.kan@foxmail.com">
-    <i class="fas fa-envelope"></i>
-  </a>
-  <a href="https://github.com/wu-kan" title="github">
-    <i class="fab fa-github"></i>
-  </a>
-  <a href="https://codeforces.com/profile/WuK" title="WuK">
-    <i class="fas fa-chart-bar"></i>
-  </a>
-  <a href="https://vjudge.net/user/WuK" title="WuK">
-    <i class="fas fa-smile"></i>
-  </a>
-  <a href="https://www.zhihu.com/people/wu.kan/activities" title="zhihu">
-    <i class="fab fa-zhihu"></i>
-  </a>
-  <iframe
-    src="https://music.163.com/outchain/player?type=0&id=155059595&auto=0&height=32"
-    width=100%
-    height=52
-    frameborder="no"
-    border="0"
-    marginwidth="0"
-    marginheight="0"
-  ></iframe>
-url: https://wu-kan.cn # https://wu-kan.github.io
-baseurl: "/jekyll-theme-WuK" # 假如你的博客是建在某个目录下的，请在这里加上目录名，并且下面配置的所有链接里的`/assets`前也要加，即`/your_baseurl/assets`。这一项结尾不要有'/'。
-
-markdown: kramdown
-kramdown: # 见https://kramdown.gettalong.org/options.html
-  input: GFM # 见http://jekyllcn.com/docs/configuration/#kramdown
-  syntax_highlighter_opts: # 可见https://kramdown.gettalong.org/syntax_highlighter/rouge.html
-    disable: true # 关掉默认的高亮，换用prismjs
-
-permalink: /_posts/:year-:month-:day-:title/ #生成文章的地址格式，我希望它和_posts目录下的格式一样
-# timezone: Asia/Shanghai # 解决githubpage显示时间不正确的问题，见https://www.iana.org/time-zones
-# future: false # 不发布时间在未来的文章
-
-# limit_posts: 999 # 限制博文数量
-# encoding: utf-8
+description: A content-first, sliding sidebar theme for Jekyll.
+url: https://jekyll-theme-WuK.wu-kan.cn # https://wu-kan.github.io
+baseurl: "" # 假如你的博客是建在某个目录下的，请在这里加上目录名，并且下面配置的所有链接里的`/assets`前也要加，即`/your_baseurl/assets`。这一项结尾不要有'/'。
 
 jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
   home:
@@ -184,18 +127,12 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
         enable: true
         img: https://gravatar.loli.net/avatar/a12c5fff23dde00df79af9aca4e7b6e4?s=300 # 头像的地址
       nav:
-        - title: '<i class="fas fa-home fa-fw"></i> 首页'
+        - title: '<i class="fas fa-home fa-fw"></i> 我的主页'
+          href: https://wu-kan.cn/
+        - title: '<i class="fas fa-file-code fa-fw"></i> 文档'
           href: /
-        - title: '<i class="fas fa-comments fa-fw"></i> 留言'
-          href: /comments/
-        - title: '<i class="fas fa-tags fa-fw"></i> 标签'
-          href: /tags/
-        - title: '<i class="fas fa-archive fa-fw"></i> 归档'
-          href: /archive/
-        - title: '<i class="fas fa-coffee fa-fw"></i> 打赏'
-          href: /merger/
       simple_jekyll_search:
-        enable: true
+        enable:
         full_text_search: false # 可能导致缓慢的搜索和加载
         alert: |
           <input id="sidebar-search-input" placeholder="搜索博文" />
@@ -224,7 +161,7 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
         - | # Copyright
           <div>
             <i class="fas fa-copyright fa-fw"></i>
-            2017-2020 WuK
+            2020 WuK
           </div>
         - | # 运行时间
           <div>
@@ -310,18 +247,6 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
         <meta
           http-equiv="content-type"
           content="text/html; charset=utf-8"
-        />
-        <link
-          rel="dns-prefetch"
-          href="https://cdn.jsdelivr.net"
-        />
-        <link
-          rel="dns-prefetch"
-          href="https://gravatar.loli.net"
-        />
-        <link
-          rel="profile"
-          href="https://gmpg.org/xfn/11"
         />
         <link
           rel="alternate"
@@ -631,3 +556,31 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
         }
         /*头像效果-end*/
         </style>
+
+# markdown: kramdown
+# kramdown: # 见https://kramdown.gettalong.org/options.html
+#  input: GFM # 见http://jekyllcn.com/docs/configuration/#kramdown
+#  syntax_highlighter_opts: # 可见https://kramdown.gettalong.org/syntax_highlighter/rouge.html
+#    disable: true # 关掉默认的高亮，换用prismjs
+
+# permalink: /_posts/:year-:month-:day-:title/ #生成文章的地址格式，我希望它和_posts目录下的格式一样
+# timezone: Asia/Shanghai # 解决githubpage显示时间不正确的问题，见https://www.iana.org/time-zones
+# future: false # 不发布时间在未来的文章
+
+# limit_posts: 999 # 限制博文数量
+# encoding: utf-8
+
+# 以下为 githubpage上不可修改的参数，见https://help.github.com/en/github/working-with-github-pages/about-github-pages-and-jekyll
+#lsi: false # 为相关文章生成索引
+#safe: true # 禁用自定义插件
+#source: [your repo's top level directory] # Jekyll 读取文件的路径
+#incremental: false # 增量生成
+#highlighter: rouge # 代码高亮器
+#gist:
+#  noscript: false
+#kramdown:
+#  math_engine: mathjax
+#  syntax_highlighter: rouge
+
+#plugins: # https://jekyllrb.com/docs/plugins/ githubpage上支持的插件见https://pages.github.com/versions/
+#  - jekyll-readme-index # 使用readme作为index，暂时失效不知道为啥
