@@ -1,9 +1,12 @@
 ---
 layout: page
 title: 关于
+permalink: /
 ---
 
 ![Stars](https://img.shields.io/github/stars/wu-kan/wu-kan.github.io.svg)![Forks](https://img.shields.io/github/forks/wu-kan/wu-kan.github.io.svg)![Watchers](https://img.shields.io/github/watchers/wu-kan/wu-kan.github.io.svg)![License](https://img.shields.io/github/license/wu-kan/wu-kan.github.io.svg)![commit-activity](https://img.shields.io/github/commit-activity/m/wu-kan/wu-kan.github.io.svg)![last-commit](https://img.shields.io/github/last-commit/wu-kan/wu-kan.github.io.svg)![contributors](https://img.shields.io/github/contributors-anon/wu-kan/wu-kan.github.io.svg)![Issues](https://img.shields.io/github/issues/wu-kan/wu-kan.github.io.svg)![Release](https://img.shields.io/github/v/release/wu-kan/wu-kan.github.io.svg)![release-date](https://img.shields.io/github/release-date/wu-kan/wu-kan.github.io.svg)![CountLanguage](https://img.shields.io/github/languages/count/wu-kan/wu-kan.github.io.svg)![TopLanguage](https://img.shields.io/github/languages/top/wu-kan/wu-kan.github.io.svg)![CodeSize](https://img.shields.io/github/languages/code-size/wu-kan/wu-kan.github.io.svg)![RepoSize](https://img.shields.io/github/repo-size/wu-kan/wu-kan.github.io.svg)![Downloads](https://img.shields.io/github/downloads/wu-kan/wu-kan.github.io/total.svg)
+
+此为我的个人博客<https://wu-kan.cn>使用的主题~
 
 ## 开始
 
@@ -39,7 +42,7 @@ title: 关于
 
 目标是实现一个尽可能简洁，而可定制内容又尽可能多的博客。目前博客的预览如下：
 
-![Demo](/screenshot.png)
+![Demo](./screenshot.png)
 
 ## 历程
 

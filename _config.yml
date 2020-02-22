@@ -10,12 +10,8 @@
 #  math_engine: mathjax
 #  syntax_highlighter: rouge
 
-plugins: # https://jekyllrb.com/docs/plugins/
-  - jekyll-remote-theme # githubpage上支持的插件见https://pages.github.com/versions/
-  - jekyll-sitemap
-  - jekyll-feed
-  - jekyll-seo-tag
-  - jekyll-readme-index # 使用readme作为index
+plugins: # https://jekyllrb.com/docs/plugins/ githubpage上支持的插件见https://pages.github.com/versions/
+#  - jekyll-readme-index # 使用readme作为index，暂时失效不知道为啥
 
 # 以下四个配置项为空时jekyll-github-metadata会帮你生成
 title: wu-kan
@@ -64,7 +60,6 @@ permalink: /_posts/:year-:month-:day-:title/ #生成文章的地址格式，我�
 # limit_posts: 999 # 限制博文数量
 # encoding: utf-8
 
-remote_theme: https://github.com/wu-kan/jekyll-theme-WuK # 使用remote_theme插件实现主题的前后分离，详见https://github.com/benbalter/jekyll-remote-theme/
 jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
   index:
     show:
@@ -555,11 +550,11 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
           background-position: center top;
           background-repeat: no-repeat;
           background-attachment: fixed;
-          background-image: url(https://cdn.jsdelivr.net/gh/wu-kan/wu-kan.github.io@df9911c4cf178c0a6070b2e5836c83e3023bff8b/assets/image/74559485_p1.webp);
+          background-image: url(https://cdn.jsdelivr.net/gh/wu-kan/jekyll-theme-WuK/assets/image/74559485_p1.webp);
         }
         @media (min-aspect-ratio: 2400/1850) {
           .wrap {
-            background-image: url(https://cdn.jsdelivr.net/gh/wu-kan/wu-kan.github.io@df9911c4cf178c0a6070b2e5836c83e3023bff8b/assets/image/71932901_p0.webp);
+            background-image: url(https://cdn.jsdelivr.net/gh/wu-kan/jekyll-theme-WuK/assets/image/71932901_p0.webp);
           }
         }
         .container {
