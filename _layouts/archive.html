@@ -1,0 +1,15 @@
+---
+layout: page
+---
+{{ content }}
+{% if site.jekyll-theme-WuK.archive.posts_count.enable %}
+{{ site.posts.size }}{{ site.jekyll-theme-WuK.archive.posts_count.alert }}
+{% endif %}
+<ul>
+  {% for post in site.posts %}
+  <li>
+    <small>{{ post.date | date_to_string }}</small>
+    <a href="{{ post.url }}">{{ post.title }}</a>
+  </li>
+  {% endfor %}
+</ul>

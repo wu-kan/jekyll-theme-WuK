@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+
+<head>
+  <title>
+    {% if page.title %}{{ page.title }} &middot; {% endif %}{{ site.title }}
+  </title>
+  {% for node in site.jekyll-theme-WuK.page404.append_to_head %}
+  {{ node }}
+  {% endfor %}
+</head>
+
+<body>
+  {{ content }}
+</body>
+
+</html>

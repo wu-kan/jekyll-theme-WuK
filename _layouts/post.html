@@ -1,0 +1,38 @@
+---
+layout: comments
+---
+<small class="post-date">
+  {% if site.jekyll-theme-WuK.post.date.enable %}
+  {{ site.jekyll-theme-WuK.post.date.alert }}
+  {{ page.date | date_to_string }}
+  {% endif %}
+  {% if site.jekyll-theme-WuK.post.wordcount.enable %}
+  {{ site.jekyll-theme-WuK.post.wordcount.alert }}
+  {{ page.content | strip_html | strip_newlines | remove: " " | size }}{{ site.jekyll-theme-WuK.post.wordcount.unit }}
+  {% endif %}
+  {% if site.jekyll-theme-WuK.post.readtime.enable %}
+  {{ site.jekyll-theme-WuK.post.readtime.alert }}
+  {{ page.content | strip_html | strip_newlines | remove: " " | size | divided_by: site.jekyll-theme-WuK.post.readtime.divided_by | plus: 1 }}{{ site.jekyll-theme-WuK.post.readtime.unit }}
+  {% endif %}
+  {% if site.jekyll-theme-WuK.post.visitor.enable %}
+  <span id="{{ page.url }}" class="leancloud-visitors" data-flag-title="{{ page.title }}">
+    {{ site.jekyll-theme-WuK.post.visitor.alert }}
+    <span class="leancloud-visitors-count">
+      <i class="fas fa-spinner fa-pulse"></i>
+    </span>{{ site.jekyll-theme-WuK.post.visitor.unit }}
+  </span>
+  {% endif %}
+  {% if site.jekyll-theme-WuK.post.tags.enable %}
+  {% for node in page.tags %}
+  {{ site.jekyll-theme-WuK.post.tags.alert }}
+  {{ node }}
+  {% endfor %}
+  {% endif %}
+  {{ site.jekyll-theme-WuK.post.copyright }}
+  {% if page.background_music %}
+  <div>
+    {{ page.background_music }}
+  </div>
+  {% endif %}
+</small>
+{{ content }}
