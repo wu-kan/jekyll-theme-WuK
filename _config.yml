@@ -529,5 +529,9 @@ kramdown: # 见https://kramdown.gettalong.org/options.html
 
 plugins: # https://jekyllrb.com/docs/plugins/ githubpage上支持的插件见https://pages.github.com/versions/
   - jekyll-readme-index
-  - jekyll-titles-from-headings
   - jekyll-default-layout
+
+
+readme_index:
+  enabled: true
+  with_frontmatter: true
