@@ -1,14 +1,14 @@
 ---
 title: jekyll-theme-WuK
 permalink: /
-layout: default
+layout: page
 ---
 
 ![License](https://img.shields.io/github/license/wu-kan/jekyll-theme-WuK.svg)![commit-activity](https://img.shields.io/github/commit-activity/m/wu-kan/jekyll-theme-WuK.svg)![last-commit](https://img.shields.io/github/last-commit/wu-kan/jekyll-theme-WuK.svg)![CountLanguage](https://img.shields.io/github/languages/count/wu-kan/jekyll-theme-WuK.svg)![TopLanguage](https://img.shields.io/github/languages/top/wu-kan/jekyll-theme-WuK.svg)![CodeSize](https://img.shields.io/github/languages/code-size/wu-kan/jekyll-theme-WuK.svg)![RepoSize](https://img.shields.io/github/repo-size/wu-kan/jekyll-theme-WuK.svg)![Downloads](https://img.shields.io/github/downloads/wu-kan/jekyll-theme-WuK/total.svg)
 
-![Watchers](https://img.shields.io/github/watchers/wu-kan/wu-kan.github.io.svg)![contributors](https://img.shields.io/github/contributors-anon/wu-kan/wu-kan.github.io.svg)![Release](https://img.shields.io/github/v/release/wu-kan/wu-kan.github.io.svg)![release-date](https://img.shields.io/github/release-date/wu-kan/wu-kan.github.io.svg)
-
 我的个人博客<https://wu-kan.cn>所使用的主题~
+
+![Watchers](https://img.shields.io/github/watchers/wu-kan/wu-kan.github.io.svg)![contributors](https://img.shields.io/github/contributors-anon/wu-kan/wu-kan.github.io.svg)![Release](https://img.shields.io/github/v/release/wu-kan/wu-kan.github.io.svg)![release-date](https://img.shields.io/github/release-date/wu-kan/wu-kan.github.io.svg)
 
 ## 快速搭建你的博客
 
