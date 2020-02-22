@@ -10,7 +10,7 @@
 #  math_engine: mathjax
 #  syntax_highlighter: rouge
 
-plugins: # https://jekyllrb.com/docs/plugins/ githubpage上支持的插件见https://pages.github.com/versions/
+#plugins: # https://jekyllrb.com/docs/plugins/ githubpage上支持的插件见https://pages.github.com/versions/
 #  - jekyll-readme-index # 使用readme作为index，暂时失效不知道为啥
 
 # 以下四个配置项为空时jekyll-github-metadata会帮你生成
