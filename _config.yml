@@ -61,16 +61,15 @@ permalink: /_posts/:year-:month-:day-:title/ #生成文章的地址格式，我�
 # encoding: utf-8
 
 jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
-  index:
-    show:
-      recent:
+  home:
+    recent:
+      enable: false
+      title: Recent
+      limit: 5
+      archive:
         enable: true
-        title: Recent
-        limit: 5
-        archive:
-          enable: true
-          href: /archive
-          alert: posts in total ...
+        href: /archive
+        alert: posts in total ...
   page404:
     append_to_head:
       - | # 腾讯公益

@@ -1,7 +1,7 @@
 ---
 title: jekyll-theme-WuK
 permalink: /
-layout: page
+layout: home
 ---
 
 ![License](https://img.shields.io/github/license/wu-kan/jekyll-theme-WuK.svg)![commit-activity](https://img.shields.io/github/commit-activity/m/wu-kan/jekyll-theme-WuK.svg)![last-commit](https://img.shields.io/github/last-commit/wu-kan/jekyll-theme-WuK.svg)![CountLanguage](https://img.shields.io/github/languages/count/wu-kan/jekyll-theme-WuK.svg)![TopLanguage](https://img.shields.io/github/languages/top/wu-kan/jekyll-theme-WuK.svg)![CodeSize](https://img.shields.io/github/languages/code-size/wu-kan/jekyll-theme-WuK.svg)![RepoSize](https://img.shields.io/github/repo-size/wu-kan/jekyll-theme-WuK.svg)![Downloads](https://img.shields.io/github/downloads/wu-kan/jekyll-theme-WuK/total.svg)
@@ -23,7 +23,7 @@ layout: page
 5. 删除`_post/`下的博文和`assets/image/`目录下的图片，开始写你自己的文章
 6. 欢迎[![Star](https://img.shields.io/github/stars/wu-kan/wu-kan.github.io.svg)](https://github.com/wu-kan/wu-kan.github.io)、[![Fork](https://img.shields.io/github/forks/wu-kan/wu-kan.github.io.svg)](https://github.com/wu-kan/wu-kan.github.io/fork)、[![Issue](https://img.shields.io/github/issues/wu-kan/wu-kan.github.io.svg)](https://github.com/wu-kan/wu-kan.github.io/issues)！
 
-## 进一步定制个人博客
+## 进一步定制
 
 以上所有操作均可直接在github网页上进行。如果你在本地运行博客的测试，或是对博客进行更高级别的定制，推荐先阅读以下几篇博文：
 

@@ -1,0 +1,24 @@
+---
+layout: page
+---
+{{ content }}
+{% if site.jekyll-theme-WuK.home.recent.enable %}
+<h2 id="{{ site.jekyll-theme-WuK.home.recent.title }}">
+  {{ site.jekyll-theme-WuK.home.recent.title }}
+</h2>
+<ul>
+  {% for post in site.posts limit:site.jekyll-theme-WuK.home.recent.limit %}
+  <li>
+    <a href="{{ post.url }}">{{ post.title }}</a>, {{ post.date | date_to_string }}
+  </li>
+  {% endfor %}
+  {% if site.jekyll-theme-WuK.home.recent.archive.enable %}
+  <li>
+    <a href="{{ site.jekyll-theme-WuK.home.recent.archive.href }}">
+      {{ site.posts.size }}
+      {{ site.jekyll-theme-WuK.home.recent.archive.alert }}
+    </a>
+  </li>
+  {% endif %}
+</ul>
+{% endif %}
