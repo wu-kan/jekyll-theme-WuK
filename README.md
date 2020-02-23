@@ -25,6 +25,10 @@ title: README
 
 - [基于 Jekyll 搭建个人博客](https://wu-kan.cn/_posts/2019-01-18-%E5%9F%BA%E4%BA%8EJekyll%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/)
 - [个人网站优化之旅](https://wu-kan.cn/_posts/2020-02-06-%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99%E4%BC%98%E5%8C%96%E4%B9%8B%E6%97%85/)
+
+统一中文文案、排版的相关用法，降低团队成员之间的沟通成本，增强网站气质，推荐：
+
+- [中文文案排版指北](https://github.com/sparanoid/chinese-copywriting-guidelines/blob/master/README.zh-CN.md)
 - [Markdown 写作心得](https://wu-kan.cn/_posts/2019-01-18-%E5%9F%BA%E4%BA%8EJekyll%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/)
 
 ## 初心

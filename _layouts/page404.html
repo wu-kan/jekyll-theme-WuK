@@ -1,9 +1,17 @@
 <!DOCTYPE html>
 
 <head>
+  {% if site.plugins contains 'jekyll-seo-tag' %}
+  {% seo %}
+  {% else %}
   <title>
-    {% if page.title %}{{ page.title }} &middot; {% endif %}{{ site.title }}
+    {% if page.title == "Home" %}
+    {{ site.title }} &middot; {{ site.tagline }}
+    {% else %}
+    {{ page.title }} &middot; {{ site.title }}
+    {% endif %}
   </title>
+  {% endif %}
   {% for node in site.jekyll-theme-WuK.page404.append_to_head %}
   {{ node }}
   {% endfor %}

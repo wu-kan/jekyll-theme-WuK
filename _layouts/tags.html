@@ -4,9 +4,11 @@ layout: page
 {{ content }}
 {% for tag in site.tags %}
 <h2>
-  {{ tag[0] }}
-  <i class="fas fa-tag"></i>
+  {{ site.jekyll-theme-WuK.tags.alert }}
+  {% if site.jekyll-theme-WuK.tags.count %}
   <small>{{ tag[1].size }}</small>
+  {% endif %}
+  {{ tag[0] }}
 </h2>
 <ul>
   {% for post in tag[1] %}
