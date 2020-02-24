@@ -156,7 +156,7 @@ jekyll-theme-WuK:
                 "mode": "draggable",
                 "hidden": true,
                 "content": {
-                  "link": ["/about/"],
+                  "link": ["https://wu-kan.cn/_posts/2019-01-18-%E5%9F%BA%E4%BA%8EJekyll%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"],
                   "skin": ["要换成我的朋友吗？", "让她放个假吧~"],
                   "custom": [{
                     "selector": "a",
@@ -168,17 +168,11 @@ jekyll-theme-WuK:
                     "selector": ".effect-info",
                     "text": "哇，你发现了什么！"
                   }, {
-                    "selector": "#sidebar-search-input",
-                    "text": "想搜索什么呢？很多干货哦！"
-                  }, {
                     "selector": "#toc",
                     "text": "这是目录~"
                   }, {
                     "selector": ".page-title",
                     "text": "这是标题~"
-                  }, {
-                    "selector": ".v",
-                    "text": "评论没有审核，要对自己的发言负责哦~"
                   }]
                 },
                 "model": [
@@ -220,6 +214,7 @@ jekyll-theme-WuK:
         }
         .masthead {
           border-bottom: 0;
+          margin-bottom: 0;
         }
         .content {
           background-color: rgba(255, 255, 255, 0.8);
