@@ -31,7 +31,7 @@ jekyll-theme-WuK:
         full_text_search: false # 可能导致缓慢的搜索和加载
       append_to_sidebar:
         - | # 目录插件
-          <aside id="toc">
+          <aside id="toc" style="max-height: 50vh;overflow: auto;">
             目录
           </aside>
           <script
@@ -218,9 +218,12 @@ jekyll-theme-WuK:
             background-image: url(https://cdn.jsdelivr.net/gh/wu-kan/jekyll-theme-WuK/assets/image/71932901_p0.webp);
           }
         }
-        .container {
-          background-color: rgba(255, 255, 255, 0.9);
-          box-shadow: 0 0 1rem 1rem rgba(255, 255, 255, 0.9);
+        .masthead {
+          border-bottom: 0;
+        }
+        .content {
+          background-color: rgba(255, 255, 255, 0.8);
+          box-shadow: 0 0 9px 9px rgba(255, 255, 255, 0.8);
           text-shadow: 1px 1px 1px #fff;
         }
         @media (min-width: 70em) {
