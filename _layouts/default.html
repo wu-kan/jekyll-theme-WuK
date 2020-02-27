@@ -76,19 +76,7 @@
   <!-- Wrap is the content to shift when toggling the sidebar. We wrap the content to avoid any CSS collisions with our real content. -->
   {% endunless %}
   <div class="wrap">
-    {% if site.jekyll-theme-WuK.default.masthead.enable %}
-    <div class="masthead">
-      <div class="container">
-        <h3 class="masthead-title">
-          <a href="{{ site.baseurl }}/" title="Home">{{ site.title }}</a>
-          <small>{{ site.tagline }}</small>
-        </h3>
-      </div>
-    </div>
-    {% endif %}
-    <div class="container content">
-      {{ content }}
-    </div>
+    {{ content }}
   </div>
   {% unless site.jekyll-theme-WuK.default.sidebar.disable %}
   <label for="sidebar-checkbox" class="sidebar-toggle fas fa-bars"></label>

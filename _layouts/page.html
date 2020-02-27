@@ -1,16 +1,17 @@
 ---
 layout: default
 ---
-<div class="page">
-  <h1 class="page-title">
-    {{ page.title }}
-    {% unless site.jekyll-theme-WuK.page.title.site_title.disable %}
-    <small>
-      <a href="{{ site.baseurl }}/" title="{{ site.title }}">
-        {{ site.title }}
-      </a>
-    </small>
-    {% endunless %}
-  </h1>
+{% for node in site.jekyll-theme-WuK.page.append_before %}
+{{ node }}
+{% endfor %}
+{% if site.jekyll-theme-WuK.page.masthead.enable %}
+<div class="masthead">
+  <h3 class="container masthead-title">
+    <a href="{{ site.baseurl }}/" title="Home">{{ site.title }}</a>
+    <small>{{ site.tagline }}</small>
+  </h3>
+</div>
+{% endif %}
+<div class="container content">
   {{ content }}
 </div>

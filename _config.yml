@@ -6,17 +6,104 @@ baseurl: ""
 tagline: wu-kan
 
 jekyll-theme-WuK:
+  home:
+    append_before: |
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/css/reveal.min.css" />
+      <style>
+      .reveal .slides {
+        text-align: left;
+      }
+      </style>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/css/theme/serif.min.css" />
+      <script defer="defer" src="https://cdn.jsdelivr.net/npm/reveal.js/js/reveal.js" onload="
+        document.getElementsByClassName('wrap')[0].classList.add('reveal');
+        let path = 'https:\/\/cdn.jsdelivr.net/npm/reveal.js/';
+        Reveal.initialize({
+          height: '100%',
+          hash: true,
+          mouseWheel: true,
+          navigationMode: 'linear',
+          parallaxBackgroundImage: 'data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoBAAEAD8D+JaQAA3AA/uVqAAA=',//这是一张纯白图
+          dependencies: [
+              // Interpret Markdown in <section> elements
+              { src: path+'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+              { src: path+'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      
+              // Syntax highlight for <code> elements
+              { src: path+'plugin/highlight/highlight.js', async: true },
+      
+              // Zoom in and out with Alt+click
+              { src: path+'plugin/zoom-js/zoom.js', async: true },
+      
+              // Speaker notes
+              { src: path+'plugin/notes/notes.js', async: true },
+      
+              // MathJax
+              { src: path+'plugin/math/math.js', async: true }
+          ]
+          });
+        "></script>
   page:
-    title:
-      site_title:
-        disable: true
-  default:
-    body:
-      theme-base: theme-base-07
-      layout-reverse: false # 开启后sidebar在右边，反之左边
-      sidebar-overlay: false # 开启后正文不随sidebar移动而移动
     masthead:
       enable: true
+    append_before:
+      - | # 增加宽屏下的显示内容
+        <style>
+          @media (min-width: 66rem) {
+            .container {
+              max-width: calc(100vw - 28rem);
+            }
+          }
+        </style>
+      - | # 给文章加上白色背景，防止被背景影响阅读
+        <style>
+          .masthead {
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 .25rem .5rem rgba(0, 0, 0, 0.1);
+          }
+          .content {
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 .25rem .5rem .5rem rgba(255, 255, 255, 0.9);
+            border: none;
+          }
+        </style>
+      - | # 加载动画
+        <style>
+          .masthead,
+          .content {
+            animation: animationAppear 2s;
+          }
+          @keyframes animationAppear {
+            0%,
+            33% {
+              opacity: 0;
+            }
+            100% {}
+          }
+        </style>
+      - | # Katex
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.js"
+          defer="defer"
+        ></script>
+        <script
+          src="https://cdn.jsdelivr.net/npm/katex/dist/contrib/auto-render.min.js"
+          defer="defer"
+          onload='renderMathInElement(document.body, { delimiters: [{ left: "$", right: "$", display: false }] })'
+        ></script>
+        <script
+          src="https://cdn.jsdelivr.net/npm/katex/dist/contrib/mathtex-script-type.min.js"
+          defer="defer"
+        ></script>
+  default:
+    body:
+      theme-base: theme-base-0d
+      layout-reverse: false # 开启后sidebar在右边，反之左边
+      sidebar-overlay: false # 开启后正文不随sidebar移动而移动
     sidebar:
       avatar: # 侧边栏显示的头像
         enable: true
@@ -105,192 +192,103 @@ jekyll-theme-WuK:
           rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"
         />
-      - | # Katex
-        <link
-          rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css"
-        />
-        <script
-          src="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.js"
-          defer="defer"
-        ></script>
-        <script
-          src="https://cdn.jsdelivr.net/npm/katex/dist/contrib/auto-render.min.js"
-          defer="defer"
-          onload='renderMathInElement(document.body, { delimiters: [{ left: "$", right: "$", display: false }] })'
-        ></script>
-        <script
-          src="https://cdn.jsdelivr.net/npm/katex/dist/contrib/mathtex-script-type.min.js"
-          defer="defer"
-        ></script>
-      - | # live2d看板娘！
-        <link
-          rel="stylesheet"
-          href="https://cdn.jsdelivr.net/gh/Dreamer-Paul/Pio@2.4/static/pio.min.css"
-        />
-        <script
-          defer="defer"
-          src="https://cdn.jsdelivr.net/gh/Dreamer-Paul/Pio@2.4/static/l2d.min.js"
-        ></script>
-        <script
-          defer="defer"
-          src="https://cdn.jsdelivr.net/gh/Dreamer-Paul/Pio@2.4/static/pio.min.js"
-          onload='
-            if (screen.width > screen.height)
-            {
-              let pio_container = document.createElement("div");
-              pio_container.classList.add("pio-container");
-              pio_container.classList.add("right");
-              pio_container.style.bottom = "-1rem";
-              document.body.insertAdjacentElement("beforeend", pio_container);
-              let pio_action = document.createElement("div");
-              pio_action.classList.add("pio-action");
-              pio_container.insertAdjacentElement("beforeend", pio_action);
-              let pio_canvas = document.createElement("canvas");
-              pio_canvas.id = "pio";
-              pio_canvas.style.width = "14rem";
-              pio_canvas.width = "600";
-              pio_canvas.height = "800";
-              pio_container.insertAdjacentElement("beforeend", pio_canvas);
-              let pio = new Paul_Pio({
-                "mode": "draggable",
-                "hidden": true,
-                "content": {
-                  "link": ["https://wu-kan.cn/_posts/2019-01-18-%E5%9F%BA%E4%BA%8EJekyll%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"],
-                  "skin": ["要换成我的朋友吗？", "让她放个假吧~"],
-                  "custom": [{
-                    "selector": "a",
-                    "type": "link",
-                  }, {
-                    "selector": ".sidebar-toggle",
-                    "text": "打开侧边栏叭~"
-                  }, {
-                    "selector": ".effect-info",
-                    "text": "哇，你发现了什么！"
-                  }, {
-                    "selector": "#toc",
-                    "text": "这是目录~"
-                  }, {
-                    "selector": ".page-title",
-                    "text": "这是标题~"
-                  }]
-                },
-                "model": [
-                  "https:\/\/cdn.jsdelivr.net/gh/imuncle/live2d/model/33/model.2018.bls-winter.json",
-                  "https:\/\/cdn.jsdelivr.net/gh/imuncle/live2d/model/platelet-2/model.json",
-                  "https:\/\/cdn.jsdelivr.net/gh/imuncle/live2d/model/xiaomai/xiaomai.model.json",
-                  "https:\/\/cdn.jsdelivr.net/gh/imuncle/live2d/model/mashiro/seifuku.model.json",
-                  "https:\/\/cdn.jsdelivr.net/gh/imuncle/live2d/model/seele/model.json",
-                  "https:\/\/cdn.jsdelivr.net/gh/imuncle/live2d/model/Violet/14.json",
-                  "https:\/\/cdn.jsdelivr.net/gh/xiaoski/live2d_models_collection/Kobayaxi/Kobayaxi.model.json",
-                  "https:\/\/cdn.jsdelivr.net/gh/xiaoski/live2d_models_collection/mikoto/mikoto.model.json",
-                  "https:\/\/cdn.jsdelivr.net/gh/xiaoski/live2d_models_collection/uiharu/uiharu.model.json"]
-              });
-            }'
-        ></script>
-      - | # 在这里自定义页面样式吧
+      - | # 网站字体
         <style>
-        pre {
-          max-height: 50vh;
-          overflow: auto;
-          background-color: rgba(0, 0, 0, 0);
-        }
-        img {
-          display: inline-block;
-          margin: 0;
-        }
-        .wrap {
-          display: inline-block;
-          background-size: 100vw auto;
-          background-position: center top;
-          background-repeat: no-repeat;
-          background-attachment: fixed;
-          background-image: url(https://cdn.jsdelivr.net/gh/wu-kan/jekyll-theme-WuK/assets/image/74559485_p1.webp);
-        }
-        @media (min-aspect-ratio: 2400/1850) {
+          html,
+          h1,
+          h2,
+          h3,
+          h4,
+          h5,
+          h6,
+          .sidebar {
+            line-height: normal;
+            font-family: Menlo, Monaco, "Courier New", Microsoft JhengHei, monospace;
+          }
+        </style>
+      - | # 网站背景图片，分竖屏、宽屏
+        <style>
           .wrap {
-            background-image: url(https://cdn.jsdelivr.net/gh/wu-kan/jekyll-theme-WuK/assets/image/71932901_p0.webp);
+            min-height: 100vh;
+            display: inline-block;
+            background-size: 100vw auto;
+            background-position: center top;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-image: url(/assets/image/74559485_p1.webp);
           }
-        }
-        .masthead {
-          border-bottom: 0;
-          margin-bottom: 0;
-        }
-        .content {
-          background-color: rgba(255, 255, 255, 0.8);
-          box-shadow: 0 0 9px 9px rgba(255, 255, 255, 0.8);
-          text-shadow: 1px 1px 1px #fff;
-        }
-        @media (min-width: 70em) {
-          .container {
-            max-width: 42rem;
+          @media (min-aspect-ratio: 2400/1850) {
+            .wrap {
+              background-image: url(/assets/image/71932901_p0.webp);
+            }
           }
-        }
-        @media (min-width: 96em) {
-          .container {
-            max-width: 48rem;
+        </style>
+      - | # 头像效果
+        <style>
+          .effect {
+            margin: 1rem;
+            perspective: 900px;
           }
-        }
-        /* Hide the sidebar checkbox that we toggle with `.sidebar-toggle` */
-        .sidebar-checkbox {
-          display: none;
-        }
-        .sidebar-toggle {
-          position: fixed;
-        }
-        .sidebar-toggle:before,
-        .sidebar-toggle:active:before,
-        #sidebar-checkbox:focus ~ .sidebar-toggle:before,
-        #sidebar-checkbox:checked ~ .sidebar-toggle:before {
-          background-image: none;
-        }
-        /*头像效果-start*/
-        .effect {
-          margin: 1rem;
-          -webkit-perspective: 900px;
-          -moz-perspective: 900px;
-          perspective: 900px;
-        }
-        .effect-info {
-          text-align: center;
-          -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-          position: absolute;
-          top: 0;
-          -webkit-transform-style: preserve-3d;
-          -moz-transform-style: preserve-3d;
-          -ms-transform-style: preserve-3d;
-          -o-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-        }
-        .effect-img {
-          z-index: 11;
-          width: 100%;
-          height: 100%;
-          position: relative;
-          -webkit-transition: all 0.5s ease-in-out;
-          -moz-transition: all 0.5s ease-in-out;
-          transition: all 0.5s ease-in-out;
-        }
-        .effect-img:before {
-          position: absolute;
-          display: block;
-        }
-        .effect-right_to_left .effect-img {
-          -webkit-transform-origin: 0% 50%;
-          -moz-transform-origin: 0% 50%;
-          -ms-transform-origin: 0% 50%;
-          -o-transform-origin: 0% 50%;
-          transform-origin: 0% 50%;
-        }
-        .effect-right_to_left:hover .effect-img {
-          -webkit-transform: rotate3d(0, 1, 0, -180deg);
-          -moz-transform: rotate3d(0, 1, 0, -180deg);
-          -ms-transform: rotate3d(0, 1, 0, -180deg);
-          -o-transform: rotate3d(0, 1, 0, -180deg);
-          transform: rotate3d(0, 1, 0, -180deg);
-        }
-        /*头像效果-end*/
+          .effect-info {
+            text-align: center;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            position: absolute;
+            top: 0;
+            transform-style: preserve-3d;
+          }
+          .effect-img {
+            z-index: 11;
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transition: all 0.5s ease-in-out;
+          }
+          .effect-img:before {
+            position: absolute;
+            display: block;
+          }
+          .effect-right_to_left .effect-img {
+            transform-origin: 0% 50%;
+          }
+          .effect-right_to_left:hover .effect-img {
+            transform: rotate3d(0, 1, 0, -180deg);
+          }
+        </style>
+      - | # 彩虹滚动条，仅对Chrome系浏览器生效
+        <style>
+          ::-webkit-scrollbar {
+            width: 4px;
+            height: 4px;
+          }
+          ::-webkit-scrollbar-thumb {
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+          }
+        </style>
+      - | # 对于原lanyon的一些补丁
+        <style>
+          pre {
+            max-height: 50vh;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0);
+          }
+          img {
+            display: inline-block;
+            margin: 0;
+          }
+          /* Hide the sidebar checkbox that we toggle with `.sidebar-toggle` */
+          .sidebar-checkbox {
+            display: none;
+          }
+          .sidebar-toggle {
+            position: fixed;
+          }
+          .sidebar-toggle:before,
+          .sidebar-toggle:active:before,
+          #sidebar-checkbox:focus~.sidebar-toggle:before,
+          #sidebar-checkbox:checked~.sidebar-toggle:before {
+            background-image: none;
+          }
         </style>
 
 markdown: kramdown
