@@ -7,15 +7,25 @@ tagline: wu-kan
 
 jekyll-theme-WuK:
   home:
+    separator: <!-- slide -->
+    separator-vertical: <!-- slide vertical=true -->
     append_before: |
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/css/reveal.min.css" />
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/combine/npm/reveal.js/css/reveal.min.css,npm/reveal.js/css/theme/serif.min.css" 
+      />
       <style>
-      .reveal .slides {
-        text-align: left;
-      }
+        .sidebar {
+          line-height: 1.5;
+        }
+        .reveal .slides {
+          text-align: left;
+        }
       </style>
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/css/theme/serif.min.css" />
-      <script defer="defer" src="https://cdn.jsdelivr.net/npm/reveal.js/js/reveal.js" onload="
+      <script
+        defer="defer"
+        src="https://cdn.jsdelivr.net/npm/reveal.js/js/reveal.min.js"
+        onload="
         document.getElementsByClassName('wrap')[0].classList.add('reveal');
         let path = 'https:\/\/cdn.jsdelivr.net/npm/reveal.js/';
         Reveal.initialize({
@@ -25,20 +35,11 @@ jekyll-theme-WuK:
           navigationMode: 'linear',
           parallaxBackgroundImage: 'data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoBAAEAD8D+JaQAA3AA/uVqAAA=',//这是一张纯白图
           dependencies: [
-              // Interpret Markdown in <section> elements
               { src: path+'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
               { src: path+'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-      
-              // Syntax highlight for <code> elements
               { src: path+'plugin/highlight/highlight.js', async: true },
-      
-              // Zoom in and out with Alt+click
               { src: path+'plugin/zoom-js/zoom.js', async: true },
-      
-              // Speaker notes
               { src: path+'plugin/notes/notes.js', async: true },
-      
-              // MathJax
               { src: path+'plugin/math/math.js', async: true }
           ]
           });
@@ -87,17 +88,57 @@ jekyll-theme-WuK:
           href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css"
         />
         <script
-          src="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.js"
-          defer="defer"
-        ></script>
-        <script
-          src="https://cdn.jsdelivr.net/npm/katex/dist/contrib/auto-render.min.js"
+          src="https://cdn.jsdelivr.net/combine/npm/katex/dist/katex.min.js,npm/katex/dist/contrib/mathtex-script-type.min.js,npm/katex/dist/contrib/auto-render.min.js"
           defer="defer"
           onload='renderMathInElement(document.body, { delimiters: [{ left: "$", right: "$", display: false }] })'
         ></script>
+      - | # mermaid
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.css"
+        />
         <script
-          src="https://cdn.jsdelivr.net/npm/katex/dist/contrib/mathtex-script-type.min.js"
+          src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"
           defer="defer"
+          onload='
+            for(let x=document.getElementsByClassName("language-mermaid"), i=0;i<x.length;i++)
+            {
+              x[i].classList.add("mermaid");
+              x[i].classList.remove("language-mermaid");
+            }'
+        ></script>
+      - | # prism代码高亮
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/combine/npm/prismjs/themes/prism-coy.min.css,npm/prismjs/plugins/line-numbers/prism-line-numbers.min.css,npm/prismjs/plugins/toolbar/prism-toolbar.min.css"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/combine/npm/prismjs/components/prism-core.min.js,npm/prismjs/plugins/autoloader/prism-autoloader.min.js,npm/prismjs/plugins/line-numbers/prism-line-numbers.min.js,npm/prismjs/plugins/toolbar/prism-toolbar.min.js"
+          defer="defer"
+          onload='
+            Prism.plugins.autoloader.languages_path = "https:\/\/cdn.jsdelivr.net/npm/prismjs/components/";
+            for(let x=document.getElementsByTagName("pre"), i=0;i<x.length;i++)
+            {
+              x[i].classList.add("line-numbers");
+            }
+            Prism.plugins.toolbar.registerButton("select-code", function (env) {
+              let button = document.createElement("button");
+              button.innerHTML = "select this " + env.language;
+              button.addEventListener("click", function () {
+                if (document.body.createTextRange) {
+                  let range = document.body.createTextRange();
+                  range.moveToElementText(env.element);
+                  range.select();
+                } else if (window.getSelection) {
+                  let selection = window.getSelection();
+                  let range = document.createRange();
+                  range.selectNodeContents(env.element);
+                  selection.removeAllRanges();
+                    selection.addRange(range);
+                }
+              });
+              return button;
+            })'
         ></script>
   default:
     body:
@@ -122,7 +163,7 @@ jekyll-theme-WuK:
             目录
           </aside>
           <script
-            defer='defer'
+            async="async"
             src='https://cdn.jsdelivr.net/npm/html-contents/html-contents.min.js'
             onload="htmlContents('#toc', {listType: 'o', filter: function(arr) {return !arr.matches('.masthead-title')}})"
           ></script>
@@ -171,6 +212,7 @@ jekyll-theme-WuK:
           http-equiv="content-type"
           content="text/html; charset=utf-8"
         />
+      - | # 网站小图标
         <link
           rel="apple-touch-icon-precomposed"
           href="https://gravatar.loli.net/avatar/a12c5fff23dde00df79af9aca4e7b6e4?s=300"
@@ -180,18 +222,99 @@ jekyll-theme-WuK:
           icon"
           href="https://gravatar.loli.net/avatar/a12c5fff23dde00df79af9aca4e7b6e4?s=32"
         />
+      - | # lanyon的页面样式
         <link
           rel="stylesheet"
-          href="https://cdn.jsdelivr.net/gh/poole/lanyon@ac85a3115c094b3e6cb92cc41771e98b443f6c5d/public/css/poole.min.css"
+          href="https://cdn.jsdelivr.net/combine/gh/poole/lanyon@ac85a3115c094b3e6cb92cc41771e98b443f6c5d/public/css/poole.min.css,gh/poole/lanyon@ac85a3115c094b3e6cb92cc41771e98b443f6c5d/public/css/lanyon.min.css"
         />
-        <link
-          rel="stylesheet"
-          href="https://cdn.jsdelivr.net/gh/poole/lanyon@ac85a3115c094b3e6cb92cc41771e98b443f6c5d/public/css/lanyon.min.css"
-        />
+      - | #对于lanyon的一些补丁，Hide the sidebar checkbox that we toggle with `.sidebar-toggle`
+        <style>
+          .sidebar-checkbox {
+            display: none;
+          }
+          .sidebar-toggle {
+            position: fixed;
+          }
+          .sidebar-toggle:before,
+          .sidebar-toggle:active:before,
+          #sidebar-checkbox:focus~.sidebar-toggle:before,
+          #sidebar-checkbox:checked~.sidebar-toggle:before {
+            background-image: none;
+          }
+        </style>
+      - | # fontawesome
         <link
           rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"
         />
+      - | # live2d看板娘！
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/gh/Dreamer-Paul/Pio@2.4/static/pio.min.css"
+        />
+        <script
+          async="async"
+          src="https://cdn.jsdelivr.net/combine/gh/Dreamer-Paul/Pio@2.4/static/l2d.min.js,gh/Dreamer-Paul/Pio@2.4/static/pio.min.js"
+          onload='
+            if (screen.width > screen.height)
+            {
+              let pio_container = document.createElement("div");
+              pio_container.classList.add("pio-container");
+              pio_container.classList.add("right");
+              pio_container.style.bottom = "-2rem";
+              pio_container.style.zIndex = "1";
+              document.body.insertAdjacentElement("beforeend", pio_container);
+              let pio_action = document.createElement("div");
+              pio_action.classList.add("pio-action");
+              pio_container.insertAdjacentElement("beforeend", pio_action);
+              let pio_canvas = document.createElement("canvas");
+              pio_canvas.id = "pio";
+              pio_canvas.style.width = "14rem";
+              pio_canvas.width = "600";
+              pio_canvas.height = "800";
+              pio_container.insertAdjacentElement("beforeend", pio_canvas);
+              let pio = new Paul_Pio({
+                "mode": "fixed",
+                "hidden": true,
+                "content": {
+                  "link": ["https://jekyll-theme-WuK.wu-kan.cn"],
+                  "skin": ["要换成我的朋友吗？", "让她放个假吧~"],
+                  "custom": [{
+                    "selector": "a",
+                    "type": "link",
+                  }, {
+                    "selector": ".sidebar-toggle",
+                    "text": "打开侧边栏叭~"
+                  }, {
+                    "selector": ".effect-info",
+                    "text": "哇，你发现了什么！"
+                  }, {
+                    "selector": "#sidebar-search-input",
+                    "text": "想搜索什么呢？很多干货哦！"
+                  }, {
+                    "selector": "#toc",
+                    "text": "这是目录~"
+                  }, {
+                    "selector": ".page-title",
+                    "text": "这是标题~"
+                  }, {
+                    "selector": ".v",
+                    "text": "评论没有审核，要对自己的发言负责哦~"
+                  }]
+                },
+                "model": [
+                  "https:\/\/cdn.jsdelivr.net/gh/imuncle/live2d/model/33/model.2018.bls-winter.json",
+                  "https:\/\/cdn.jsdelivr.net/gh/imuncle/live2d/model/platelet-2/model.json",
+                  "https:\/\/cdn.jsdelivr.net/gh/imuncle/live2d/model/xiaomai/xiaomai.model.json",
+                  "https:\/\/cdn.jsdelivr.net/gh/imuncle/live2d/model/mashiro/seifuku.model.json",
+                  "https:\/\/cdn.jsdelivr.net/gh/imuncle/live2d/model/seele/model.json",
+                  "https:\/\/cdn.jsdelivr.net/gh/imuncle/live2d/model/Violet/14.json",
+                  "https:\/\/cdn.jsdelivr.net/gh/xiaoski/live2d_models_collection/Kobayaxi/Kobayaxi.model.json",
+                  "https:\/\/cdn.jsdelivr.net/gh/xiaoski/live2d_models_collection/mikoto/mikoto.model.json",
+                  "https:\/\/cdn.jsdelivr.net/gh/xiaoski/live2d_models_collection/uiharu/uiharu.model.json"]
+              });
+            }'
+        ></script>
       - | # 网站字体
         <style>
           html,
@@ -202,7 +325,6 @@ jekyll-theme-WuK:
           h5,
           h6,
           .sidebar {
-            line-height: normal;
             font-family: Menlo, Monaco, "Courier New", Microsoft JhengHei, monospace;
           }
         </style>
@@ -265,7 +387,7 @@ jekyll-theme-WuK:
             background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
           }
         </style>
-      - | # 对于原lanyon的一些补丁
+      - | # 在这里自定义你的页面样式吧~
         <style>
           pre {
             max-height: 50vh;
@@ -275,19 +397,6 @@ jekyll-theme-WuK:
           img {
             display: inline-block;
             margin: 0;
-          }
-          /* Hide the sidebar checkbox that we toggle with `.sidebar-toggle` */
-          .sidebar-checkbox {
-            display: none;
-          }
-          .sidebar-toggle {
-            position: fixed;
-          }
-          .sidebar-toggle:before,
-          .sidebar-toggle:active:before,
-          #sidebar-checkbox:focus~.sidebar-toggle:before,
-          #sidebar-checkbox:checked~.sidebar-toggle:before {
-            background-image: none;
           }
         </style>
 

@@ -1,14 +1,12 @@
-# Jekyll-theme-WuK
+---
+title: README
+---
 
-感谢使用我的主题，下面跟随一些简单操作快速搭建你的博客吧~
+## Quick Start
+
+感谢使用我的博客主题，下面跟随一些简单操作快速生成你的站点/文档/展示页面吧~无需命令行~
 
 ![License](https://img.shields.io/github/license/wu-kan/jekyll-theme-WuK.svg)![commit-activity](https://img.shields.io/github/commit-activity/m/wu-kan/jekyll-theme-WuK.svg)![last-commit](https://img.shields.io/github/last-commit/wu-kan/jekyll-theme-WuK.svg)![CountLanguage](https://img.shields.io/github/languages/count/wu-kan/jekyll-theme-WuK.svg)![TopLanguage](https://img.shields.io/github/languages/top/wu-kan/jekyll-theme-WuK.svg)![CodeSize](https://img.shields.io/github/languages/code-size/wu-kan/jekyll-theme-WuK.svg)![RepoSize](https://img.shields.io/github/repo-size/wu-kan/jekyll-theme-WuK.svg)![Downloads](https://img.shields.io/github/downloads/wu-kan/jekyll-theme-WuK/total.svg)![Watchers](https://img.shields.io/github/watchers/wu-kan/jekyll-theme-WuK.svg)![contributors](https://img.shields.io/github/contributors-anon/wu-kan/jekyll-theme-WuK.svg)![Release](https://img.shields.io/github/v/release/wu-kan/jekyll-theme-WuK.svg)![release-date](https://img.shields.io/github/release-date/wu-kan/jekyll-theme-WuK.svg)
-
-<!-- slide -->
-
-## 快速搭建你的博客
-
-无需命令行~
 
 <!-- slide vertical=true -->
 
@@ -64,21 +62,35 @@
 
 <!-- slide -->
 
-## `_layout/home`的使用技巧
+## 展示页的说明和使用技巧
 
-从`v3.1.0`版本开始，`_layout/home`被我重写，基于[hakimel/reveal.js](https://github.com/hakimel/reveal.js)实现了一个简洁的 ppt 界面，既可以作为博客的封面，也可以用作 ppt 展示！
+从`v3.1.0`版本开始，`_layout/home`被我重写，基于[hakimel/reveal.js](https://github.com/hakimel/reveal.js)实现了一个简洁的展示页面，既可以作为博客的封面，也可以用作 presentation！
+
+示例：[我的数图期末展示页面](https://wu-kan.cn/_posts/2019-12-10-%E6%95%B0%E5%9B%BE%E6%9C%9F%E6%9C%ABProject/)
 
 <!-- slide vertical=true -->
 
-向你的 markdown 文件中插入![水平标签](data:image/webp;base64,UklGRlwCAABXRUJQVlA4IFACAACQDwCdASrgACAAPpE8m0elo6KhLbVcALASCWkAEWHcpexmUsD6ZOiu5sdWJqej30kHAWtWgzm1NokVrmXtBduqdjf69Ky/YrEfEk+DW1QmKbH58l6EwOTfIUdlpA9FItaZ+aXOqRi7Lf8XoMSwIPubKewvVC8kbFKgsiWQMmHqL7KMBE8AAP79uypAcc+TWCg0wbbnBWWODDTzqFgLrrobgfk6sOqETmoC8PIIDAt2Si73oax5KbX3SwCtGFRuRBn1uMwQStgw0dWqf5biuBby+hCRVXsg1usfCXyC2TOzsYDX89EEII6pcuI+jyvREioCmAhUHo5uHUEi05r1rckaSHFG9jYaTLNpOSC2AFItW/sUZIgBsYz1EnDk0oPG0eaWfTD3p1pwNOapL3JUK52Kqqdpwi5L/UxF+qUPS+XVX5BA2AI2FjTkJXaN75DUdEQ04xq+fCz1hDcc9po5h4AJCmNGDJ+hBKvSAKeRvRzbAi/OgVFg4ZpozCToVa+MMYslTrUGCJC3goF1f379lpSUD12xat2I4lTC3UrAkcbYE8kvpy817kSb+lg4cD80TdS06oTGhQR5jhlw9m3Shctwj5MyQ9e4dnKfbvZGsjBiB/C4OS/yJT4yN6vSFq/P3DmpiG5pQYwGVZud0Sp4fQ/hK84KYIxfEfeZSTRvrrNcS83XqziGfuD2xXXkulIjKF2Wdo9SDsZ2v2owdj9PN6xprlnXo/lEUwI/dRpY0JscfYWYrWtPdn4aznDTfsXina6MeJvfZyJ+dktjvrCfSAAA)作为一个水平页面分隔符，插入![垂直标签](data:image/webp;base64,UklGRswEAABXRUJQVlA4IMAEAABQHwCdASrAASAAPsVQo0unpKMhtJMt+PAYiWkAFsxLa9e8Eh/E96cqAGmyaFhk0Q5inYLCsACybyvNmNBBvQcWVFDythsQZJBVxehBlMwh1yaCph3TT2mmXBYK4xTe1NQkAXYTUqlqw5axNWj96M5T+rkKO1ITOC/HXVhXDuBiZLLWebQVjzeuOZZbVNTlj1mUAthhmVBOEZyvWrJ8MacmBcu/R1nhZXOFxgJcjRk0JUNUxVxkcJKLugO7TzsHe/ypmIXUjZkQM2B75gv0R2Il+croGEtWa9KC3jCQ50RDOiQz2gtg3d5JDES2HqfZoVXHDcmj31oyYgLAMsrs0kRz6oAAAP73mKTfMOCm35/b4Qk9coZRWF/gzyQ+AyJOWBfAGDv3SBErqzWPv1hFXtlNoLceJgqLqnLzOSUx7DiuK2wiJ4rUObsqOE+MT6+pGZhCQhIjAq7hVZOjFtXUAuXEvG0pwJn3iedUv/j455TijyrJJcdJMR4aqihWqaBMTcB4E2CcjQ1YdITOt7BzvuJ+ujCFC5gybqIFrv+7SeNt4xux7nEqq6ajkJwkXg4GutsosueU/0lBwh3UW/kFoOKFTWouPwbLGWdYI4WaIWshXeDv549gTc0PKD/FFeqPHd9aU++Hqu7JbmEMpa7CLPsaxQRgDGAHDfjva0DqroXr7gD7SHbIHeEEfGneh7wgYLGcN1wO6XpUnmZQSYhqvKZ3V9qh180B9n7/7ViGnOjPnLZHiR0DDUPN3WgNvLfdTtXrzTIIe4clZR4QBCJ98wGdOZEo3vv0y+I7HVPXcDzibfxpuyfoPCnOgMFmVLKMvwqIHgIWH4Yxzhv6efYiKAyOVNnQIosoOKsI/6mG1uzH9RjgDcJA7gTJvwpTq5ST0FKUdrVtY0F62jai3eqcWhQEg3Lp11W2z8+pOjpU/ALrHDFQB8eATgid4+lu9cquOn6D5jfkHAIOVSWNgW55QB3drAhCEqTZ2BCjIxzQeTTD50rZxGTSSv51QbMbOG6+OQp6X6mOuYlBPctjkYbTYITDV0ANyT/bH1ZYw0QN+qV9Z0FvgDMuixTGgm/WwRDroKqik4JL9Toro+xMQKUlbaftdxfIjkrmVDAALBD/bF26A3vTRtGP+KMgNDj2mqd9w3znrM/WQnqrtp2Dm7vLVmURPpLzofnbviwFz7LHSPwT7dz1tfOPPeJMunAM7Hl2bLMPJ53KZy9M0+ns7ylPJ5sYLNsrstwdy5/KgZi9nqhQ9rDGETCv9Jm01GiMBemXJa4EPD7VB1MCG2Ep+ibTIRNjQ/j3Q/HyNfUpwNQSJ4DEiG3ZKplHKFRdjwWz2jsVBl+S6T98wMG7WJKoOAv6UDHM1GJ814ICZRXKX8COWPCKvFJgPT+ohqrUYy2YxQvr/UUJoIRbX3xCmyL/Co484h4ADGRJ+pl9Dkv72GvAxR9Q9/lZzSNgkiess0mfv2ctlFaKnfQGhsE2g39w37DIR26xJi0rMtkey9YiaTl62hSm3uqrKSpidim0eDZJvLvHLTxHxoBOytnf9sZaUuEAC5/OAGcD86/cByTlWvPbvbnRPygoLSl8xEmg9IWpHnD/ETK2dClPiRsF+hfETqEtSAAA)作为一个垂直页面分隔符，即可快速开始使用啦！
+向你的 markdown 文件中插入水平页面分隔符和垂直页面分隔符（可自定义），即可快速开始使用啦！可以以[本篇文档](https://github.com/wu-kan/jekyll-theme-WuK/blob/master/README.md)作为使用示例。
 
-这里的记号尽可能地与[vscode-markdown-preview-enhanced](https://shd101wyy.github.io/markdown-preview-enhanced/#/presentation)的标记兼容（注意空格都是单个），方便本地预览。也可以以[本篇文档](https://github.com/wu-kan/jekyll-theme-WuK/blob/master/README.md)作为使用示例。
+推荐的分隔符是![垂直标签](data:image/webp;base64,UklGRswEAABXRUJQVlA4IMAEAABQHwCdASrAASAAPsVQo0unpKMhtJMt+PAYiWkAFsxLa9e8Eh/E96cqAGmyaFhk0Q5inYLCsACybyvNmNBBvQcWVFDythsQZJBVxehBlMwh1yaCph3TT2mmXBYK4xTe1NQkAXYTUqlqw5axNWj96M5T+rkKO1ITOC/HXVhXDuBiZLLWebQVjzeuOZZbVNTlj1mUAthhmVBOEZyvWrJ8MacmBcu/R1nhZXOFxgJcjRk0JUNUxVxkcJKLugO7TzsHe/ypmIXUjZkQM2B75gv0R2Il+croGEtWa9KC3jCQ50RDOiQz2gtg3d5JDES2HqfZoVXHDcmj31oyYgLAMsrs0kRz6oAAAP73mKTfMOCm35/b4Qk9coZRWF/gzyQ+AyJOWBfAGDv3SBErqzWPv1hFXtlNoLceJgqLqnLzOSUx7DiuK2wiJ4rUObsqOE+MT6+pGZhCQhIjAq7hVZOjFtXUAuXEvG0pwJn3iedUv/j455TijyrJJcdJMR4aqihWqaBMTcB4E2CcjQ1YdITOt7BzvuJ+ujCFC5gybqIFrv+7SeNt4xux7nEqq6ajkJwkXg4GutsosueU/0lBwh3UW/kFoOKFTWouPwbLGWdYI4WaIWshXeDv549gTc0PKD/FFeqPHd9aU++Hqu7JbmEMpa7CLPsaxQRgDGAHDfjva0DqroXr7gD7SHbIHeEEfGneh7wgYLGcN1wO6XpUnmZQSYhqvKZ3V9qh180B9n7/7ViGnOjPnLZHiR0DDUPN3WgNvLfdTtXrzTIIe4clZR4QBCJ98wGdOZEo3vv0y+I7HVPXcDzibfxpuyfoPCnOgMFmVLKMvwqIHgIWH4Yxzhv6efYiKAyOVNnQIosoOKsI/6mG1uzH9RjgDcJA7gTJvwpTq5ST0FKUdrVtY0F62jai3eqcWhQEg3Lp11W2z8+pOjpU/ALrHDFQB8eATgid4+lu9cquOn6D5jfkHAIOVSWNgW55QB3drAhCEqTZ2BCjIxzQeTTD50rZxGTSSv51QbMbOG6+OQp6X6mOuYlBPctjkYbTYITDV0ANyT/bH1ZYw0QN+qV9Z0FvgDMuixTGgm/WwRDroKqik4JL9Toro+xMQKUlbaftdxfIjkrmVDAALBD/bF26A3vTRtGP+KMgNDj2mqd9w3znrM/WQnqrtp2Dm7vLVmURPpLzofnbviwFz7LHSPwT7dz1tfOPPeJMunAM7Hl2bLMPJ53KZy9M0+ns7ylPJ5sYLNsrstwdy5/KgZi9nqhQ9rDGETCv9Jm01GiMBemXJa4EPD7VB1MCG2Ep+ibTIRNjQ/j3Q/HyNfUpwNQSJ4DEiG3ZKplHKFRdjwWz2jsVBl+S6T98wMG7WJKoOAv6UDHM1GJ814ICZRXKX8COWPCKvFJgPT+ohqrUYy2YxQvr/UUJoIRbX3xCmyL/Co484h4ADGRJ+pl9Dkv72GvAxR9Q9/lZzSNgkiess0mfv2ctlFaKnfQGhsE2g39w37DIR26xJi0rMtkey9YiaTl62hSm3uqrKSpidim0eDZJvLvHLTxHxoBOytnf9sZaUuEAC5/OAGcD86/cByTlWvPbvbnRPygoLSl8xEmg9IWpHnD/ETK2dClPiRsF+hfETqEtSAAA)和![水平标签](data:image/webp;base64,UklGRlwCAABXRUJQVlA4IFACAACQDwCdASrgACAAPpE8m0elo6KhLbVcALASCWkAEWHcpexmUsD6ZOiu5sdWJqej30kHAWtWgzm1NokVrmXtBduqdjf69Ky/YrEfEk+DW1QmKbH58l6EwOTfIUdlpA9FItaZ+aXOqRi7Lf8XoMSwIPubKewvVC8kbFKgsiWQMmHqL7KMBE8AAP79uypAcc+TWCg0wbbnBWWODDTzqFgLrrobgfk6sOqETmoC8PIIDAt2Si73oax5KbX3SwCtGFRuRBn1uMwQStgw0dWqf5biuBby+hCRVXsg1usfCXyC2TOzsYDX89EEII6pcuI+jyvREioCmAhUHo5uHUEi05r1rckaSHFG9jYaTLNpOSC2AFItW/sUZIgBsYz1EnDk0oPG0eaWfTD3p1pwNOapL3JUK52Kqqdpwi5L/UxF+qUPS+XVX5BA2AI2FjTkJXaN75DUdEQ04xq+fCz1hDcc9po5h4AJCmNGDJ+hBKvSAKeRvRzbAi/OgVFg4ZpozCToVa+MMYslTrUGCJC3goF1f379lpSUD12xat2I4lTC3UrAkcbYE8kvpy817kSb+lg4cD80TdS06oTGhQR5jhlw9m3Shctwj5MyQ9e4dnKfbvZGsjBiB/C4OS/yJT4yN6vSFq/P3DmpiG5pQYwGVZud0Sp4fQ/hK84KYIxfEfeZSTRvrrNcS83XqziGfuD2xXXkulIjKF2Wdo9SDsZ2v2owdj9PN6xprlnXo/lEUwI/dRpY0JscfYWYrWtPdn4aznDTfsXina6MeJvfZyJ+dktjvrCfSAAA)，这样可以和[vscode-markdown-preview-enhanced](https://shd101wyy.github.io/markdown-preview-enhanced/#/presentation)的标记兼容，方便本地预览。
 
 <!-- slide vertical=true -->
 
 如果你希望使用它来渲染主页之外的页面，可以在你的 markdown 的 yaml 头中设置`_layout: home`即可！当然，如果你不希望使用它来渲染主页，你也可以将主页的 layout 设置成其他的。
 
-更多的功能，请尽情探索[hakimel/reveal.js](https://github.com/hakimel/reveal.js)！（例如，按 Esc 可以生成一个 ppt 大纲）
+这是一个仍在开发的特性（主要是找不到美观精致的[展示主题](https://github.com/hakimel/reveal.js/tree/master/css/theme)，如果你有合适的欢迎给我发 issue）。
+
+<!-- slide vertical=true -->
+
+更多的功能，请尽情探索[hakimel/reveal.js](https://github.com/hakimel/reveal.js)！~~例如，按 Esc 可以生成一个 ppt 大纲~~
+
+<!-- slide -->
+
+## Demo
+
+<!-- slide vertical=true -->
+
+![Demo](./screenshot.png)
 
 <!-- slide -->
 
@@ -100,17 +112,13 @@
 
 <!-- slide vertical=true -->
 
-目标是实现一个尽可能简洁，而可定制内容又尽可能多的博客。
-
-<!-- slide vertical=true -->
-
-目前博客的预览如下：
-
-![Demo](./screenshot.png)
+目标是打造一个尽可能简洁，而可定制内容又尽可能多的博客。如果有更好的建议，欢迎给我提 Issue！
 
 <!-- slide -->
 
 ## 声明
+
+<!-- slide vertical=true -->
 
 除特别声明或转载外，所有博文采用[署名-相同方式共享 4.0 国际](https://creativecommons.org/licenses/by-sa/4.0/deed.zh)协议进行许可。
 
@@ -119,6 +127,8 @@
 <!-- slide -->
 
 ## 致谢
+
+<!-- slide vertical=true -->
 
 托管于[Github Pages](https://pages.github.com/)，感谢。
 
@@ -134,11 +144,13 @@ ci/cd 来自于[gitlab](https://gitlab.com/wu-kan/wu-kan-github-io)，感谢。
 
 图标库来自于[<i class="fab fa-font-awesome"></i>fontawesome-free](https://fontawesome.com/)，感谢。
 
-留言和阅读量系统来自于[Valine](https://valine.js.org/)和[LeanCloud](https://leancloud.cn/)，感谢。
+展示页基于[hakimel/reveal.js](https://github.com/hakimel/reveal.js)，感谢。
 
 捐赠页来自[hifocus/merger](https://github.com/hifocus/merger)，感谢。
 
 <!-- slide vertical=true -->
+
+留言和阅读量系统来自于[Valine](https://valine.js.org/)和[LeanCloud](https://leancloud.cn/)，感谢。
 
 页面统计来自于[不蒜子](http://busuanzi.ibruce.info/)，感谢。
 
@@ -154,11 +166,11 @@ Live2D 前端插件来自于[Dreamer-Paul/Pio](https://github.com/Dreamer-Paul/P
 
 Live2D Model 来自于[imuncle/live2d](https://github.com/imuncle/live2d)和[xiaoski/live2d_models_collection](https://github.com/xiaoski/live2d_models_collection)，感谢。
 
-头像翻转效果来自于[leopardpan/leopardpan.github.io](https://github.com/leopardpan/leopardpan.github.io)，感谢。
-
 <!-- slide vertical=true -->
 
 头像、壁纸来自于<https://www.pixiv.net/artworks/72096124>、<https://www.pixiv.net/artworks/71932901>和<https://www.pixiv.net/artworks/74559485>，感谢（侵权必删）。
+
+头像翻转效果受启发自[leopardpan/leopardpan.github.io](https://github.com/leopardpan/leopardpan.github.io)，感谢。
 
 <!-- slide -->
 
@@ -179,6 +191,8 @@ Live2D Model 来自于[imuncle/live2d](https://github.com/imuncle/live2d)和[xia
   - 彩虹滚动条
   - 页面加载动画
   - 更换竖屏下壁纸
+
+<!-- slide vertical=true -->
 
 这么大的更新感觉叫“v4.0.0”也不为过嘛。
 
