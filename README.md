@@ -154,7 +154,7 @@ title: README
 
 <!-- slide vertical=true -->
 
-如果你希望使用它来渲染主页之外的页面，可以在你的 markdown 的 yaml 头中设置`_layout: home`即可！当然，如果你不希望使用它来渲染主页，你也可以将主页的 layout 设置成其他的。
+如果你希望使用它来渲染主页之外的页面，可以在你的 markdown 的 yaml 头中设置`layout: home`即可！当然，如果你不希望使用它来渲染主页，你也可以将主页的 layout 设置成其他的。
 
 想针对特定页面默认开启侧边栏？在 yaml 头中设置`sidebar_open: true`即可！
 
