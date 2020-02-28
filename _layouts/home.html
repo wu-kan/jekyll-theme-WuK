@@ -3,8 +3,7 @@ layout: default
 ---
 {{ site.jekyll-theme-WuK.home.append_before }}
 <div class="slides">
-  <section data-markdown data-separator='{{ site.jekyll-theme-WuK.home.separator|escape }}'
-    data-separator-vertical='{{ site.jekyll-theme-WuK.home.separator-vertical|escape }}'>
+  <section {% for node in site.jekyll-theme-WuK.home.append_to_section_tag %}{{ node.key }}{% if node.value %}='{{ node.value|escape }}'{% endif %} {% endfor %}>
     <textarea data-template>{{ content }}</textarea>
   </section>
 </div>

@@ -1,14 +1,23 @@
 # 这个文件仅用于生成文档，配置项并不完整，可以在<https://github.com/wu-kan/wu-kan.github.io/blob/master/_config.yml>获取完整配置文档及示例！
-title: jekyll-theme-WuK
-description: A content-first, sliding sidebar theme for Jekyll.
+title: jekyll-theme-WuK # 站点标题
+description: A content-first, sliding sidebar theme for Jekyll. # 头像背后的信息，<br/>代表换行
 url: https://jekyll-theme-WuK.wu-kan.cn
-baseurl: ""
-tagline: wu-kan
+baseurl: "" # 假如你的博客是建在某个目录下的，请在这里加上目录名，并且下面配置的所有链接里的`/assets`前也要加，即`/your_baseurl/assets`。这一项结尾不要有'/'。
 
-jekyll-theme-WuK:
+# githubpage上支持的插件见<https://pages.github.com/versions/>
+plugins: # <https://jekyllrb.com/docs/plugins/>
+  - jekyll-readme-index # 使用readme做index，从而和github渲染效果一致
+  - jekyll-default-layout # 为每个markdown自动生成layout
+  - jekyll-seo-tag # 为每个页面生成标题
+
+jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
   home:
-    separator: <!-- slide -->
-    separator-vertical: <!-- slide vertical=true -->
+    append_to_section_tag:
+      - key: data-markdown
+      - key: data-separator # 水平展示页分隔符
+        value: <!-- slide -->
+      - key: data-separator-vertical # 垂直展示页分隔符
+        value: <!-- slide vertical=true -->
     append_before: |
       <link
         rel="stylesheet"
@@ -44,166 +53,15 @@ jekyll-theme-WuK:
           ]
           });
         "></script>
-  page:
-    masthead:
-      enable: true
-    append_before:
-      - | # 增加宽屏下的显示内容
-        <style>
-          @media (min-width: 66rem) {
-            .container {
-              max-width: calc(100vw - 28rem);
-            }
-          }
-        </style>
-      - | # 给文章加上白色背景，防止被背景影响阅读
-        <style>
-          .masthead {
-            background-color: rgba(255, 255, 255, 0.9);
-            box-shadow: 0 .25rem .5rem rgba(0, 0, 0, 0.1);
-          }
-          .content {
-            background-color: rgba(255, 255, 255, 0.9);
-            box-shadow: 0 .25rem .5rem .5rem rgba(255, 255, 255, 0.9);
-            border: none;
-          }
-        </style>
-      - | # 加载动画
-        <style>
-          .masthead,
-          .content {
-            animation: animationAppear 2s;
-          }
-          @keyframes animationAppear {
-            0%,
-            33% {
-              opacity: 0;
-            }
-            100% {}
-          }
-        </style>
-      - | # Katex
-        <link
-          rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css"
-        />
-        <script
-          src="https://cdn.jsdelivr.net/combine/npm/katex/dist/katex.min.js,npm/katex/dist/contrib/mathtex-script-type.min.js,npm/katex/dist/contrib/auto-render.min.js"
-          defer="defer"
-          onload='renderMathInElement(document.body, { delimiters: [{ left: "$", right: "$", display: false }] })'
-        ></script>
-      - | # mermaid
-        <link
-          rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.css"
-        />
-        <script
-          src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"
-          defer="defer"
-          onload='
-            for(let x=document.getElementsByClassName("language-mermaid"), i=0;i<x.length;i++)
-            {
-              x[i].classList.add("mermaid");
-              x[i].classList.remove("language-mermaid");
-            }'
-        ></script>
-      - | # prism代码高亮
-        <link
-          rel="stylesheet"
-          href="https://cdn.jsdelivr.net/combine/npm/prismjs/themes/prism-coy.min.css,npm/prismjs/plugins/line-numbers/prism-line-numbers.min.css,npm/prismjs/plugins/toolbar/prism-toolbar.min.css"
-        />
-        <script
-          src="https://cdn.jsdelivr.net/combine/npm/prismjs/components/prism-core.min.js,npm/prismjs/plugins/autoloader/prism-autoloader.min.js,npm/prismjs/plugins/line-numbers/prism-line-numbers.min.js,npm/prismjs/plugins/toolbar/prism-toolbar.min.js"
-          defer="defer"
-          onload='
-            Prism.plugins.autoloader.languages_path = "https:\/\/cdn.jsdelivr.net/npm/prismjs/components/";
-            for(let x=document.getElementsByTagName("pre"), i=0;i<x.length;i++)
-            {
-              x[i].classList.add("line-numbers");
-            }
-            Prism.plugins.toolbar.registerButton("select-code", function (env) {
-              let button = document.createElement("button");
-              button.innerHTML = "select this " + env.language;
-              button.addEventListener("click", function () {
-                if (document.body.createTextRange) {
-                  let range = document.body.createTextRange();
-                  range.moveToElementText(env.element);
-                  range.select();
-                } else if (window.getSelection) {
-                  let selection = window.getSelection();
-                  let range = document.createRange();
-                  range.selectNodeContents(env.element);
-                  selection.removeAllRanges();
-                    selection.addRange(range);
-                }
-              });
-              return button;
-            })'
-        ></script>
   default:
     body:
-      theme-base: theme-base-0d
+      theme-base: theme-base-0d # 可选的值08~0f，见<https://github.com/poole/lanyon>
       layout-reverse: false # 开启后sidebar在右边，反之左边
       sidebar-overlay: false # 开启后正文不随sidebar移动而移动
     sidebar:
-      avatar: # 侧边栏显示的头像
-        enable: true
-        img: https://gravatar.loli.net/avatar/a12c5fff23dde00df79af9aca4e7b6e4?s=300 # 头像的地址
-      nav:
-        - title: '<i class="fas fa-home fa-fw"></i> 我的主页'
-          href: https://wu-kan.cn/
-        - title: '<i class="fas fa-file-code fa-fw"></i> 这篇文档'
-          href: /
-      simple_jekyll_search:
-        enable: false
-        full_text_search: false # 可能导致缓慢的搜索和加载
-      append_to_sidebar:
-        - | # 目录插件
-          <aside id="toc" style="max-height: 50vh;overflow: auto;">
-            目录
-          </aside>
-          <script
-            async="async"
-            src='https://cdn.jsdelivr.net/npm/html-contents/html-contents.min.js'
-            onload="htmlContents('#toc', {listType: 'o', filter: function(arr) {return !arr.matches('.masthead-title')}})"
-          ></script>
-        - | # Copyright
-          <div>
-            <i class="fas fa-copyright fa-fw"></i>
-            2020 WuK
-          </div>
-        - | # 不蒜子页面统计
-          <div>
-            <div>
-              <i class="fas fa-eye fa-fw"></i>
-              <span id="busuanzi_value_page_pv">
-                <i class="fas fa-spinner fa-pulse"></i>
-              </span>次
-            </div>
-            <div>
-              <i class="fas fa-paw fa-fw"></i>
-              <span id="busuanzi_value_site_pv">
-                <i class="fas fa-spinner fa-pulse"></i>
-              </span>枚
-            </div>
-            <div>
-              <i class="fas fa-user-friends fa-fw"></i>
-              <span id="busuanzi_value_site_uv">
-                <i class="fas fa-spinner fa-pulse"></i>
-              </span>人
-            </div>
-            <script
-              src='https://cdn.jsdelivr.net/npm/busuanzi'
-              defer='defer'
-            ></script>
-          </div>
-      wordcount:
-        enable: true
-        alert: <i class="fas fa-user-edit fa-fw"></i>
-        kilo: 千
-        unit: 字
+      disable: true
     append_to_head: # 通过内嵌html的方式引入并定制插件，删改前确定知道自己在做什么。定制插件的方式可以参考这篇文章<https://wu-kan.cn/_posts/2019-01-18-基于Jekyll搭建个人博客/>
-      - |
+      - | #一些页面优化标签
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=1"
@@ -222,12 +80,12 @@ jekyll-theme-WuK:
           icon"
           href="https://gravatar.loli.net/avatar/a12c5fff23dde00df79af9aca4e7b6e4?s=32"
         />
-      - | # lanyon的页面样式
+      - | # 来自lanyon的页面样式
         <link
           rel="stylesheet"
           href="https://cdn.jsdelivr.net/combine/gh/poole/lanyon@ac85a3115c094b3e6cb92cc41771e98b443f6c5d/public/css/poole.min.css,gh/poole/lanyon@ac85a3115c094b3e6cb92cc41771e98b443f6c5d/public/css/lanyon.min.css"
         />
-      - | #对于lanyon的一些补丁，Hide the sidebar checkbox that we toggle with `.sidebar-toggle`
+      - | #对于lanyon侧边栏按钮的一些补丁，Hide the sidebar checkbox that we toggle with `.sidebar-toggle`
         <style>
           .sidebar-checkbox {
             display: none;
@@ -277,7 +135,7 @@ jekyll-theme-WuK:
                 "mode": "fixed",
                 "hidden": true,
                 "content": {
-                  "link": ["https://jekyll-theme-WuK.wu-kan.cn"],
+                  "link": ["https://wu-kan.cn"],
                   "skin": ["要换成我的朋友吗？", "让她放个假吧~"],
                   "custom": [{
                     "selector": "a",
@@ -389,31 +247,29 @@ jekyll-theme-WuK:
         </style>
       - | # 在这里自定义你的页面样式吧~
         <style>
-          pre {
-            max-height: 50vh;
-            overflow: auto;
-            background-color: rgba(0, 0, 0, 0);
-          }
           img {
             display: inline-block;
             margin: 0;
           }
         </style>
 
-markdown: kramdown
-kramdown: # 见https://kramdown.gettalong.org/options.html
-  input: GFM # 见http://jekyllcn.com/docs/configuration/#kramdown
-  syntax_highlighter_opts: # 可见https://kramdown.gettalong.org/syntax_highlighter/rouge.html
-    disable: true # 关掉默认的高亮，换用prismjs
+readme_index:
+  with_frontmatter: true
 
 # permalink: /_posts/:year-:month-:day-:title/ #生成文章的地址格式，我希望它和_posts目录下的格式一样
-# timezone: Asia/Shanghai # 解决githubpage显示时间不正确的问题，见https://www.iana.org/time-zones
+# timezone: Asia/Shanghai # 解决githubpage显示时间不正确的问题，见<https://www.iana.org/time-zones>
 # future: false # 不发布时间在未来的文章
 
 # limit_posts: 999 # 限制博文数量
 # encoding: utf-8
 
-# 以下为 githubpage上不可修改的参数，见https://help.github.com/en/github/working-with-github-pages/about-github-pages-and-jekyll
+markdown: kramdown
+kramdown: # 见<https://kramdown.gettalong.org/options.html>
+  input: GFM # 见<http://jekyllcn.com/docs/configuration/#kramdown>
+  syntax_highlighter_opts: # 可见<https://kramdown.gettalong.org/syntax_highlighter/rouge.html>
+    disable: true # 关掉默认的高亮，换用prismjs
+
+# 以下为 githubpage上不可修改的参数，见<https://help.github.com/en/github/working-with-github-pages/about-github-pages-and-jekyll>
 #lsi: false # 为相关文章生成索引
 #safe: true # 禁用自定义插件
 #source: [your repo's top level directory] # Jekyll 读取文件的路径
@@ -424,11 +280,3 @@ kramdown: # 见https://kramdown.gettalong.org/options.html
 #kramdown:
 #  math_engine: mathjax
 #  syntax_highlighter: rouge
-
-plugins: # https://jekyllrb.com/docs/plugins/ githubpage上支持的插件见https://pages.github.com/versions/
-  - jekyll-readme-index
-  - jekyll-default-layout
-  - jekyll-seo-tag
-
-readme_index:
-  with_frontmatter: true

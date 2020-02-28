@@ -6,7 +6,7 @@ title: README
 
 感谢使用我的博客主题，下面跟随一些简单操作快速生成你的站点/文档/展示页面吧~无需命令行~
 
-![License](https://img.shields.io/github/license/wu-kan/jekyll-theme-WuK.svg)![commit-activity](https://img.shields.io/github/commit-activity/m/wu-kan/jekyll-theme-WuK.svg)![last-commit](https://img.shields.io/github/last-commit/wu-kan/jekyll-theme-WuK.svg)![CountLanguage](https://img.shields.io/github/languages/count/wu-kan/jekyll-theme-WuK.svg)![TopLanguage](https://img.shields.io/github/languages/top/wu-kan/jekyll-theme-WuK.svg)![CodeSize](https://img.shields.io/github/languages/code-size/wu-kan/jekyll-theme-WuK.svg)![RepoSize](https://img.shields.io/github/repo-size/wu-kan/jekyll-theme-WuK.svg)![Downloads](https://img.shields.io/github/downloads/wu-kan/jekyll-theme-WuK/total.svg)![Watchers](https://img.shields.io/github/watchers/wu-kan/jekyll-theme-WuK.svg)![contributors](https://img.shields.io/github/contributors-anon/wu-kan/jekyll-theme-WuK.svg)![Release](https://img.shields.io/github/v/release/wu-kan/jekyll-theme-WuK.svg)![release-date](https://img.shields.io/github/release-date/wu-kan/jekyll-theme-WuK.svg)
+![License](https://img.shields.io/github/license/wu-kan/jekyll-theme-WuK)![commit-activity](https://img.shields.io/github/commit-activity/m/wu-kan/jekyll-theme-WuK)![last-commit](https://img.shields.io/github/last-commit/wu-kan/jekyll-theme-WuK)![CountLanguage](https://img.shields.io/github/languages/count/wu-kan/jekyll-theme-WuK)![TopLanguage](https://img.shields.io/github/languages/top/wu-kan/jekyll-theme-WuK)![CodeSize](https://img.shields.io/github/languages/code-size/wu-kan/jekyll-theme-WuK)![RepoSize](https://img.shields.io/github/repo-size/wu-kan/jekyll-theme-WuK)![Downloads](https://img.shields.io/github/downloads/wu-kan/jekyll-theme-WuK/total)![Watchers](https://img.shields.io/github/watchers/wu-kan/jekyll-theme-WuK)![contributors](https://img.shields.io/github/contributors-anon/wu-kan/jekyll-theme-WuK)![Release](https://img.shields.io/github/v/release/wu-kan/jekyll-theme-WuK)![release-date](https://img.shields.io/github/release-date/wu-kan/jekyll-theme-WuK)
 
 <!-- slide vertical=true -->
 
@@ -42,7 +42,7 @@ title: README
 
 删除`_post/`下的博文和`assets/image/`目录下的图片，开始写你自己的文章啦~
 
-欢迎[![Star](https://img.shields.io/github/stars/wu-kan/wu-kan.github.io.svg)](https://github.com/wu-kan/wu-kan.github.io)、[![Fork](https://img.shields.io/github/forks/wu-kan/wu-kan.github.io.svg)](https://github.com/wu-kan/wu-kan.github.io/fork)、[![Issue](https://img.shields.io/github/issues/wu-kan/wu-kan.github.io.svg)](https://github.com/wu-kan/wu-kan.github.io/issues)！
+欢迎[![Star](https://img.shields.io/github/stars/wu-kan/wu-kan.github.io)](https://github.com/wu-kan/wu-kan.github.io)、[![Fork](https://img.shields.io/github/forks/wu-kan/wu-kan.github.io)](https://github.com/wu-kan/wu-kan.github.io/fork)、[![Issue](https://img.shields.io/github/issues/wu-kan/wu-kan.github.io)](https://github.com/wu-kan/wu-kan.github.io/issues)！
 
 <!-- slide -->
 
@@ -62,11 +62,89 @@ title: README
 
 <!-- slide -->
 
-## 展示页的说明和使用技巧
+## Demo
+
+<!-- slide vertical=true -->
+
+![Demo](./screenshot.png)
+
+<!-- slide -->
+
+## 文件结构
+
+我的主题主要实现了如下几种渲染页面的样式供选择。
+
+<!-- slide vertical=true -->
+
+### `_layout/default.html`
+
+基于[poole/lanyon](https://github.com/poole/lanyon)的页面，提供一个侧边栏和可随侧边栏移动的 warp。
+
+<!-- slide vertical=true -->
+
+### `_layout/page.html`
+
+基于`_layout/default.html`，提供了一个标题栏`.masthead`和文本框的`.content`。
+
+<!-- slide vertical=true -->
+
+### `_layout/archive.html`
+
+基于`_layout/page.html`的归档页。
+
+示例：<https://wu-kan.cn/archive/>
+
+当前我对它不是很满意，可能会在以后的版本中修改。
+
+<!-- slide vertical=true -->
+
+### `_layout/tags.html`
+
+基于`_layout/page.html`的标签页。
+
+示例：<https://wu-kan.cn/tags/>
+
+当前我对它不是很满意，可能会在以后的版本中修改。
+
+<!-- slide vertical=true -->
+
+### `_layout/comments.html`
+
+基于`_layout/page.html`的留言页，留言插件使用了[Valine](https://valine.js.org/)。
+
+示例：<https://wu-kan.cn/comments/>
+
+<!-- slide vertical=true -->
+
+### `_layout/post.html`
+
+基于`_layout/comments.html`的博文页，为每篇博文增加描述信息。
+
+示例：[基于 Jekyll 搭建个人博客](https://wu-kan.cn/_posts/2019-01-18-%E5%9F%BA%E4%BA%8EJekyll%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/)
+
+<!-- slide vertical=true -->
+
+### `_layout/page404.html`
+
+基于[腾讯志愿者](http://e.t.qq.com/Tencent-Volunteers)的公益 404 页。
+
+示例：<https://wu-kan.cn/404>
+
+<!-- slide vertical=true -->
+
+### `_layout/merger.html`
+
+基于 merger 的打赏页。
+
+示例：<https://wu-kan.cn/merger/>
+
+<!-- slide vertical=true -->
+
+### `_layout/home`
 
 从`v3.1.0`版本开始，`_layout/home`被我重写，基于[hakimel/reveal.js](https://github.com/hakimel/reveal.js)实现了一个简洁的展示页面，既可以作为博客的封面，也可以用作 presentation！
 
-示例：[我的数图期末展示页面](https://wu-kan.cn/_posts/2019-12-10-%E6%95%B0%E5%9B%BE%E6%9C%9F%E6%9C%ABProject/)
+示例：[我的数图期末展示页](https://wu-kan.cn/_posts/2019-12-10-%E6%95%B0%E5%9B%BE%E6%9C%9F%E6%9C%ABProject/)
 
 <!-- slide vertical=true -->
 
@@ -78,19 +156,17 @@ title: README
 
 如果你希望使用它来渲染主页之外的页面，可以在你的 markdown 的 yaml 头中设置`_layout: home`即可！当然，如果你不希望使用它来渲染主页，你也可以将主页的 layout 设置成其他的。
 
-这是一个仍在开发的特性（主要是找不到美观精致的[展示主题](https://github.com/hakimel/reveal.js/tree/master/css/theme)，如果你有合适的欢迎给我发 issue）。
+想针对特定页面默认开启侧边栏？在 yaml 头中设置`sidebar_open: true`即可！
+
+想针对特定页面隐藏侧边栏？在 yaml 头中设置`sidebar_disable: true`即可！会覆盖`sidebar_open`的设置。
+
+<!-- slide vertical=true -->
+
+这是一个仍在开发的特性（主要是找不到美观精致的[展示主题](https://github.com/hakimel/reveal.js/tree/master/css/theme)），如果有建议/需求欢迎 issue！
 
 <!-- slide vertical=true -->
 
 更多的功能，请尽情探索[hakimel/reveal.js](https://github.com/hakimel/reveal.js)！~~例如，按 Esc 可以生成一个 ppt 大纲~~
-
-<!-- slide -->
-
-## Demo
-
-<!-- slide vertical=true -->
-
-![Demo](./screenshot.png)
 
 <!-- slide -->
 
@@ -112,7 +188,7 @@ title: README
 
 <!-- slide vertical=true -->
 
-目标是打造一个尽可能简洁，而可定制内容又尽可能多的博客。如果有更好的建议，欢迎给我提 Issue！
+目标是打造一个尽可能简洁，而可定制内容又尽可能丰富的博客。如果有更好的建议，欢迎给我提 Issue！
 
 <!-- slide -->
 
@@ -194,7 +270,9 @@ Live2D Model 来自于[imuncle/live2d](https://github.com/imuncle/live2d)和[xia
 
 <!-- slide vertical=true -->
 
-这么大的更新感觉叫“v4.0.0”也不为过嘛。
+这么大的更新感觉版本号改成“4.0.0”也不为过嘛。
+
+不过实际上这个版本保持了和前一个版本的兼容，因此是“3.1.0”。
 
 <!-- slide vertical=true -->
 
