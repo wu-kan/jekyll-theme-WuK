@@ -12,35 +12,95 @@ title: README
 
 ### 第一步
 
-点这个链接<https://github.com/wu-kan/wu-kan.github.io/fork>，把[示例站点](https://wu-kan.cn) fork 到你的仓库，并在设置里开启 gh-pages
+点这个链接<https://github.com/wu-kan/wu-kan.github.io/fork>，把[示例站点](https://wu-kan.cn) fork 到你的仓库。
 
 <!-- slide vertical=true -->
 
 ### 第二步
 
-修改`CNAME`中的网址为自己的网址，如`wu-kan.cn`。
+在你 Fork 之后的仓库里，选择 Setting，将仓库名改成`your-name.github.io`。
 
-如果没有自己的域名，可以直接删除这个文件，将仓库重命名为`username.github.io`。
+例如这里我用来示例的 GitHub 小号是 @Mizuno-Ai ，改的名字就是`Mizuno-Ai.github.io`。
 
-其中`username`是你的 github 账号名，如`wu-kan`；生成的博客将在这个地址。
+<!-- slide vertical=true -->
+
+![step.2](./step.2.webp)
 
 <!-- slide vertical=true -->
 
 ### 第三步
 
-稍等几分钟，现在你的博客应该可以访问了！
+回到根目录下，删除`CNAME`文件。
+
+<!-- slide vertical=true -->
+
+![step.3.1](./step.3.1.webp)
+
+<!-- slide vertical=true -->
+
+![step.3.2](./step.3.2.webp)
+
+<!-- slide vertical=true -->
+
+![step.3.3](./step.3.3.webp)
+
+<!-- slide vertical=true -->
+
+回到 Setting，拉到下面找到 Github Pages 相关选项，将 Source 从改成 None 改到 master branch。
+
+<!-- slide vertical=true -->
+
+![step.3.4](./step.3.4.webp)
+
+<!-- slide vertical=true -->
+
+稍等一下，应该会提示你的博客地址可以访问了！你已经成功大半啦~
 
 <!-- slide vertical=true -->
 
 ### 第四步
 
-用你自己的信息配置`_config.yml`，能看懂多少就改多少。大部分配置项我都加了注释。
+回到仓库根目录下，自行配置`_config.yml`，能看懂多少就改多少。大部分配置项我都加了注释。
+
+<!-- slide vertical=true -->
+
+![step.4.1](./step.4.1.webp)
+
+<!-- slide vertical=true -->
+
+![step.4.2](./step.4.2.webp)
+
+<!-- slide vertical=true -->
+
+![step.4.3](./step.4.3.webp)
+
+<!-- slide vertical=true -->
+
+要注意 yaml 格式中缩进是很重要的，不要破坏本来的缩进。
 
 <!-- slide vertical=true -->
 
 ### 第五步
 
-删除`_post/`下的博文和`assets/image/`目录下的图片，开始写你自己的文章啦~
+回到仓库根目录下，点开`/_posts/`文件夹，这个目录存放博客文章。点 Create new file 就可以写你自己的博客了。这些文章使用的格式是 [Markdown](https://www.runoob.com/markdown/md-tutorial.html)，这是一种非常简单易用的有格式文本标记语言，文件后缀名是 `md`。
+
+<!-- slide vertical=true -->
+
+![step.5.1](./step.5.1.webp)
+
+<!-- slide vertical=true -->
+
+文件命名方式需要是`日期-标题.md`；文件内容前最好要有一个`title: 标题`的 yaml 头，以防止显示错乱。
+
+<!-- slide vertical=true -->
+
+![step.5.2](./step.5.2.webp)
+
+<!-- slide vertical=true -->
+
+写好之后和改配置的操作类似，点 Commit 提交。现在再访问你的博客，可以发现你的博文已经出现在归档页的最上面了！Enjoy~
+
+<!-- slide vertical=true -->
 
 欢迎[![Star](https://img.shields.io/github/stars/wu-kan/wu-kan.github.io)](https://github.com/wu-kan/wu-kan.github.io)、[![Fork](https://img.shields.io/github/forks/wu-kan/wu-kan.github.io)](https://github.com/wu-kan/wu-kan.github.io/fork)、[![Issue](https://img.shields.io/github/issues/wu-kan/wu-kan.github.io)](https://github.com/wu-kan/wu-kan.github.io/issues)！
 
@@ -76,21 +136,21 @@ title: README
 
 <!-- slide vertical=true -->
 
-### `_layout/default.html`
+### `layout: default`
 
 基于[poole/lanyon](https://github.com/poole/lanyon)的页面，提供一个侧边栏和可随侧边栏移动的 warp。
 
 <!-- slide vertical=true -->
 
-### `_layout/page.html`
+### `layout: page`
 
-基于`_layout/default.html`，提供了一个标题栏`.masthead`和文本框的`.content`。
+基于'layout: default`，提供了一个标题栏`.masthead`和文本框的`.content`。
 
 <!-- slide vertical=true -->
 
-### `_layout/archive.html`
+### `layout: archive`
 
-基于`_layout/page.html`的归档页。
+基于'layout: page`的归档页。
 
 示例：<https://wu-kan.cn/archive/>
 
@@ -98,9 +158,9 @@ title: README
 
 <!-- slide vertical=true -->
 
-### `_layout/tags.html`
+### 'layout: tags`
 
-基于`_layout/page.html`的标签页。
+基于'layout: page`的标签页。
 
 示例：<https://wu-kan.cn/tags/>
 
@@ -108,23 +168,23 @@ title: README
 
 <!-- slide vertical=true -->
 
-### `_layout/comments.html`
+### 'layout: comments`
 
-基于`_layout/page.html`的留言页，留言插件使用了[Valine](https://valine.js.org/)。
+基于'layout: page`的留言页，留言插件使用了[Valine](https://valine.js.org/)。
 
 示例：<https://wu-kan.cn/comments/>
 
 <!-- slide vertical=true -->
 
-### `_layout/post.html`
+### 'layout: post`
 
-基于`_layout/comments.html`的博文页，为每篇博文增加描述信息。
+基于'layout: comments`的博文页，为每篇博文增加描述信息。
 
 示例：[基于 Jekyll 搭建个人博客](https://wu-kan.cn/_posts/2019-01-18-%E5%9F%BA%E4%BA%8EJekyll%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/)
 
 <!-- slide vertical=true -->
 
-### `_layout/page404.html`
+### 'layout: page404`
 
 基于[腾讯志愿者](http://e.t.qq.com/Tencent-Volunteers)的公益 404 页。
 
@@ -132,7 +192,7 @@ title: README
 
 <!-- slide vertical=true -->
 
-### `_layout/merger.html`
+### 'layout: merger`
 
 基于 merger 的打赏页。
 
@@ -140,9 +200,9 @@ title: README
 
 <!-- slide vertical=true -->
 
-### `_layout/home`
+### 'layout: home`
 
-从`v3.1.0`版本开始，`_layout/home`被我重写，基于[hakimel/reveal.js](https://github.com/hakimel/reveal.js)实现了一个简洁的展示页面，既可以作为博客的封面，也可以用作 presentation！
+从`v3.1.0`版本开始，'layout: home`被我重写，基于[hakimel/reveal.js](https://github.com/hakimel/reveal.js)实现了一个简洁的展示页面，既可以作为博客的封面，也可以用作 presentation！
 
 示例：[我的数图期末展示页](https://wu-kan.cn/_posts/2019-12-10-%E6%95%B0%E5%9B%BE%E6%9C%9F%E6%9C%ABProject/)
 
@@ -259,7 +319,7 @@ Live2D Model 来自于[imuncle/live2d](https://github.com/imuncle/live2d)和[xia
 - 使用 bundle 管理版本和运行依赖
 - 使用 Remote_theme 将博客主题和博文分离
 - 部署 gitlab 镜像站，解决百度爬虫爬不到的问题
-- 基于[hakimel/reveal.js](https://github.com/hakimel/reveal.js)重写`_layout/home`
+- 基于[hakimel/reveal.js](https://github.com/hakimel/reveal.js)重写'/\_layout/home`
 - 更换 live2d 插件为[Dreamer-Paul/Pio](https://github.com/Dreamer-Paul/Pio)
 - 更换 live2d 模型
 - 定制 live2d 提示语
