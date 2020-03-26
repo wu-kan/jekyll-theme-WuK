@@ -30,23 +30,7 @@ title: README
 
 ### 第三步
 
-回到根目录下，删除`CNAME`文件。
-
-<!-- slide vertical=true -->
-
-![step.3.1](./step.3.1.webp)
-
-<!-- slide vertical=true -->
-
-![step.3.2](./step.3.2.webp)
-
-<!-- slide vertical=true -->
-
-![step.3.3](./step.3.3.webp)
-
-<!-- slide vertical=true -->
-
-回到 Setting，拉到下面找到 Github Pages 相关选项，将 Source 从改成 None 改到 master branch。
+把 Setting 拉到下面找到 Github Pages 相关选项，将 Source 从改成 None 改到 master branch。
 
 <!-- slide vertical=true -->
 
@@ -144,13 +128,13 @@ title: README
 
 ### `layout: page`
 
-基于'layout: default`，提供了一个标题栏`.masthead`和文本框的`.content`。
+基于`layout: default`，提供了一个标题栏`.masthead`和文本框的`.content`。
 
 <!-- slide vertical=true -->
 
 ### `layout: archive`
 
-基于'layout: page`的归档页。
+基于`layout: page`的归档页。
 
 示例：<https://wu-kan.cn/archive/>
 
@@ -158,9 +142,9 @@ title: README
 
 <!-- slide vertical=true -->
 
-### 'layout: tags`
+### `layout: tags`
 
-基于'layout: page`的标签页。
+基于`layout: page`的标签页。
 
 示例：<https://wu-kan.cn/tags/>
 
@@ -168,23 +152,23 @@ title: README
 
 <!-- slide vertical=true -->
 
-### 'layout: comments`
+### `layout: comments`
 
-基于'layout: page`的留言页，留言插件使用了[Valine](https://valine.js.org/)。
+基于`layout: page`的留言页，留言插件使用了[Valine](https://valine.js.org/)。
 
 示例：<https://wu-kan.cn/comments/>
 
 <!-- slide vertical=true -->
 
-### 'layout: post`
+### `layout: post`
 
-基于'layout: comments`的博文页，为每篇博文增加描述信息。
+基于`layout: comments`的博文页，为每篇博文增加描述信息。
 
 示例：[基于 Jekyll 搭建个人博客](https://wu-kan.cn/_posts/2019-01-18-%E5%9F%BA%E4%BA%8EJekyll%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/)
 
 <!-- slide vertical=true -->
 
-### 'layout: page404`
+### `layout: page404`
 
 基于[腾讯志愿者](http://e.t.qq.com/Tencent-Volunteers)的公益 404 页。
 
@@ -192,7 +176,7 @@ title: README
 
 <!-- slide vertical=true -->
 
-### 'layout: merger`
+### `layout: merger`
 
 基于 merger 的打赏页。
 
@@ -200,9 +184,9 @@ title: README
 
 <!-- slide vertical=true -->
 
-### 'layout: home`
+### `layout: home`
 
-从`v3.1.0`版本开始，'layout: home`被我重写，基于[hakimel/reveal.js](https://github.com/hakimel/reveal.js)实现了一个简洁的展示页面，既可以作为博客的封面，也可以用作 presentation！
+从`v3.1.0`版本开始，`layout: home`被我重写，基于[hakimel/reveal.js](https://github.com/hakimel/reveal.js)实现了一个简洁的展示页面，既可以作为博客的封面，也可以用作 presentation！
 
 示例：[我的数图期末展示页](https://wu-kan.cn/_posts/2019-12-10-%E6%95%B0%E5%9B%BE%E6%9C%9F%E6%9C%ABProject/)
 
@@ -314,12 +298,19 @@ Live2D Model 来自于[imuncle/live2d](https://github.com/imuncle/live2d)和[xia
 
 <!-- slide vertical=true -->
 
+### 2020-03-27 v3.1.1
+
+- 删去壁纸，加快本地测试速度
+- 引入 [chartjs/Chart.js](https://github.com/chartjs/Chart.js)
+
+<!-- slide vertical=true -->
+
 ### 2020-02-29 v3.1.0
 
 - 使用 bundle 管理版本和运行依赖
 - 使用 Remote_theme 将博客主题和博文分离
 - 部署 gitlab 镜像站，解决百度爬虫爬不到的问题
-- 基于[hakimel/reveal.js](https://github.com/hakimel/reveal.js)重写'/\_layout/home`
+- 基于[hakimel/reveal.js](https://github.com/hakimel/reveal.js)重写`layout: home`
 - 更换 live2d 插件为[Dreamer-Paul/Pio](https://github.com/Dreamer-Paul/Pio)
 - 更换 live2d 模型
 - 定制 live2d 提示语
