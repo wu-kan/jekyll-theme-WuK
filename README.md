@@ -30,11 +30,15 @@ title: README
 
 ### 第三步
 
-把 Setting 拉到下面找到 Github Pages 相关选项，将 Source 从改成 None 改到 master branch。
+把 Setting 拉到下面找到 Github Pages 相关选项，将 Source 从改成 None 改到 master branch，再将 Custom domain 改成你的网址。
 
 <!-- slide vertical=true -->
 
 ![step.3.4](./step.3.4.webp)
+
+<!-- slide vertical=true -->
+
+![step.3.5](./step.3.5.webp)
 
 <!-- slide vertical=true -->
 
@@ -298,10 +302,11 @@ Live2D Model 来自于[imuncle/live2d](https://github.com/imuncle/live2d)和[xia
 
 <!-- slide vertical=true -->
 
-### 2020-03-27 v3.1.1
+### 2020-03-28 v3.1.1
 
 - 删去壁纸，加快本地测试速度
-- 引入 [chartjs/Chart.js](https://github.com/chartjs/Chart.js)
+- 修复 `layout: home` 中代码块渲染可能存在的一些问题
+- `layout: page`引入 [chartjs/Chart.js](https://github.com/chartjs/Chart.js)
 
 <!-- slide vertical=true -->
 

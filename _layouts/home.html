@@ -3,7 +3,9 @@ layout: default
 ---
 {{ site.jekyll-theme-WuK.home.append_before }}
 <div class="slides">
-  <section {% for node in site.jekyll-theme-WuK.home.append_to_section_tag %}{{ node.key }}{% if node.value %}='{{ node.value|escape }}'{% endif %} {% endfor %}>
-    <textarea data-template>{{ content }}</textarea>
+  <section
+    {% for node in site.jekyll-theme-WuK.home.append_to_section_tag %}{{ node.key }}{% if node.value %}='{{ node.value|escape }}'
+    {% endif %} {% endfor %}>
+    <textarea data-template>{{ page.content }}</textarea>
   </section>
 </div>
