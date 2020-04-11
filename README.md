@@ -1,5 +1,5 @@
 ---
-title: README
+title: Home
 ---
 
 ## Quick Start
@@ -204,9 +204,9 @@ title: README
 
 如果你希望使用它来渲染主页之外的页面，可以在你的 markdown 的 yaml 头中设置`layout: home`即可！当然，如果你不希望使用它来渲染主页，你也可以将主页的 layout 设置成其他的。
 
-想针对特定页面默认开启侧边栏？在 yaml 头中设置`sidebar_open: true`即可！
+想针对特定页面默认开启侧边栏？在 yaml 头中设置`jekyll-theme-WuK: sidebar_open: true`即可！
 
-想针对特定页面隐藏侧边栏？在 yaml 头中设置`sidebar_disable: true`即可！会覆盖`sidebar_open`的设置。
+想针对特定页面隐藏侧边栏？在 yaml 头中设置`jekyll-theme-WuK: sidebar_disable: true`即可！会覆盖`sidebar_open`的设置。
 
 <!-- slide vertical=true -->
 
@@ -299,6 +299,14 @@ Live2D Model 来自于[imuncle/live2d](https://github.com/imuncle/live2d)和[xia
 <!-- slide -->
 
 ## 历程
+
+<!-- slide vertical=true -->
+
+### 2020-04-12 v3.1.2
+
+- [poole/lanyon](https://github.com/poole/lanyon) 更新至 v1.1.0
+- Live2D 增加变换主题按钮
+- page 中用到的变量移动到`jekyll-theme-WuK`命名空间下
 
 <!-- slide vertical=true -->
 

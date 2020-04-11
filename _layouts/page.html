@@ -9,13 +9,13 @@ layout: default
   <h3 class="container masthead-title">
     {% if page.title and page.title != "Home" %}
     {{ page.title }}
-    <a href="{{ site.baseurl }}/" title="Home">
+    <a href="{{ '/' | absolute_url }}" title="Home">
       <small>
         {{ site.title }}
       </small>
     </a>
     {% else %}
-    <a href="{{ site.baseurl }}/" title="Home">
+    <a href="{{ '/' | absolute_url }}" title="Home">
       {{ site.title }}
     </a>
     <small>
