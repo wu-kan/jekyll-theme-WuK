@@ -6,13 +6,15 @@ title: Home
 
 感谢使用我的博客主题，下面跟随一些简单操作快速生成你的站点/文档/展示页面吧~无需命令行~
 
+[在 Github 上阅读此页](https://github.com/wu-kan/jekyll-theme-WuK)
+
 ![License](https://img.shields.io/github/license/wu-kan/jekyll-theme-WuK)![commit-activity](https://img.shields.io/github/commit-activity/m/wu-kan/jekyll-theme-WuK)![last-commit](https://img.shields.io/github/last-commit/wu-kan/jekyll-theme-WuK)![CountLanguage](https://img.shields.io/github/languages/count/wu-kan/jekyll-theme-WuK)![TopLanguage](https://img.shields.io/github/languages/top/wu-kan/jekyll-theme-WuK)![CodeSize](https://img.shields.io/github/languages/code-size/wu-kan/jekyll-theme-WuK)![RepoSize](https://img.shields.io/github/repo-size/wu-kan/jekyll-theme-WuK)![Downloads](https://img.shields.io/github/downloads/wu-kan/jekyll-theme-WuK/total)![Watchers](https://img.shields.io/github/watchers/wu-kan/jekyll-theme-WuK)![contributors](https://img.shields.io/github/contributors-anon/wu-kan/jekyll-theme-WuK)![Release](https://img.shields.io/github/v/release/wu-kan/jekyll-theme-WuK)![release-date](https://img.shields.io/github/release-date/wu-kan/jekyll-theme-WuK)
 
 <!-- slide vertical=true -->
 
 ### 第一步
 
-点这个链接<https://github.com/wu-kan/wu-kan.github.io/fork>，把[示例站点](https://wu-kan.cn) fork 到你的仓库。
+点这个链接<https://github.com/wu-kan/wu-kan.github.io/fork>，把[示例站点](https://wu-kan.cn) fork 到你的仓库。注意，fork 的是示例站点，fork 主题仓库是不完整的！
 
 <!-- slide vertical=true -->
 
@@ -259,8 +261,6 @@ title: Home
 博客引擎来自于[jekyll/jekyll](https://github.com/jekyll/jekyll)，感谢。
 
 CDN 加速服务来自于<https://cdn.jsdelivr.net/>和<https://loli.net>，感谢。
-
-ci/cd 来自于[gitlab](https://gitlab.com/wu-kan/wu-kan-github-io)，感谢。
 
 <!-- slide vertical=true -->
 

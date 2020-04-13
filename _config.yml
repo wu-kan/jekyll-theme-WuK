@@ -47,12 +47,6 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
           rel="stylesheet"
           href="https://cdn.jsdelivr.net/combine/gh/poole/lanyon@v1.1.0/public/css/poole.min.css,gh/poole/lanyon@v1.1.0/public/css/lanyon.min.css"
         />
-      - | #对于lanyon侧边栏按钮的一些补丁，Hide the sidebar checkbox that we toggle with `.sidebar-toggle`；建议不要改
-        <style>
-          .sidebar-toggle {
-            position: fixed;
-          }
-        </style>
       - | # 引入fontawesome图标样式
         <link
           rel="stylesheet"
@@ -162,6 +156,22 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
             font-family: Menlo, Monaco, "Courier New", Microsoft JhengHei, monospace;
           }
         </style>
+      - | #修复点击侧边栏按钮回到顶部的问题
+        <style>
+          .sidebar-checkbox {
+            display: none;
+          }
+          .sidebar-toggle {
+            position: fixed;
+          }
+        </style>
+      - | #修复行内图片默认样式
+        <style>
+          img {
+            display: inline-block;
+            margin: 0;
+          }
+        </style>
       - | # 侧边栏头像效果
         <style>
           .effect {
@@ -200,7 +210,7 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
             height: 4px;
           }
           ::-webkit-scrollbar-thumb {
-            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-image: linear-gradient(0deg, #00C0FF 0%, #FFCF00 50%, #FC4F4F 100%);
           }
         </style>
       - | # 选中字体颜色
@@ -210,15 +220,8 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
             background: #26351c;
           }
         </style>
-      - | # 如果你会CSS的话，在这里自定义你的页面样式吧~
-        <style>
-          img {
-            display: inline-block;
-            margin: 0;
-          }
-        </style>
     sidebar: # 此配置项下是一些关于侧边栏的配置
-      disable: true
+      disable: true # 是否不显示sidebar
       wordcount: # 全站字数统计
         enable: false # 本地调试时建议关闭，非常影响站点生成速度（所需时间与博文数量的平方成正比）
   home:
