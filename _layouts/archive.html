@@ -18,7 +18,7 @@ layout: page
 {% endif %}
 {% endfor %}
 
-{% assign counts = counts | split: ', ' %}
+{% assign counts = counts | split: ', ' | reverse %}
 
 {% if site.jekyll-theme-WuK.archive.pie_chart.enable %}
 
