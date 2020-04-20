@@ -302,6 +302,14 @@ Live2D Model 来自于[imuncle/live2d](https://github.com/imuncle/live2d)和[xia
 
 <!-- slide vertical=true -->
 
+### 2020-04-20 v3.1.3
+
+- 归档页、标签页增加一个饼状统计图
+  - 好丑啊，可以关掉
+- 归档页现在按照年份归档
+
+<!-- slide vertical=true -->
+
 ### 2020-04-12 v3.1.2
 
 - [poole/lanyon](https://github.com/poole/lanyon) 更新至 v1.1.0
@@ -314,7 +322,6 @@ Live2D Model 来自于[imuncle/live2d](https://github.com/imuncle/live2d)和[xia
 
 - 删去壁纸，加快本地测试速度
 - 修复 `layout: home` 中代码块渲染可能存在的一些问题
-- `layout: page`引入 [chartjs/Chart.js](https://github.com/chartjs/Chart.js)
 
 <!-- slide vertical=true -->
 

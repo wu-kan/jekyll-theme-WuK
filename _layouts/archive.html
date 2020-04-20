@@ -5,11 +5,58 @@ layout: page
 {% if site.jekyll-theme-WuK.archive.posts_count.enable %}
 {{ site.posts.size }}{{ site.jekyll-theme-WuK.archive.posts_count.alert }}
 {% endif %}
-<ul>
+
+{% assign count = 1 %}
+{% for post in site.posts reversed %}
+{% assign year = post.date | date: '%Y' %}
+{% assign nyear = post.next.date | date: '%Y' %}
+{% if year != nyear %}
+{% assign counts = counts | append: count | append: ', ' %}
+{% assign count = 1 %}
+{% else %}
+{% assign count = count | plus: 1 %}
+{% endif %}
+{% endfor %}
+
+{% assign counts = counts | split: ', ' %}
+
+{% if site.jekyll-theme-WuK.archive.pie_chart.enable %}
+
+<div class="mermaid">
+  pie
+  {{ site.jekyll-theme-WuK.archive.pie_chart.title }}
+  {% assign i = 0 %}
   {% for post in site.posts %}
+  {% assign year = post.date | date: '%Y' %}
+  {% assign nyear = post.next.date | date: '%Y' %}
+  {% if year != nyear %}
+  "{{ year }}" : {{ counts[i] }}
+  {% assign i = i | plus: 1 %}
+  {% endif %}
+  {% endfor %}
+</div>
+{% endif %}
+
+<ul>
+  {% assign i = 0 %}
+  {% for post in site.posts %}
+  {% assign year = post.date | date: '%Y' %}
+  {% assign nyear = post.next.date | date: '%Y' %}
+  {% if year != nyear %}
+</ul>
+<h2>
+  {{ site.jekyll-theme-WuK.archive.alert }}
+  {% if site.jekyll-theme-WuK.archive.year_count %}
+  <small>{{ counts[i] }}</small>
+  {% endif %}
+  {{ year }}
+</h2>
+<ul>
+  {% assign i = i | plus: 1 %}
+  {% endif %}
   <li>
     <small>{{ post.date | date_to_string }}</small>
-    <a href="{{ post.url }}">{{ post.title }}</a>
+    <a href="{{ post.url | absolute_url }}">{{ post.title }}</a>
   </li>
   {% endfor %}
 </ul>
