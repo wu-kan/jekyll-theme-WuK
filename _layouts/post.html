@@ -16,7 +16,7 @@ layout: comments
     {{ page.content | number_of_words | divided_by: site.jekyll-theme-WuK.post.readtime.divided_by | plus: 1 }}{{ site.jekyll-theme-WuK.post.readtime.unit }}
     {% endif %}
     {% if site.jekyll-theme-WuK.post.visitor.enable %}
-    <span id="{{ page.url | absolute_url }}" class="leancloud-visitors" data-flag-title="{{ page.title }}">
+    <span class="leancloud-visitors" data-xid="{{ page.url }}" data-flag-title="{{ page.title }}">
       {{ site.jekyll-theme-WuK.post.visitor.alert }}
       <span class="leancloud-visitors-count">
         <i class="fas fa-spinner fa-pulse"></i>
