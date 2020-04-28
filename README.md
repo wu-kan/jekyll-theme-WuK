@@ -302,6 +302,13 @@ Live2D Model 来自于[imuncle/live2d](https://github.com/imuncle/live2d)和[xia
 
 <!-- slide vertical=true -->
 
+### 2020-04-28 v3.1.5
+
+- 修复博文字数统计忽略中文的问题
+- 修复 valine 阅读量统计失效的问题
+
+<!-- slide vertical=true -->
+
 ### 2020-04-20 v3.1.4
 
 - 修复归档页年份博文数量统计错误的问题
