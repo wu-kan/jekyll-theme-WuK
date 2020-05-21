@@ -1,7 +1,16 @@
 ---
 layout: default
 ---
-{% for node in site.jekyll-theme-WuK.page.append_before %}
+{% if site.jekyll-theme-WuK.page.katex.enable %}
+{{ site.jekyll-theme-WuK.page.katex.append }}
+{% endif %}
+{% if site.jekyll-theme-WuK.page.mermaid.enable %}
+{{ site.jekyll-theme-WuK.page.mermaid.append }}
+{% endif %}
+{% if site.jekyll-theme-WuK.page.prism.enable %}
+{{ site.jekyll-theme-WuK.page.prism.append }}
+{% endif %}
+{% for node in site.jekyll-theme-WuK.page.prepend %}
 {{ node }}
 {% endfor %}
 {% if site.jekyll-theme-WuK.page.masthead.enable %}
@@ -9,13 +18,13 @@ layout: default
   <h3 class="container masthead-title">
     {% if page.title and page.title != "Home" %}
     {{ page.title }}
-    <a href="{{ '/' | absolute_url }}" title="Home">
+    <a href="{{ '/' | relative_url }}" title="Home">
       <small>
         {{ site.title }}
       </small>
     </a>
     {% else %}
-    <a href="{{ '/' | absolute_url }}" title="Home">
+    <a href="{{ '/' | relative_url }}" title="Home">
       {{ site.title }}
     </a>
     <small>

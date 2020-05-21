@@ -50,16 +50,18 @@
     </nav>
     <div class="sidebar-item">
       {% if site.jekyll-theme-WuK.default.sidebar.simple_jekyll_search.enable %}
-      <div>
-        {{ site.jekyll-theme-WuK.default.sidebar.simple_jekyll_search.alert }}
-      </div>
+      {{ site.jekyll-theme-WuK.default.sidebar.simple_jekyll_search.append }}
+      {% endif %}
+      {% if site.jekyll-theme-WuK.default.sidebar.jekyll-toc.enable %}
+      {{ site.jekyll-theme-WuK.default.sidebar.jekyll-toc.prepend }}
+      {% include toc.html html=content ordered=true skipNoIDs=true sanitize=true id="toc" %}
       {% endif %}
       {% for node in site.jekyll-theme-WuK.default.sidebar.append_to_sidebar %}
       {{ node }}
       {% endfor %}
       {% if site.jekyll-theme-WuK.default.sidebar.wordcount.enable %}
       <div>
-        {{ site.jekyll-theme-WuK.default.sidebar.wordcount.alert }}
+        {{ site.jekyll-theme-WuK.default.sidebar.wordcount.prepend }}
         {% assign count = 0 %}
         {% for post in site.posts %}
         {% assign single_count = post.content | strip_html | strip_newlines | remove: " " | size %}

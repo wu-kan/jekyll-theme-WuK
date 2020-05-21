@@ -12,8 +12,8 @@ layout: page
 </div>
 {% endif %}
 {% for tag in site.tags %}
-<h2>
-  {{ site.jekyll-theme-WuK.tags.alert }}
+<h2 id="{{ tag[0] | url_encode }}">
+  {{ site.jekyll-theme-WuK.tags.prepend }}
   {% if site.jekyll-theme-WuK.tags.count %}
   <small>{{ tag[1].size }}</small>
   {% endif %}
@@ -23,7 +23,7 @@ layout: page
   {% for post in tag[1] %}
   <li>
     <small>{{ post.date | date_to_string }}</small>
-    <a href="{{ post.url | absolute_url }}">{{ post.title }}</a>
+    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
   </li>
   {% endfor %}
 </ul>

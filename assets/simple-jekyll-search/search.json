@@ -12,7 +12,7 @@ layout: null
       {% if site.jekyll-theme-WuK.default.sidebar.simple_jekyll_search.full_text_search %}
       "content"  : {{ post.content | jsonify }},
       {% endif %}
-      "url"      : "{{ post.url | absolute_url }}"
+      "url"      : "{{ post.url | relative_url }}"
     } {% unless forloop.last %},{% endunless %}
   {% endfor %}
   ,
@@ -26,7 +26,7 @@ layout: null
         {% if site.jekyll-theme-WuK.default.sidebar.simple_jekyll_search.full_text_search %}
         "content"  : {{ page.content | jsonify }},
         {% endif %}
-        "url"      : "{{ page.url | absolute_url }}"
+        "url"      : "{{ page.url | relative_url }}"
      {% endif %}
    } {% unless forloop.last %},{% endunless %}
   {% endfor %}

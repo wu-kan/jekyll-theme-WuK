@@ -3,7 +3,7 @@ layout: page
 ---
 {{ content }}
 {% if site.jekyll-theme-WuK.archive.posts_count.enable %}
-{{ site.posts.size }}{{ site.jekyll-theme-WuK.archive.posts_count.alert }}
+{{ site.posts.size }}{{ site.jekyll-theme-WuK.archive.posts_count.append }}
 {% endif %}
 
 {% assign count = 1 %}
@@ -44,8 +44,8 @@ layout: page
   {% assign nyear = post.next.date | date: '%Y' %}
   {% if year != nyear %}
 </ul>
-<h2>
-  {{ site.jekyll-theme-WuK.archive.alert }}
+<h2 id="{{ year | url_encode }}">
+  {{ site.jekyll-theme-WuK.archive.prepend }}
   {% if site.jekyll-theme-WuK.archive.year_count %}
   <small>{{ counts[i] }}</small>
   {% endif %}
@@ -56,7 +56,7 @@ layout: page
   {% endif %}
   <li>
     <small>{{ post.date | date_to_string }}</small>
-    <a href="{{ post.url | absolute_url }}">{{ post.title }}</a>
+    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
   </li>
   {% endfor %}
 </ul>

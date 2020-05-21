@@ -280,7 +280,7 @@ CDN 加速服务来自于<https://cdn.jsdelivr.net/>和<https://loli.net>，感�
 
 博客搜索插件来自于[christian-fei/Simple-Jekyll-Search](https://github.com/christian-fei/Simple-Jekyll-Search)，感谢。
 
-博文目录插件来自于[psalmody/html-contents](https://github.com/psalmody/html-contents)，感谢。
+博文目录插件来自于[allejo/jekyll-toc](https://github.com/allejo/jekyll-toc)，感谢。
 
 代码高亮及插件来自于[PrismJS](https://prismjs.com/)，感谢。
 
@@ -299,6 +299,17 @@ Live2D Model 来自于[imuncle/live2d](https://github.com/imuncle/live2d)和[xia
 <!-- slide -->
 
 ## 历程
+
+<!-- slide vertical=true -->
+
+### 2020-05-21 v3.2.0
+
+- 修复 reveal.js 自动更新到 4.0 版本后渲染错误的问题！
+- document 页回归，现在可以生成 github readme 风格的可打印文档
+- 修复当博文没有标签时仍然显示标签图标的 bug
+- 配置项中的 alert 命名不规范，全部换成 append/prepend
+- 博客目录插件更换成 [allejo/jekyll-toc](https://github.com/allejo/jekyll-toc)，纯 Liquid ！
+  - 下一步将按同样思路优化 katex、mermaid、prism 三个插件的渲染速度
 
 <!-- slide vertical=true -->
 

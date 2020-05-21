@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  {% if site.plugins contains 'jekyll-seo-tag' %}
+  {% seo %}
+  {% else %}
+  <title>
+    {% if page.title == "Home" %}
+    {{ site.title }} &middot; {{ site.tagline }}
+    {% else %}
+    {{ page.title }} &middot; {{ site.title }}
+    {% endif %}
+  </title>
+  {% endif %}
+  {% for node in site.jekyll-theme-WuK.document.append_to_head %}
+  {{ node }}
+  {% endfor %}
+</head>
+
+<body class="markdown-body">
+  {% if page.jekyll-theme-WuK.jekyll-toc.enable %}
+  {{ page.jekyll-theme-WuK.jekyll-toc.prepend }}
+  {% include toc.html html=content ordered=true skipNoIDs=true sanitize=true id="toc" %}
+  {% endif %}
+  {{ content }}
+</body>
+
+</html>
