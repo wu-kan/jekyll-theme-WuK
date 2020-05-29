@@ -2,29 +2,23 @@
 layout: page
 ---
 {{ content }}
+{% capture tags_archive %}
 {% if site.jekyll-theme-WuK.tags.pie_chart.enable %}
-<div class="mermaid">
-  pie
-  {{ site.jekyll-theme-WuK.tags.pie_chart.title }}
-  {% for tag in site.tags %}
-  "{{ tag[0] }}" : {{ tag[1].size }}
-  {% endfor %}
-</div>
-{% endif %}
+```mermaid
+pie
+{{ site.jekyll-theme-WuK.tags.pie_chart.title }}
 {% for tag in site.tags %}
-<h2 id="{{ tag[0] | url_encode }}">
-  {{ site.jekyll-theme-WuK.tags.prepend }}
-  {% if site.jekyll-theme-WuK.tags.count %}
-  <small>{{ tag[1].size }}</small>
-  {% endif %}
-  {{ tag[0] }}
-</h2>
-<ul>
-  {% for post in tag[1] %}
-  <li>
-    <small>{{ post.date | date_to_string }}</small>
-    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-  </li>
-  {% endfor %}
-</ul>
+"{{ tag[0] }}" : {{ tag[1].size }}
 {% endfor %}
+```
+{% endif %}
+
+{% for tag in site.tags %}
+## <span class="fa-layers fa-fw"><i class="fas fa-tag"></i>{% if site.jekyll-theme-WuK.tags.count %}<span class="fa-layers-counter">{{ tag[1].size }}</span>{% endif %}</span> {{ tag[0] }}
+
+{% for post in tag[1] %}
+- *{{ post.date | date_to_string }}* [{{ post.title }}]({{ post.url | relative_url }}){% endfor %}
+{% endfor %}
+
+{% endcapture %}
+{{ tags_archive | markdownify }}

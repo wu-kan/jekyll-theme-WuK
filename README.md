@@ -272,6 +272,8 @@ CDN 加速服务来自于<https://cdn.jsdelivr.net/>和<https://loli.net>，感�
 
 捐赠页来自[hifocus/merger](https://github.com/hifocus/merger)，感谢。
 
+页面压缩来自于[penibelst/jekyll-compress-html](https://github.com/penibelst/jekyll-compress-html)，感谢。
+
 <!-- slide vertical=true -->
 
 留言和阅读量系统来自于[Valine](https://valine.js.org/)和[LeanCloud](https://leancloud.cn/)，感谢。
@@ -299,6 +301,14 @@ Live2D Model 来自于[imuncle/live2d](https://github.com/imuncle/live2d)和[xia
 <!-- slide -->
 
 ## 历程
+
+<!-- slide vertical=true -->
+
+### 2020-05-29 v3.2.1
+
+- 使用 [penibelst/jekyll-compress-html](https://github.com/penibelst/jekyll-compress-html) 压缩生成页面大小
+- 优化 archive 、tags 页面生成速度
+- 新增 archive 自定义分组规则
 
 <!-- slide vertical=true -->
 

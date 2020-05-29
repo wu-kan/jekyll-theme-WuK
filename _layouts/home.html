@@ -6,6 +6,6 @@ layout: default
   <section
     {% for node in site.jekyll-theme-WuK.home.append_to_section_tag %}{{ node.key }}{% if node.value %}='{{ node.value|escape }}'
     {% endif %} {% endfor %}>
-    <textarea data-template>{{ page.content }}</textarea>
+    <textarea data-template>{{ content }}</textarea>
   </section>
 </div>
