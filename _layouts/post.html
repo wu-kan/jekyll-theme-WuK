@@ -3,33 +3,33 @@ layout: comments
 ---
 <div class="post">
   <span class="post-date">
-    {% if site.jekyll-theme-WuK.post.date.enable %}
-    {{ site.jekyll-theme-WuK.post.date.prepend }}
+    {% if page.jekyll-theme-WuK.post.date.enable %}
+    {{ page.jekyll-theme-WuK.post.date.prepend }}
     {{ page.date | date_to_string }}
     {% endif %}
-    {% if site.jekyll-theme-WuK.post.wordcount.enable %}
-    {{ site.jekyll-theme-WuK.post.wordcount.prepend }}
-    {{ page.content | strip_html | strip_newlines | remove: " " | size }}{{ site.jekyll-theme-WuK.post.wordcount.unit }}
+    {% if page.jekyll-theme-WuK.post.wordcount.enable %}
+    {{ page.jekyll-theme-WuK.post.wordcount.prepend }}
+    {{ page.content | strip_html | strip_newlines | remove: " " | size }}{{ page.jekyll-theme-WuK.post.wordcount.unit }}
     {% endif %}
-    {% if site.jekyll-theme-WuK.post.readtime.enable %}
-    {{ site.jekyll-theme-WuK.post.readtime.prepend }}
-    {{ page.content | strip_html | strip_newlines | remove: " " | size | divided_by: site.jekyll-theme-WuK.post.readtime.divided_by | plus: 1 }}{{ site.jekyll-theme-WuK.post.readtime.unit }}
+    {% if page.jekyll-theme-WuK.post.readtime.enable %}
+    {{ page.jekyll-theme-WuK.post.readtime.prepend }}
+    {{ page.content | strip_html | strip_newlines | remove: " " | size | divided_by: page.jekyll-theme-WuK.post.readtime.divided_by | plus: 1 }}{{ page.jekyll-theme-WuK.post.readtime.unit }}
     {% endif %}
-    {% if site.jekyll-theme-WuK.post.visitor.enable %}
+    {% if page.jekyll-theme-WuK.post.visitor.enable %}
     <span class="leancloud-visitors" id="{{ page.url | relative_url }}" data-xid="{{ page.url | relative_url }}" data-flag-title="{{ page.title }}">
-      {{ site.jekyll-theme-WuK.post.visitor.prepend }}
+      {{ page.jekyll-theme-WuK.post.visitor.prepend }}
       <span class="leancloud-visitors-count">
         <i class="fas fa-spinner fa-pulse"></i>
-      </span>{{ site.jekyll-theme-WuK.post.visitor.unit }}
+      </span>{{ page.jekyll-theme-WuK.post.visitor.unit }}
     </span>
     {% endif %}
-    {% if site.jekyll-theme-WuK.post.tags.enable %}
+    {% if page.jekyll-theme-WuK.post.tags.enable %}
     {% if page.tags.size > 0 %}
-    {{ site.jekyll-theme-WuK.post.tags.prepend }}
+    {{ page.jekyll-theme-WuK.post.tags.prepend }}
     {{ page.tags | array_to_sentence_string }}
     {% endif %}
     {% endif %}
-    {{ site.jekyll-theme-WuK.post.copyright }}
+    {{ page.jekyll-theme-WuK.post.copyright }}
     {% if page.jekyll-theme-WuK.background_music %}
     {{ page.jekyll-theme-WuK.background_music }}
     {% endif %}

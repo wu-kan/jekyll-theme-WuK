@@ -304,6 +304,12 @@ Live2D Model 来自于[imuncle/live2d](https://github.com/imuncle/live2d)和[xia
 
 <!-- slide vertical=true -->
 
+### 2020-06.21 v4.0.0
+
+- 将所有主题配置变量移动到 [front-matter-defaults](https://jekyllrb.com/docs/configuration/front-matter-defaults/)，从而使得所有页面可以自定义配置
+
+<!-- slide vertical=true -->
+
 ### 2020-05-29 v3.2.1
 
 - 使用 [penibelst/jekyll-compress-html](https://github.com/penibelst/jekyll-compress-html) 压缩生成页面大小

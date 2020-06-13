@@ -3,14 +3,14 @@ layout: page
 ---
 {{ content }}
 {% capture archive_content %}
-{% if site.jekyll-theme-WuK.archive.posts_count.enable %}
-{{ site.posts.size }}{{ site.jekyll-theme-WuK.archive.posts_count.append }}
+{% if page.jekyll-theme-WuK.archive.posts_count.enable %}
+{{ site.posts.size }}{{ page.jekyll-theme-WuK.archive.posts_count.append }}
 {% endif %}
 
 {% assign count = 1 %}
 {% for post in site.posts reversed %}
-{% assign year = post.date | date: site.jekyll-theme-WuK.archive.group_by %}
-{% assign nyear = post.next.date | date: site.jekyll-theme-WuK.archive.group_by %}
+{% assign year = post.date | date: page.jekyll-theme-WuK.archive.group_by %}
+{% assign nyear = post.next.date | date: page.jekyll-theme-WuK.archive.group_by %}
 {% if year != nyear %}
 {% assign counts = counts | append: count | append: ', ' %}
 {% assign count = 1 %}
@@ -19,14 +19,14 @@ layout: page
 {% endif %}
 {% endfor %}
 {% assign counts = counts | split: ', ' | reverse %}
-{% if site.jekyll-theme-WuK.archive.pie_chart.enable %}
+{% if page.jekyll-theme-WuK.archive.pie_chart.enable %}
 ```mermaid
 pie
-{{ site.jekyll-theme-WuK.archive.pie_chart.title }}
+{{ page.jekyll-theme-WuK.archive.pie_chart.title }}
 {% assign i = 0 %}
 {% for post in site.posts %}
-{% assign year = post.date | date: site.jekyll-theme-WuK.archive.group_by %}
-{% assign nyear = post.next.date | date: site.jekyll-theme-WuK.archive.group_by %}
+{% assign year = post.date | date: page.jekyll-theme-WuK.archive.group_by %}
+{% assign nyear = post.next.date | date: page.jekyll-theme-WuK.archive.group_by %}
 {% if year != nyear %}
 "{{ year }}" : {{ counts[i] }}
 {% assign i = i | plus: 1 %}
@@ -35,9 +35,9 @@ pie
 ```
 {% endif %}
 {% assign i = 0 %}
-{% for post in site.posts %}{% assign year = post.date | date: site.jekyll-theme-WuK.archive.group_by %}{% assign nyear = post.next.date | date: site.jekyll-theme-WuK.archive.group_by %}{% if year != nyear %}
+{% for post in site.posts %}{% assign year = post.date | date: page.jekyll-theme-WuK.archive.group_by %}{% assign nyear = post.next.date | date: page.jekyll-theme-WuK.archive.group_by %}{% if year != nyear %}
 
-## <span class="fa-layers fa-fw"><i class="fas fa-folder-open"></i>{% if site.jekyll-theme-WuK.archive.year_count %}<span class="fa-layers-counter">{{ counts[i] }}</span>{% endif %}</span> {{ year }}{% assign i = i | plus: 1 %}
+## <span class="fa-layers fa-fw"><i class="fas fa-folder-open"></i>{% if page.jekyll-theme-WuK.archive.year_count %}<span class="fa-layers-counter">{{ counts[i] }}</span>{% endif %}</span> {{ year }}{% assign i = i | plus: 1 %}
 
 {% endif %}
 - *{{ post.date | date_to_string }}* [{{ post.title }}]({{ post.url | relative_url }}){% endfor %}
