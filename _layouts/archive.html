@@ -34,6 +34,10 @@ pie
 {% endfor %}
 ```
 {% endif %}
+{% if page.jekyll-theme-WuK.archive.toc.enable %}
+- TOC
+{:toc}
+{% endif %}
 {% assign i = 0 %}
 {% for post in site.posts %}{% assign year = post.date | date: page.jekyll-theme-WuK.archive.group_by %}{% assign nyear = post.next.date | date: page.jekyll-theme-WuK.archive.group_by %}{% if year != nyear %}
 

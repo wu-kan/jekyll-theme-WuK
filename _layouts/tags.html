@@ -12,7 +12,10 @@ pie
 {% endfor %}
 ```
 {% endif %}
-
+{% if page.jekyll-theme-WuK.tags.toc.enable %}
+- TOC
+{:toc}
+{% endif %}
 {% for tag in site.tags %}
 ## <span class="fa-layers fa-fw"><i class="fas fa-tag"></i>{% if page.jekyll-theme-WuK.tags.count %}<span class="fa-layers-counter">{{ tag[1].size }}</span>{% endif %}</span> {{ tag[0] }}
 

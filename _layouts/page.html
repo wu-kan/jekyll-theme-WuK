@@ -1,15 +1,6 @@
 ---
 layout: default
 ---
-{% if page.jekyll-theme-WuK.page.katex.enable %}
-{{ page.jekyll-theme-WuK.page.katex.append }}
-{% endif %}
-{% if page.jekyll-theme-WuK.page.mermaid.enable %}
-{{ page.jekyll-theme-WuK.page.mermaid.append }}
-{% endif %}
-{% if page.jekyll-theme-WuK.page.prism.enable %}
-{{ page.jekyll-theme-WuK.page.prism.append }}
-{% endif %}
 {% for node in page.jekyll-theme-WuK.page.prepend %}
 {{ node }}
 {% endfor %}
@@ -37,3 +28,15 @@ layout: default
 <div class="container content">
   {{ content }}
 </div>
+{% for node in page.jekyll-theme-WuK.page.apppend %}
+{{ node }}
+{% endfor %}
+{% if page.jekyll-theme-WuK.page.katex.enable %}
+{{ page.jekyll-theme-WuK.page.katex.append }}
+{% endif %}
+{% if page.jekyll-theme-WuK.page.mermaid.enable %}
+{{ page.jekyll-theme-WuK.page.mermaid.append }}
+{% endif %}
+{% if page.jekyll-theme-WuK.page.prism.enable %}
+{{ page.jekyll-theme-WuK.page.prism.append }}
+{% endif %}

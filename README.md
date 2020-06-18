@@ -307,6 +307,8 @@ Live2D Model 来自于[imuncle/live2d](https://github.com/imuncle/live2d)和[xia
 ### 2020-06.21 v4.0.0
 
 - 将所有主题配置变量移动到 [front-matter-defaults](https://jekyllrb.com/docs/configuration/front-matter-defaults/)，从而使得所有页面可以自定义配置
+- 标签页、归档页增加一个目录（可选）
+- 插件位置调整到页面底部，提高页面加载速度
 
 <!-- slide vertical=true -->
 
