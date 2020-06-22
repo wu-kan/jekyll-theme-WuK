@@ -88,7 +88,19 @@ layout: compress
   <!-- Wrap is the content to shift when toggling the sidebar. We wrap the content to avoid any CSS collisions with our real content. -->
   {% endunless %}
   <div class="wrap">
+    {% capture _content %}
     {{ content }}
+    {% endcapture %}
+    {% if _content contains '<pre class="highlight">' %}
+    {% comment %}
+    Fixed kramdown code highlight rendering:
+    https://github.com/penibelst/jekyll-compress-html/issues/101
+    https://github.com/penibelst/jekyll-compress-html/issues/71#issuecomment-188144901
+    {% endcomment %}
+    {% assign _content = _content | replace: '<pre class="highlight"><code', '<code' %}
+    {% assign _content = _content | replace: '</code></pre>', '</code>' %}
+    {% endif %}
+    {{ _content }}
   </div>
   {% unless sidebar_disable %}
   <label for="sidebar-checkbox" class="sidebar-toggle"></label>
