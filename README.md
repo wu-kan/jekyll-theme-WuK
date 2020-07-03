@@ -304,6 +304,14 @@ Live2D Model 来自于[imuncle/live2d](https://github.com/imuncle/live2d)和[xia
 
 <!-- slide vertical=true -->
 
+### 2020-07.04 v4.0.1
+
+- 修复使用 rouge 并开启代码行号时使用[jekyll-compress-html](https://github.com/penibelst/jekyll-compress-html)导致渲染错误的问题
+- 修复 `search.json` 失效的问题
+- default、home 增加 append 配置项
+
+<!-- slide vertical=true -->
+
 ### 2020-06.21 v4.0.0
 
 - 将所有主题配置变量移动到 [front-matter-defaults](https://jekyllrb.com/docs/configuration/front-matter-defaults/)，从而使得所有页面可以自定义配置
