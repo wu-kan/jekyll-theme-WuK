@@ -304,11 +304,12 @@ Live2D Model 来自于[imuncle/live2d](https://github.com/imuncle/live2d)和[xia
 
 <!-- slide vertical=true -->
 
-### 2020-07.04 v4.0.1
+### 2020-07.23 v4.0.1
 
 - 修复使用 rouge 并开启代码行号时使用[jekyll-compress-html](https://github.com/penibelst/jekyll-compress-html)导致渲染错误的问题
 - 修复 `search.json` 失效的问题
 - default、home 增加 append 配置项
+- 打包发布
 
 <!-- slide vertical=true -->
 
