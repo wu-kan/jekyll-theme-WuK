@@ -31,6 +31,9 @@ layout: default
 {% for node in page.jekyll-theme-WuK.page.apppend %}
 {{ node }}
 {% endfor %}
+{% if page.jekyll-theme-WuK.page.mathjax.enable %}
+{{ page.jekyll-theme-WuK.page.mathjax.append }}
+{% endif %}
 {% if page.jekyll-theme-WuK.page.katex.enable %}
 {{ page.jekyll-theme-WuK.page.katex.append }}
 {% endif %}
