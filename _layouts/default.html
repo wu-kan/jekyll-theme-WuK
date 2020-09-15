@@ -63,6 +63,15 @@ layout: compress
       {% for node in page.jekyll-theme-WuK.default.sidebar.append_to_sidebar %}
       {{ node }}
       {% endfor %}
+      {% if page.jekyll-theme-WuK.default.sidebar.visitor.enable %}
+      <span class="leancloud-visitors" id="{{ page.url | relative_url }}" data-xid="{{ page.url | relative_url }}" data-flag-title="{{ page.title }}">
+        {{ page.jekyll-theme-WuK.default.sidebar.visitor.prepend }}
+        <span class="leancloud-visitors-count">
+          <i class="fas fa-spinner fa-pulse"></i>
+        </span>{{ page.jekyll-theme-WuK.default.sidebar.visitor.unit }}
+      </span>
+      {{ page.jekyll-theme-WuK.default.sidebar.visitor.append }}
+      {% endif %}
       {% if page.jekyll-theme-WuK.default.sidebar.wordcount.enable %}
       <div>
         {{ page.jekyll-theme-WuK.default.sidebar.wordcount.prepend }}
