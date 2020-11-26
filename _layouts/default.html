@@ -58,7 +58,7 @@ layout: compress
       {% endif %}
       {% if page.jekyll-theme-WuK.default.sidebar.jekyll-toc.enable %}
       {{ page.jekyll-theme-WuK.default.sidebar.jekyll-toc.prepend }}
-      {% include toc.html html=content ordered=true skipNoIDs=true sanitize=true id="toc" %}
+      {% include toc.html html=content ordered=false skipNoIDs=true sanitize=true id="toc" %}
       {% endif %}
       {% for node in page.jekyll-theme-WuK.default.sidebar.append_to_sidebar %}
       {{ node }}
