@@ -26,7 +26,7 @@ title: Home
 
 <!-- .slide vertical=true -->
 
-![step.2](/docs/2.webp)
+![TW9GSNUkfv6lsyr8Xh1qKaRjwD](https://i.loli.net/2020/12/01/P61UlGcjqHSNXwa.png)
 
 <!-- .slide vertical=true -->
 
@@ -36,11 +36,11 @@ title: Home
 
 <!-- .slide vertical=true -->
 
-![step.3.4](/docs/3.4.webp)
+![csFVmdQfKTP4SWApE9DOkMwhZt](https://i.loli.net/2020/12/01/zsLxQVYU2dj3yEa.png)
 
 <!-- .slide vertical=true -->
 
-![step.3.5](/docs/3.5.webp)
+![2t96cfb85yDwxeAn3XLPmkrI1U](https://i.loli.net/2020/12/01/yTc6mozNvGru92p.png)
 
 <!-- .slide vertical=true -->
 
@@ -54,15 +54,15 @@ title: Home
 
 <!-- .slide vertical=true -->
 
-![step.4.1](/docs/4.1.webp)
+![4.1.png](https://i.loli.net/2020/12/01/t7hOkr5LVpZfEn3.png)
 
 <!-- .slide vertical=true -->
 
-![step.4.2](/docs/4.2.webp)
+![4.2.png](https://i.loli.net/2020/12/01/paufLrzkVhZenFJ.png)
 
 <!-- .slide vertical=true -->
 
-![step.4.3](/docs/4.3.webp)
+![4.3.png](https://i.loli.net/2020/12/01/7i5uEYPHS2Ljts4.png)
 
 <!-- .slide vertical=true -->
 
@@ -76,7 +76,7 @@ title: Home
 
 <!-- .slide vertical=true -->
 
-![step.5.1](/docs/5.1.webp)
+![5.1.png](https://i.loli.net/2020/12/01/Jm784WbjACLtdOP.png)
 
 <!-- .slide vertical=true -->
 
@@ -84,7 +84,7 @@ title: Home
 
 <!-- .slide vertical=true -->
 
-![step.5.2](/docs/5.2.webp)
+![5.2.png](https://i.loli.net/2020/12/01/THowcQnNLFRJx7C.png)
 
 <!-- .slide vertical=true -->
 
@@ -304,14 +304,14 @@ Live2D Model 来自于[imuncle/live2d](https://github.com/imuncle/live2d)和[xia
 
 <!-- .slide vertical=true -->
 
-### 2020-09.15 v4.0.2
+### 2020-09-15 v4.0.2
 
 - 侧边栏增加 [minivaline-counter](https://github.com/MiniValine/minivaline-counter) 的可选功能
   - 可用于替代不蒜子计数器，修复两个计数器数量不一致的问题
 
 <!-- .slide vertical=true -->
 
-### 2020-07.23 v4.0.1
+### 2020-07-23 v4.0.1
 
 - 修复使用 rouge 并开启代码行号时使用[jekyll-compress-html](https://github.com/penibelst/jekyll-compress-html)导致渲染错误的问题
 - 修复 `search.json` 失效的问题
@@ -320,7 +320,7 @@ Live2D Model 来自于[imuncle/live2d](https://github.com/imuncle/live2d)和[xia
 
 <!-- .slide vertical=true -->
 
-### 2020-06.21 v4.0.0
+### 2020-06-21 v4.0.0
 
 - 将所有主题配置变量移动到 [front-matter-defaults](https://jekyllrb.com/docs/configuration/front-matter-defaults/)，从而使得所有页面可以自定义配置
 - 标签页、归档页增加一个目录（可选）

@@ -49,7 +49,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
             - | # 用js引入fontawesome图标样式，功能更丰富
               <script
                 async="async"
-                src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/js/all.min.js"
+                src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/js/all.min.js"
               ></script>
             - | # 引入live2d看板娘！不需要可以把这一项都删掉
               <link
@@ -160,7 +160,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
           prepend: |
             <link
               rel="stylesheet"
-              href="https://cdn.jsdelivr.net/combine/npm/reveal.js@4.0.2/dist/reveal.min.css,npm/reveal.js@4.0.2/dist/theme/serif.min.css"
+              href="https://cdn.jsdelivr.net/combine/npm/reveal.js@4.1.0/dist/reveal.min.css,npm/reveal.js@4.1.0/dist/theme/serif.min.css"
             />
             <style>
               .sidebar {
@@ -176,20 +176,16 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
           append: |
             <script
               async="async"
-              src="https://cdn.jsdelivr.net/combine/npm/reveal.js@4.0.2/dist/reveal.min.js,npm/reveal.js@4.0.2/plugin/markdown/markdown.min.js,npm/reveal.js@4.0.2/plugin/math/math.min.js,npm/reveal.js@4.0.2/plugin/highlight/highlight.min.js"
+              src="https://cdn.jsdelivr.net/combine/npm/reveal.js@4.1.0/dist/reveal.min.js,npm/reveal.js@4.1.0/plugin/markdown/markdown.min.js,npm/reveal.js@4.1.0/plugin/math/math.min.js,npm/reveal.js@4.1.0/plugin/highlight/highlight.min.js"
               onload="
-                for(let x of document.getElementsByClassName('wrap'))
-                  x.classList.add('reveal');
-                Reveal.initialize({
+              for(let x of document.getElementsByClassName('wrap'))
+                x.classList.add('reveal');
+              Reveal.initialize({
                 height: '100%',
                 hash: true,
                 mouseWheel: true,
                 navigationMode: 'linear',
-                math: {
-                  mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
-                  config: 'TeX-AMS_HTML-full'
-                },
-                plugins: [ RevealMarkdown ,RevealMath, RevealHighlight]
+                plugins: [ RevealMarkdown,RevealMath,RevealHighlight ]
               });
             "></script>
 
