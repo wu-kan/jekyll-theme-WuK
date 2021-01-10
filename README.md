@@ -294,13 +294,19 @@ Live2D Model 来自于[imuncle/live2d](https://github.com/imuncle/live2d)和[xia
 
 <!-- .slide vertical=true -->
 
-头像、壁纸来自于<https://www.pixiv.net/artworks/72096124>、<https://www.pixiv.net/artworks/71932901>和<https://www.pixiv.net/artworks/74559485>，感谢（侵权必删）。
+头像、壁纸来自于<https://www.pixiv.net/artworks/71574257>、<https://www.pixiv.net/artworks/71932901>和<https://www.pixiv.net/artworks/74559485>，感谢（侵权必删）。
 
 头像翻转效果受启发自[leopardpan/leopardpan.github.io](https://github.com/leopardpan/leopardpan.github.io)，感谢。
 
 <!-- .slide -->
 
 ## 历程
+
+<!-- .slide vertical=true -->
+
+### 2021-01-10 v4.0.3
+
+- document 样式更新，渲染成类似于 $\LaTeX$ 的样式
 
 <!-- .slide vertical=true -->
 
