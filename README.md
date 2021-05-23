@@ -1,7 +1,3 @@
----
-title: Home
----
-
 ## Quick Start
 
 感谢使用我的博客主题，下面跟随一些简单操作快速生成你的站点/文档/展示页面吧~无需命令行~
@@ -116,7 +112,7 @@ title: Home
 
 <!-- .slide vertical=true -->
 
-![Demo](./screenshot.png)
+![Demo](https://wu-kan.github.io/jekyll-theme-WuK/screenshot.png)
 
 <!-- .slide -->
 
