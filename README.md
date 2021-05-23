@@ -300,6 +300,12 @@ Live2D Model 来自于[imuncle/live2d](https://github.com/imuncle/live2d)和[xia
 
 <!-- .slide vertical=true -->
 
+### 2021-05-23 v4.0.4
+
+- 后端实现精简，去掉主页部分
+
+<!-- .slide vertical=true -->
+
 ### 2021-01-10 v4.0.3
 
 - document 样式更新，渲染成类似于 $\LaTeX$ 的样式

@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name     = 'jekyll-theme-WuK'
-  s.version  = '4.0.3'
+  s.version  = '4.0.4'
   s.license  = 'MIT'
   s.summary  = 'A content-first, sliding sidebar theme for Jekyll.'
   s.author   = 'WuK'
