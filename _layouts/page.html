@@ -26,7 +26,12 @@ layout: default
 </div>
 {% endif %}
 <div class="container content">
-  {{ content }}
+  <div class="page">
+    {% if page.jekyll-theme-WuK.page.title.enable %}
+    <h1 class="page-title">{{ page.title }}</h1>
+    {% endif %}
+    {{ content }}
+  </div>
 </div>
 {% if page.jekyll-theme-WuK.page.katex.enable %}
 {{ page.jekyll-theme-WuK.page.katex.append }}
