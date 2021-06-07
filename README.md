@@ -244,7 +244,7 @@ CDN 加速服务来自于<https://cdn.jsdelivr.net/>和<https://loli.net>，感�
 
 <!-- .slide vertical=true -->
 
-留言和阅读量系统来自于[Valine](https://valine.js.org/)和[LeanCloud](https://leancloud.cn/)，感谢。
+评论系统来自于[utterance/utterances](https://github.com/utterance/utterances)，感谢。
 
 页面统计来自于[不蒜子](http://busuanzi.ibruce.info/)，感谢。
 
@@ -281,6 +281,7 @@ Live2D Model 来自于[imuncle/live2d](https://github.com/imuncle/live2d)和[xia
   - 代替文件
 - 配合 jekyll-redirect-from 模板，增加
   - layout: redirect
+- 使用[utterances](https://github.com/utterance/utterances)代替 valine
 
 <!-- .slide vertical=true -->
 
