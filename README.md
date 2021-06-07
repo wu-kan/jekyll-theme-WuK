@@ -278,7 +278,6 @@ Live2D Model 来自于[imuncle/live2d](https://github.com/imuncle/live2d)和[xia
   - layout: archive
   - layout: tags
   - layout: page404
-  - 代替文件
 - 配合 jekyll-redirect-from 模板，增加
   - layout: redirect
 - 使用[utterances](https://github.com/utterance/utterances)代替 valine
