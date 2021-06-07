@@ -6,23 +6,12 @@ layout: default
 {% endfor %}
 {% if page.jekyll-theme-WuK.page.masthead.enable %}
 <div class="masthead">
-  <h3 class="container masthead-title">
-    {% if page.title and page.title != "Home" %}
-    {{ page.title }}
-    <a href="{{ '/' | relative_url }}" title="Home">
-      <small>
-        {{ site.title }}
-      </small>
-    </a>
-    {% else %}
-    <a href="{{ '/' | relative_url }}" title="Home">
-      {{ site.title }}
-    </a>
-    <small>
-      {{ site.tagline }}
-    </small>
-    {% endif %}
-  </h3>
+  <div class="container">
+    <h3 class="masthead-title">
+      <a href="{{ site.baseurl }}/" title="Home">{{ site.title }}</a>
+      <small>{{ site.tagline }}</small>
+    </h3>
+  </div>
 </div>
 {% endif %}
 <div class="container content">

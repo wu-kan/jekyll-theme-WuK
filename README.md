@@ -134,26 +134,6 @@
 
 <!-- .slide vertical=true -->
 
-### `layout: archive`
-
-基于`layout: page`的归档页。
-
-示例：<https://wu-kan.cn/archive/>
-
-当前我对它不是很满意，可能会在以后的版本中修改。
-
-<!-- .slide vertical=true -->
-
-### `layout: tags`
-
-基于`layout: page`的标签页。
-
-示例：<https://wu-kan.cn/tags/>
-
-当前我对它不是很满意，可能会在以后的版本中修改。
-
-<!-- .slide vertical=true -->
-
 ### `layout: comments`
 
 基于`layout: page`的留言页，留言插件使用了[Valine](https://valine.js.org/)。
@@ -167,14 +147,6 @@
 基于`layout: comments`的博文页，为每篇博文增加描述信息。
 
 示例：[基于 Jekyll 搭建个人博客](https://wu-kan.cn/_posts/2019-01-18-%E5%9F%BA%E4%BA%8EJekyll%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/)
-
-<!-- .slide vertical=true -->
-
-### `layout: page404`
-
-基于[腾讯志愿者](http://e.t.qq.com/Tencent-Volunteers)的公益 404 页。
-
-示例：<https://wu-kan.cn/404>
 
 <!-- .slide vertical=true -->
 
@@ -202,9 +174,9 @@
 
 如果你希望使用它来渲染主页之外的页面，可以在你的 markdown 的 yaml 头中设置`layout: home`即可！当然，如果你不希望使用它来渲染主页，你也可以将主页的 layout 设置成其他的。
 
-想针对特定页面默认开启侧边栏？在 yaml 头中设置`jekyll-theme-WuK: sidebar_open: true`即可！
+想针对特定页面默认开启侧边栏？在 yaml 头中设置`jekyll-theme-WuK: default: sidebar: open: true`即可！
 
-想针对特定页面隐藏侧边栏？在 yaml 头中设置`jekyll-theme-WuK: sidebar_disable: true`即可！会覆盖`sidebar_open`的设置。
+想针对特定页面隐藏侧边栏？在 yaml 头中设置`jekyll-theme-WuK: default: sidebar: disable: true`即可！会覆盖`sidebar: open`的设置。
 
 <!-- .slide vertical=true -->
 
@@ -297,6 +269,18 @@ Live2D Model 来自于[imuncle/live2d](https://github.com/imuncle/live2d)和[xia
 <!-- .slide -->
 
 ## 历程
+
+<!-- .slide vertical=true -->
+
+### 2021-06-07 v4.1.0
+
+- 对主题进行精简，去掉
+  - layout: archive
+  - layout: tags
+  - layout: page404
+  - 代替文件
+- 配合 jekyll-redirect-from 模板，增加
+  - layout: redirect
 
 <!-- .slide vertical=true -->
 

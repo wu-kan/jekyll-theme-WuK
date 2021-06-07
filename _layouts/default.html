@@ -6,9 +6,6 @@ layout: compress
 <html>
 
 <head>
-  {% if site.plugins contains 'jekyll-seo-tag' %}
-  {% seo %}
-  {% else %}
   <title>
     {% if page.title == "Home" %}
     {{ site.title }} &middot; {{ site.tagline }}
@@ -16,6 +13,8 @@ layout: compress
     {{ page.title }} &middot; {{ site.title }}
     {% endif %}
   </title>
+  {% if site.plugins contains 'jekyll-seo-tag' %}
+  {% seo title=false %}
   {% endif %}
   {% for node in page.jekyll-theme-WuK.default.append_to_head %}
   {{ node }}
@@ -31,8 +30,8 @@ layout: compress
   {% unless sidebar_disable %}
   <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
      styles, `#sidebar-checkbox` for behavior. -->
-  <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox"
-    {% if page.jekyll-theme-WuK.sidebar_open %}checked{% endif %} />
+  <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox" {% if page.jekyll-theme-WuK.default.sidebar.open
+    %}checked{% endif %} />
   <!-- Toggleable sidebar -->
   <div class="sidebar" id="sidebar">
     {% if page.jekyll-theme-WuK.default.sidebar.avatar.enable %}
@@ -64,7 +63,8 @@ layout: compress
       {{ node }}
       {% endfor %}
       {% if page.jekyll-theme-WuK.default.sidebar.visitor.enable %}
-      <div class="leancloud-visitors" id="{{ page.url | relative_url }}" data-xid="{{ page.url | relative_url }}" data-flag-title="{{ page.title }}">
+      <div class="leancloud-visitors" id="{{ page.url | relative_url }}" data-xid="{{ page.url | relative_url }}"
+        data-flag-title="{{ page.title }}">
         {{ page.jekyll-theme-WuK.default.sidebar.visitor.prepend }}
         <span class="leancloud-visitors-count">
           <i class="fas fa-spinner fa-pulse"></i>
@@ -100,7 +100,8 @@ layout: compress
     {% capture _content %}
     {{ content }}
     {% endcapture %}
-    {% if _content contains '<pre class="highlight">' %}
+    {% if _content contains '
+    <pre class="highlight">' %}
     {% comment %}
     Fixed kramdown code highlight rendering:
     https://github.com/penibelst/jekyll-compress-html/issues/101
