@@ -2,8 +2,8 @@
 layout: compress
 ---
 
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html />
+<html lang="{{ page.jekyll-theme-WuK.default.html_lang }}">
 
 <head>
   <title>
@@ -28,11 +28,15 @@ layout: compress
   {% assign sidebar_disable = true %}
   {% endif %}
   {% unless sidebar_disable %}
+  {% comment %}
   <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
      styles, `#sidebar-checkbox` for behavior. -->
+  {% endcomment %}
   <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox" {% if page.jekyll-theme-WuK.default.sidebar.open
     %}checked{% endif %} />
+  {% comment %}
   <!-- Toggleable sidebar -->
+  {% endcomment %}
   <div class="sidebar" id="sidebar">
     {% if page.jekyll-theme-WuK.default.sidebar.avatar.enable %}
     <div class="sidebar-item">
@@ -84,7 +88,9 @@ layout: compress
       {% endif %}
     </div>
   </div>
+  {% comment %}
   <!-- Wrap is the content to shift when toggling the sidebar. We wrap the content to avoid any CSS collisions with our real content. -->
+  {% endcomment %}
   {% endunless %}
   <div class="wrap">
     {% capture _content %}

@@ -22,15 +22,15 @@ layout: default
     {{ content }}
   </div>
 </div>
-{% if page.jekyll-theme-WuK.page.katex.enable %}
-{{ page.jekyll-theme-WuK.page.katex.append }}
+{% for p in page.jekyll-theme-WuK.page.plugin %}
+{% if p.enable == false %}{% continue %}{% endif %}
+{% if p.smart_include.enable %}
+{% unless content contains p.smart_include.key %}
+{% continue %}
+{% endunless %}
 {% endif %}
-{% if page.jekyll-theme-WuK.page.mermaid.enable %}
-{{ page.jekyll-theme-WuK.page.mermaid.append }}
-{% endif %}
-{% if page.jekyll-theme-WuK.page.prism.enable %}
-{{ page.jekyll-theme-WuK.page.prism.append }}
-{% endif %}
+{{ p.append }}
+{% endfor %}
 {% for node in page.jekyll-theme-WuK.page.append %}
 {{ node }}
 {% endfor %}
