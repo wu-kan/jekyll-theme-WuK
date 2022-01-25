@@ -272,6 +272,12 @@ Live2D Model 来自于[imuncle/live2d](https://github.com/imuncle/live2d)和[xia
 
 <!-- .slide vertical=true -->
 
+### 2022-01-26 v4.2.0
+
+- layout: page 页面的插件支持智能引入
+
+<!-- .slide vertical=true -->
+
 ### 2021-06-07 v4.1.0
 
 - 对主题进行精简，去掉
