@@ -22,7 +22,7 @@
 
 <!-- .slide vertical=true -->
 
-![TW9GSNUkfv6lsyr8Xh1qKaRjwD](https://i.loli.net/2020/12/01/P61UlGcjqHSNXwa.png)
+![TW9GSNUkfv6lsyr8Xh1qKaRjwD](https://Mizuno-Ai.wu-kan.cn/assets/image/2020/12/01/P61UlGcjqHSNXwa.png)
 
 <!-- .slide vertical=true -->
 
@@ -32,11 +32,11 @@
 
 <!-- .slide vertical=true -->
 
-![csFVmdQfKTP4SWApE9DOkMwhZt](https://i.loli.net/2020/12/01/zsLxQVYU2dj3yEa.png)
+![csFVmdQfKTP4SWApE9DOkMwhZt](https://Mizuno-Ai.wu-kan.cn/assets/image/2020/12/01/zsLxQVYU2dj3yEa.png)
 
 <!-- .slide vertical=true -->
 
-![2t96cfb85yDwxeAn3XLPmkrI1U](https://i.loli.net/2020/12/01/yTc6mozNvGru92p.png)
+![2t96cfb85yDwxeAn3XLPmkrI1U](https://Mizuno-Ai.wu-kan.cn/assets/image/2020/12/01/yTc6mozNvGru92p.png)
 
 <!-- .slide vertical=true -->
 
@@ -50,15 +50,15 @@
 
 <!-- .slide vertical=true -->
 
-![4.1.png](https://i.loli.net/2020/12/01/t7hOkr5LVpZfEn3.png)
+![4.1.png](https://Mizuno-Ai.wu-kan.cn/assets/image/2020/12/01/t7hOkr5LVpZfEn3.png)
 
 <!-- .slide vertical=true -->
 
-![4.2.png](https://i.loli.net/2020/12/01/paufLrzkVhZenFJ.png)
+![4.2.png](https://Mizuno-Ai.wu-kan.cn/assets/image/2020/12/01/paufLrzkVhZenFJ.png)
 
 <!-- .slide vertical=true -->
 
-![4.3.png](https://i.loli.net/2020/12/01/7i5uEYPHS2Ljts4.png)
+![4.3.png](https://Mizuno-Ai.wu-kan.cn/assets/image/2020/12/01/7i5uEYPHS2Ljts4.png)
 
 <!-- .slide vertical=true -->
 
@@ -72,7 +72,7 @@
 
 <!-- .slide vertical=true -->
 
-![5.1.png](https://i.loli.net/2020/12/01/Jm784WbjACLtdOP.png)
+![5.1.png](https://Mizuno-Ai.wu-kan.cn/assets/image/2020/12/01/Jm784WbjACLtdOP.png)
 
 <!-- .slide vertical=true -->
 
@@ -80,7 +80,7 @@
 
 <!-- .slide vertical=true -->
 
-![5.2.png](https://i.loli.net/2020/12/01/THowcQnNLFRJx7C.png)
+![5.2.png](https://Mizuno-Ai.wu-kan.cn/assets/image/2020/12/01/THowcQnNLFRJx7C.png)
 
 <!-- .slide vertical=true -->
 
@@ -96,15 +96,15 @@
 
 以上所有操作均可直接在 github 网页上进行。如果你在本地运行博客的测试，或是对博客进行更高级别的定制，推荐先阅读以下几篇博文：
 
-- [基于 Jekyll 搭建个人博客](https://wu-kan.cn/_posts/2019-01-18-%E5%9F%BA%E4%BA%8EJekyll%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/)
-- [个人网站优化之旅](https://wu-kan.cn/_posts/2020-02-06-%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99%E4%BC%98%E5%8C%96%E4%B9%8B%E6%97%85/)
+- [基于 Jekyll 搭建个人博客](https://wu-kan.cn/2019/01/18/%E5%9F%BA%E4%BA%8EJekyll%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/)
+- [个人网站优化之旅](https://wu-kan.cn/2020/02/06/%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99%E4%BC%98%E5%8C%96%E4%B9%8B%E6%97%85/)
 
 <!-- .slide vertical=true -->
 
 统一中文文案、排版的相关用法，降低团队成员之间的沟通成本，增强网站气质，推荐阅读：
 
 - [中文文案排版指北](https://github.com/sparanoid/chinese-copywriting-guidelines/blob/master/README.zh-CN.md)
-- [Markdown 写作心得](https://wu-kan.cn/_posts/2020-01-18-Markdown%E5%86%99%E4%BD%9C%E5%BF%83%E5%BE%97/)
+- [Markdown 写作心得](https://wu-kan.cn/2020/01/18/Markdown%E5%86%99%E4%BD%9C%E5%BF%83%E5%BE%97/)
 
 <!-- .slide -->
 
@@ -112,7 +112,7 @@
 
 <!-- .slide vertical=true -->
 
-![Demo](https://wu-kan.github.io/jekyll-theme-WuK/screenshot.png)
+![Demo](https://jekyll-theme-WuK.wu-kan.cn/screenshot.png)
 
 <!-- .slide -->
 
@@ -146,7 +146,7 @@
 
 基于`layout: comments`的博文页，为每篇博文增加描述信息。
 
-示例：[基于 Jekyll 搭建个人博客](https://wu-kan.cn/_posts/2019-01-18-%E5%9F%BA%E4%BA%8EJekyll%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/)
+示例：[基于 Jekyll 搭建个人博客](https://wu-kan.cn/2019/01/18/%E5%9F%BA%E4%BA%8EJekyll%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/)
 
 <!-- .slide vertical=true -->
 
@@ -162,7 +162,7 @@
 
 从`v3.1.0`版本开始，`layout: home`被我重写，基于[hakimel/reveal.js](https://github.com/hakimel/reveal.js)实现了一个简洁的展示页面，既可以作为博客的封面，也可以用作 presentation！
 
-示例：[我的数图期末展示页](https://wu-kan.cn/_posts/2019-12-10-%E6%95%B0%E5%9B%BE%E6%9C%9F%E6%9C%ABProject/)
+示例：[我的数图期末展示页](https://wu-kan.cn/2019/12/10/%E6%95%B0%E5%9B%BE%E6%9C%9F%E6%9C%ABProject/)
 
 <!-- .slide vertical=true -->
 
@@ -269,6 +269,12 @@ Live2D Model 来自于[imuncle/live2d](https://github.com/imuncle/live2d)和[xia
 <!-- .slide -->
 
 ## 历程
+
+<!-- .slide vertical=true -->
+
+### 2024-01-21 v4.2.1
+
+- 更新[文档](https://Jekyll-theme-WuK.wu-kan.cn)
 
 <!-- .slide vertical=true -->
 
