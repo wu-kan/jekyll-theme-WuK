@@ -32,12 +32,18 @@ layout: compress
   <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
      styles, `#sidebar-checkbox` for behavior. -->
   {% endcomment %}
+  <div class="loader-wrapper">
+    <span class="loader"></span>
+  </div>
   <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox" {% if page.jekyll-theme-WuK.default.sidebar.open
     %}checked{% endif %} />
   {% comment %}
   <!-- Toggleable sidebar -->
   {% endcomment %}
   <div class="sidebar" id="sidebar">
+    {% for node in page.jekyll-theme-WuK.default.sidebar.prepend_to_sidebar %}
+    {{ node }}
+    {% endfor %}
     {% if page.jekyll-theme-WuK.default.sidebar.avatar.enable %}
     <div class="sidebar-item">
       <div class="effect effect-right_to_left">
