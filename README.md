@@ -272,6 +272,13 @@ Live2D Model 来自于[imuncle/live2d](https://github.com/imuncle/live2d)和[xia
 
 <!-- .slide vertical=true -->
 
+### 2024-01-21 v4.2.2
+
+- 增加页面加载器 loader
+- 增加 prepend_to_sidebar，修复 side-bar 加载变色问题
+
+<!-- .slide vertical=true -->
+
 ### 2024-01-21 v4.2.1
 
 - 更新[文档](https://Jekyll-theme-WuK.wu-kan.cn)
