@@ -98,7 +98,11 @@ layout: compress
   <!-- Wrap is the content to shift when toggling the sidebar. We wrap the content to avoid any CSS collisions with our real content. -->
   {% endcomment %}
   {% endunless %}
-  <div class="wrap">
+  <div class="wrap"
+    data-color-mode="{{ page.jekyll-theme-WuK.default.body.color-mode | default: 'auto'}}"
+    data-light-theme="{{ page.jekyll-theme-WuK.default.body.light-theme | default: 'light'}}"
+    data-dark-theme="{{ page.jekyll-theme-WuK.default.body.dark-theme | default: 'dark'}}"
+  >
     {% capture _content %}
     {{ content }}
     {% endcapture %}
