@@ -15,11 +15,13 @@ layout: default
 </div>
 {% endif %}
 <div class="container-lg px-3 my-5 markdown-body">
-  <div class="container content page">
-    {% if page.jekyll-theme-WuK.page.title.enable %}
-    <h1 class="page-title">{{ page.title }}</h1>
-    {% endif %}
-    {{ content }}
+  <div class="container content">
+    <div class="page">
+      {% if page.jekyll-theme-WuK.page.title.enable %}
+      <h1 class="page-title">{{ page.title }}</h1>
+      {% endif %}
+      {{ content }}
+    </div>
   </div>
 </div>
 {% for p in page.jekyll-theme-WuK.page.plugin %}
