@@ -272,9 +272,9 @@ Live2D Model 来自于[imuncle/live2d](https://github.com/imuncle/live2d)和[xia
 
 <!-- .slide vertical=true -->
 
-### 2024-01-21 v4.4.0
+### 2024-12-18 v5.0.0
 
-- 开始引入 [primer/css](https://github.com/primer/css)
+- 使用 [primer/css](https://github.com/primer/css)，去掉 lanyon
 
 <!-- .slide vertical=true -->
 
