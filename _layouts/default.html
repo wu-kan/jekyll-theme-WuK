@@ -22,9 +22,14 @@ layout: compress
 </head>
 
 <body>
-  <div class="wrap" data-color-mode="{{ page.jekyll-theme-WuK.default.body.color-mode | default: 'auto'}}"
+  <div class="loader-wrapper">
+    <span class="loader"></span>
+  </div>
+  <div
+    data-color-mode="{{ page.jekyll-theme-WuK.default.body.color-mode | default: 'auto'}}"
     data-light-theme="{{ page.jekyll-theme-WuK.default.body.light-theme | default: 'light'}}"
-    data-dark-theme="{{ page.jekyll-theme-WuK.default.body.dark-theme | default: 'dark'}}">
+    data-dark-theme="{{ page.jekyll-theme-WuK.default.body.dark-theme | default: 'dark'}}"
+    class="wrap">
 
     <div class="position-fixed right-0 m-5 z-3">
 
