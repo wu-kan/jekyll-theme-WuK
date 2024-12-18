@@ -21,88 +21,51 @@ layout: compress
   {% endfor %}
 </head>
 
-<body
-  class="{{ page.jekyll-theme-WuK.default.body.theme-base }}{% if page.jekyll-theme-WuK.default.body.layout-reverse %} layout-reverse{% endif %}{% if page.jekyll-theme-WuK.default.body.sidebar-overlay %} sidebar-overlay{% endif %}">
-  {% assign sidebar_disable = false %}
-  {% if page.jekyll-theme-WuK.default.sidebar.disable %}
-  {% assign sidebar_disable = true %}
-  {% endif %}
-  {% unless sidebar_disable %}
-  {% comment %}
-  <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
-     styles, `#sidebar-checkbox` for behavior. -->
-  {% endcomment %}
-  <div class="loader-wrapper">
-    <span class="loader"></span>
-  </div>
-  <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox" {% if page.jekyll-theme-WuK.default.sidebar.open
-    %}checked{% endif %} />
-  {% comment %}
-  <!-- Toggleable sidebar -->
-  {% endcomment %}
-  <div class="sidebar" id="sidebar">
-    {% for node in page.jekyll-theme-WuK.default.sidebar.prepend_to_sidebar %}
-    {{ node }}
-    {% endfor %}
-    {% if page.jekyll-theme-WuK.default.sidebar.avatar.enable %}
-    <div class="sidebar-item">
-      <div class="effect effect-right_to_left">
-        <img class="effect-img" src="{{ page.jekyll-theme-WuK.default.sidebar.avatar.img }}" alt="img" />
-        <div class="effect-info">
-          {{ site.description }}
-        </div>
-      </div>
-    </div>
-    {% endif %}
-    <nav class="sidebar-nav">
-      {% for node in page.jekyll-theme-WuK.default.sidebar.nav %}
-      <a class="sidebar-nav-item{% if page.url == node.href %} active{% endif %}" href="{{ node.href }}">
-        {{ node.title }}
-      </a>
-      {% endfor %}
-    </nav>
-    <div class="sidebar-item">
-      {% if page.jekyll-theme-WuK.default.sidebar.simple_jekyll_search.enable %}
-      {{ page.jekyll-theme-WuK.default.sidebar.simple_jekyll_search.append }}
-      {% endif %}
-      {% if page.jekyll-theme-WuK.default.sidebar.jekyll-toc.enable %}
-      {{ page.jekyll-theme-WuK.default.sidebar.jekyll-toc.prepend }}
-      {% include toc.html html=content ordered=true skipNoIDs=true sanitize=true id="toc" %}
-      {% endif %}
-      {% for node in page.jekyll-theme-WuK.default.sidebar.append_to_sidebar %}
-      {{ node }}
-      {% endfor %}
-      {% if page.jekyll-theme-WuK.default.sidebar.wordcount.enable %}
-      <div>
-        {{ page.jekyll-theme-WuK.default.sidebar.wordcount.prepend }}
-        {% assign count = 0 %}
-        {% for post in site.posts %}
-        {% assign single_count = post.content | strip_html | strip_newlines | remove: " " | size %}
-        {% assign count = count | plus: single_count %}
-        {% endfor %}
-        {% for post in site.pages %}
-        {% assign single_count = post.content | strip_html | strip_newlines | remove: " " | size %}
-        {% assign count = count | plus: single_count %}
-        {% endfor %}
-        {% if count > 1000 %}
-        {{ count | divided_by: 1000 }}{{ page.jekyll-theme-WuK.default.sidebar.wordcount.kilo }}
-        {{ count | modulo: 1000 }}{{ page.jekyll-theme-WuK.default.sidebar.wordcount.unit }}
-        {% else %}
-        {{ count }}{{ page.jekyll-theme-WuK.default.sidebar.wordcount.unit }}
-        {% endif %}
-      </div>
-      {% endif %}
-    </div>
-  </div>
-  {% comment %}
-  <!-- Wrap is the content to shift when toggling the sidebar. We wrap the content to avoid any CSS collisions with our real content. -->
-  {% endcomment %}
-  {% endunless %}
-  <div class="wrap"
-    data-color-mode="{{ page.jekyll-theme-WuK.default.body.color-mode | default: 'auto'}}"
+<body>
+  <div class="wrap" data-color-mode="{{ page.jekyll-theme-WuK.default.body.color-mode | default: 'auto'}}"
     data-light-theme="{{ page.jekyll-theme-WuK.default.body.light-theme | default: 'light'}}"
-    data-dark-theme="{{ page.jekyll-theme-WuK.default.body.dark-theme | default: 'dark'}}"
-  >
+    data-dark-theme="{{ page.jekyll-theme-WuK.default.body.dark-theme | default: 'dark'}}">
+
+    <div class="position-fixed right-0 m-6 z-3">
+
+      <details class="details-reset details-overlay">
+
+        <summary class="btn" aria-haspopup="true">
+          Menu
+        </summary>
+
+        <div class="SelectMenu right-0">
+
+          <div class="SelectMenu-modal">
+
+            {% for node in page.jekyll-theme-WuK.default.menu.prepend %}
+              {{ node }}
+            {% endfor %}
+
+            <div class="SelectMenu-list">
+
+              {% for node in page.jekyll-theme-WuK.default.menu.nav %}
+              <a href="{{ node.href }}">
+                <button class="SelectMenu-item" role="menuitem">
+                  {{ node.title }}
+                </button>
+              </a>
+              {% endfor %}
+
+            </div>
+
+            <footer class="SelectMenu-footer">
+              {{ page.jekyll-theme-WuK.default.menu.footer }}
+            </footer>
+
+          </div>
+
+        </div>
+
+      </details>
+
+    </div>
+
     {% capture _content %}
     {{ content }}
     {% endcapture %}
@@ -118,9 +81,6 @@ layout: compress
     {% endif %}
     {{ _content }}
   </div>
-  {% unless sidebar_disable %}
-  <label for="sidebar-checkbox" class="sidebar-toggle"></label>
-  {% endunless %}
   {{ page.jekyll-theme-WuK.default.append }}
 </body>
 
