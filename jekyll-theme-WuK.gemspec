@@ -1,8 +1,8 @@
 Gem::Specification.new do |s|
   s.name     = 'jekyll-theme-WuK'
-  s.version  = '4.2.2'
+  s.version  = '5。0。1'
   s.license  = 'MIT'
-  s.summary  = 'A content-first, sliding sidebar theme for Jekyll.'
+  s.summary  = 'A content-first theme for Jekyll, use primer design.'
   s.author   = 'WuK'
   s.email    = 'i@wu-kan.cn'
   s.homepage = 'https://jekyll-theme-WuK.wu-kan.cn/'

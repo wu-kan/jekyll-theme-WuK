@@ -272,6 +272,12 @@ Live2D Model 来自于[imuncle/live2d](https://github.com/imuncle/live2d)和[xia
 
 <!-- .slide vertical=true -->
 
+### 2024-12-20 v5.0.1
+
+- 修复主页菜单字体错误问题
+
+<!-- .slide vertical=true -->
+
 ### 2024-12-18 v5.0.0
 
 - 使用 [primer/css](https://github.com/primer/css)，去掉 lanyon

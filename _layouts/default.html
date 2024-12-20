@@ -25,51 +25,61 @@ layout: compress
   <div class="loader-wrapper">
     <span class="loader"></span>
   </div>
-  <div
-    data-color-mode="{{ page.jekyll-theme-WuK.default.body.color-mode | default: 'auto'}}"
-    data-light-theme="{{ page.jekyll-theme-WuK.default.body.light-theme | default: 'light'}}"
-    data-dark-theme="{{ page.jekyll-theme-WuK.default.body.dark-theme | default: 'dark'}}"
-    class="wrap">
 
-    <div class="position-fixed right-0 m-5 z-3">
+  <div data-color-mode="{{ page.jekyll-theme-WuK.default.color-mode | default: 'auto'}}"
+    data-light-theme="{{ page.jekyll-theme-WuK.default.light-theme | default: 'light'}}"
+    data-dark-theme="{{ page.jekyll-theme-WuK.default.dark-theme | default: 'dark'}}"
+    class="position-fixed right-0 m-5 z-3">
 
-      <details class="details-reset details-overlay">
+    <details class="details-reset details-overlay">
 
-        <summary class="btn" aria-haspopup="true">
-          Menu
-        </summary>
+      <summary class="btn" aria-haspopup="true">
+        Menu
+      </summary>
 
-        <div class="SelectMenu right-0">
+      <div class="SelectMenu right-0">
 
-          <div class="SelectMenu-modal">
+        <div class="SelectMenu-modal">
 
-            {% for node in page.jekyll-theme-WuK.default.menu.prepend %}
-              {{ node }}
+          {% for node in page.jekyll-theme-WuK.default.menu.prepend %}
+          {{ node }}
+          {% endfor %}
+
+          <div class="SelectMenu-list">
+
+            {% for node in page.jekyll-theme-WuK.default.menu.append %}
+            {{ node }}
             {% endfor %}
 
-            <div class="SelectMenu-list">
+            {% for node in page.jekyll-theme-WuK.default.menu.nav %}
+            <a href="{{ node.href }}">
+              <button class="SelectMenu-item" role="menuitem">
+                {{ node.title }}
+              </button>
+            </a>
+            {% endfor %}
 
-              {% for node in page.jekyll-theme-WuK.default.menu.nav %}
-              <a href="{{ node.href }}">
-                <button class="SelectMenu-item" role="menuitem">
-                  {{ node.title }}
-                </button>
-              </a>
-              {% endfor %}
-
-            </div>
-
-            <footer class="SelectMenu-footer">
-              {{ page.jekyll-theme-WuK.default.menu.footer }}
-            </footer>
+            {% for node in page.jekyll-theme-WuK.default.menu.append %}
+            {{ node }}
+            {% endfor %}
 
           </div>
 
+          <footer class="SelectMenu-footer">
+            {{ page.jekyll-theme-WuK.default.menu.footer }}
+          </footer>
+
         </div>
 
-      </details>
+      </div>
 
-    </div>
+    </details>
+
+  </div>
+
+  <div data-color-mode="{{ page.jekyll-theme-WuK.default.color-mode | default: 'auto'}}"
+    data-light-theme="{{ page.jekyll-theme-WuK.default.light-theme | default: 'light'}}"
+    data-dark-theme="{{ page.jekyll-theme-WuK.default.dark-theme | default: 'dark'}}" class="wrap">
 
     {% capture _content %}
     {{ content }}
