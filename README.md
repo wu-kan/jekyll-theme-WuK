@@ -272,6 +272,13 @@ Live2D Model 来自于[imuncle/live2d](https://github.com/imuncle/live2d)和[xia
 
 <!-- .slide vertical=true -->
 
+### 2024-12-20 v5.1.0
+
+- 增加 menu 中的搜索栏和目录
+- 微调页面上边距
+
+<!-- .slide vertical=true -->
+
 ### 2024-12-20 v5.0.1
 
 - 修复主页菜单字体错误问题

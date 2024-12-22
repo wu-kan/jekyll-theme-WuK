@@ -59,6 +59,11 @@ layout: compress
             </a>
             {% endfor %}
 
+            {% if page.jekyll-theme-WuK.default.menu.jekyll-toc.enable %}
+            {{ page.jekyll-theme-WuK.default.menu.jekyll-toc.prepend }}
+            {% include toc.html html=content ordered=true skipNoIDs=true sanitize=true id="toc" %}
+            {% endif %}
+
             {% for node in page.jekyll-theme-WuK.default.menu.append %}
             {{ node }}
             {% endfor %}
