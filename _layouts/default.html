@@ -41,13 +41,9 @@ layout: compress
 
         <div class="SelectMenu-modal">
 
-          {% for node in page.jekyll-theme-WuK.default.menu.prepend %}
-          {{ node }}
-          {% endfor %}
-
           <div class="SelectMenu-list">
 
-            {% for node in page.jekyll-theme-WuK.default.menu.append %}
+            {% for node in page.jekyll-theme-WuK.default.menu.prepend %}
             {{ node }}
             {% endfor %}
 
@@ -59,10 +55,12 @@ layout: compress
             </a>
             {% endfor %}
 
-            {% if page.jekyll-theme-WuK.default.menu.jekyll-toc.enable %}
-            {{ page.jekyll-theme-WuK.default.menu.jekyll-toc.prepend }}
-            {% include toc.html html=content ordered=true skipNoIDs=true sanitize=true id="toc" %}
-            {% endif %}
+            <div class="SelectMenu-item toc">
+              {% if page.jekyll-theme-WuK.default.menu.jekyll-toc.enable %}
+              {{ page.jekyll-theme-WuK.default.menu.jekyll-toc.prepend }}
+              {% include toc.html html=content ordered=true skipNoIDs=true sanitize=true id="toc" %}
+              {% endif %}
+            </div>
 
             {% for node in page.jekyll-theme-WuK.default.menu.append %}
             {{ node }}
