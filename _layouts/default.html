@@ -55,7 +55,7 @@ layout: compress
             </a>
             {% endfor %}
 
-            <div class="SelectMenu-item toc">
+            <div class="SelectMenu-item">
               {% if page.jekyll-theme-WuK.default.menu.jekyll-toc.enable %}
               {{ page.jekyll-theme-WuK.default.menu.jekyll-toc.prepend }}
               {% include toc.html html=content ordered=true skipNoIDs=true sanitize=true id="toc" %}
