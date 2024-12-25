@@ -224,47 +224,30 @@
 
 <!-- .slide vertical=true -->
 
-托管于[Github Pages](https://pages.github.com/)，感谢。
-
-博客引擎来自于[jekyll/jekyll](https://github.com/jekyll/jekyll)，感谢。
-
-CDN 加速服务来自于<https://cdn.jsdelivr.net/>和<https://loli.net>，感谢。
-
-<!-- .slide vertical=true -->
-
-博客主题基于[poole/lanyon](https://github.com/poole/lanyon)，感谢。
-
-图标库来自于[<i class="fab fa-font-awesome"></i>fontawesome-free](https://fontawesome.com/)，感谢。
-
-展示页基于[hakimel/reveal.js](https://github.com/hakimel/reveal.js)，感谢。
-
-捐赠页来自[hifocus/merger](https://github.com/hifocus/merger)，感谢。
-
-页面压缩来自于[penibelst/jekyll-compress-html](https://github.com/penibelst/jekyll-compress-html)，感谢。
+- [Github Pages](https://pages.github.com/)
+- [jekyll/jekyll](https://github.com/jekyll/jekyll)
+- <https://cdn.jsdelivr.net/>
+- <https://loli.net>
+- [不蒜子](http://busuanzi.ibruce.info/)
 
 <!-- .slide vertical=true -->
 
-评论系统来自于[utterance/utterances](https://github.com/utterance/utterances)，感谢。
-
-页面统计来自于[不蒜子](http://busuanzi.ibruce.info/)，感谢。
-
-博客搜索插件来自于[christian-fei/Simple-Jekyll-Search](https://github.com/christian-fei/Simple-Jekyll-Search)，感谢。
-
-博文目录插件来自于[allejo/jekyll-toc](https://github.com/allejo/jekyll-toc)，感谢。
-
-代码高亮及插件来自于[PrismJS](https://prismjs.com/)，感谢。
+- [primer/css](https://github.com/primer/css)
+- [hakimel/reveal.js](https://github.com/hakimel/reveal.js)
+- [qr-merger/merger](https://github.com/qr-merger/merger)
+- [utterance/utterances](https://github.com/utterance/utterances)
 
 <!-- .slide vertical=true -->
 
-Live2D 前端插件来自于[Dreamer-Paul/Pio](https://github.com/Dreamer-Paul/Pio)，感谢。
-
-Live2D Model 来自于[imuncle/live2d](https://github.com/imuncle/live2d)和[xiaoski/live2d_models_collection](https://github.com/xiaoski/live2d_models_collection)，感谢。
+- [penibelst/jekyll-compress-html](https://github.com/penibelst/jekyll-compress-html)
+- [christian-fei/Simple-Jekyll-Search](https://github.com/christian-fei/Simple-Jekyll-Search)
+- [allejo/jekyll-toc](https://github.com/allejo/jekyll-toc)
 
 <!-- .slide vertical=true -->
 
-头像、壁纸来自于<https://www.pixiv.net/artworks/71574257>、<https://www.pixiv.net/artworks/71932901>和<https://www.pixiv.net/artworks/74559485>，感谢（侵权必删）。
-
-头像翻转效果受启发自[leopardpan/leopardpan.github.io](https://github.com/leopardpan/leopardpan.github.io)，感谢。
+- [dsrkafuu/sakana-widget](https://github.com/dsrkafuu/sakana-widget)
+- <https://www.pixiv.net/artworks/75805052>（侵权必删）
+- <https://www.pixiv.net/artworks/71574257>（侵权必删）
 
 <!-- .slide -->
 

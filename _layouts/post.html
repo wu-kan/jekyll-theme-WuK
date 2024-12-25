@@ -1,8 +1,8 @@
 ---
 layout: comments
 ---
-<div class="post">
-  <span class="post-date">
+<div id="wrap-post">
+  <blockquote id="wrap-post-date">
     {% if page.jekyll-theme-WuK.post.date.enable %}
     {{ page.jekyll-theme-WuK.post.date.prepend }}
     {{ page.date | date_to_string }}
@@ -26,26 +26,24 @@ layout: comments
     {% if page.jekyll-theme-WuK.background_music %}
     {{ page.jekyll-theme-WuK.background_music }}
     {% endif %}
-  </span>
+  </blockquote>
   {{ content }}
 </div>
 
 {% if page.jekyll-theme-WuK.post.related_posts.enable %}
 {% if site.related_posts.size >= 1 %}
-<div class="related">
+<blockquote id="wrap-related">
   <h2>Related posts</h2>
-  <ul class="related-posts">
+  <ul id="wrap-related-posts">
     {% for post in site.related_posts limit:3 %}
     <li>
-      <h3>
-        <a href="{{ site.baseurl }}{{ post.url }}">
-          {{ post.title }}
-          <small>{{ post.date | date_to_string }}</small>
-        </a>
-      </h3>
+      <a href="{{ site.baseurl }}{{ post.url }}">
+        {{ post.title }}
+        <small>{{ post.date | date_to_string }}</small>
+      </a>
     </li>
     {% endfor %}
   </ul>
-</div>
+</blockquote>
 {% endif %}
 {% endif %}

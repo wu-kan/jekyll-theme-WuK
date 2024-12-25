@@ -22,14 +22,14 @@ layout: compress
 </head>
 
 <body>
-  <div class="loader-wrapper">
+  <div id="wrap-loader">
     <span class="loader"></span>
   </div>
 
-  <div data-color-mode="{{ page.jekyll-theme-WuK.default.color-mode | default: 'auto'}}"
+  <div id="wrap-menu" class="position-fixed right-0 m-5 z-3"
+    data-color-mode="{{ page.jekyll-theme-WuK.default.color-mode | default: 'auto'}}"
     data-light-theme="{{ page.jekyll-theme-WuK.default.light-theme | default: 'light'}}"
-    data-dark-theme="{{ page.jekyll-theme-WuK.default.dark-theme | default: 'dark'}}"
-    class="position-fixed right-0 m-5 z-3">
+    data-dark-theme="{{ page.jekyll-theme-WuK.default.dark-theme | default: 'dark'}}">
 
     <details class="details-reset details-overlay">
 
@@ -80,9 +80,9 @@ layout: compress
 
   </div>
 
-  <div data-color-mode="{{ page.jekyll-theme-WuK.default.color-mode | default: 'auto'}}"
+  <div id="wrap-content" data-color-mode="{{ page.jekyll-theme-WuK.default.color-mode | default: 'auto'}}"
     data-light-theme="{{ page.jekyll-theme-WuK.default.light-theme | default: 'light'}}"
-    data-dark-theme="{{ page.jekyll-theme-WuK.default.dark-theme | default: 'dark'}}" class="wrap">
+    data-dark-theme="{{ page.jekyll-theme-WuK.default.dark-theme | default: 'dark'}}">
 
     {% capture _content %}
     {{ content }}
