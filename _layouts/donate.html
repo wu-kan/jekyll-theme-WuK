@@ -24,11 +24,7 @@ layout: compress
     {% endif %}
   </title>
   {% endif %}
-  {% for node in page.jekyll-theme-WuK.merger.append_to_head %}
-  {{ node }}
-  {% endfor %}
   <meta charset="utf-8">
-  <meta name="author" content="Huangxin, LF112">
   <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 
@@ -43,7 +39,7 @@ layout: compress
 </head>
 
 <body>
-
+  {{ content }}
   <div class="main" id="h">
     <i id="i"></i>
 

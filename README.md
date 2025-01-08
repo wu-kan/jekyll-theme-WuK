@@ -28,7 +28,7 @@
 
 ### 第三步
 
-把 Setting 拉到下面找到 Github Pages 相关选项，将 Source 从改成 None 改到 master branch，再将 Custom domain 改成你的网址。
+把 Setting 拉到下面找到 Github Pages 相关选项，将 Source 从改成 None 改到默认的 branch，（可选）再将 Custom domain 改成你的网址。
 
 <!-- .slide vertical=true -->
 
@@ -150,11 +150,11 @@
 
 <!-- .slide vertical=true -->
 
-### `layout: merger`
+### `layout: dnoate`
 
 基于 merger 的打赏页。
 
-示例：<https://wu-kan.cn/merger/>
+示例：<https://wu-kan.cn/donate/>
 
 <!-- .slide vertical=true -->
 
@@ -172,15 +172,7 @@
 
 <!-- .slide vertical=true -->
 
-如果你希望使用它来渲染主页之外的页面，可以在你的 markdown 的 yaml 头中设置`layout: home`即可！当然，如果你不希望使用它来渲染主页，你也可以将主页的 layout 设置成其他的。
-
-想针对特定页面默认开启侧边栏？在 yaml 头中设置`jekyll-theme-WuK: default: sidebar: open: true`即可！
-
-想针对特定页面隐藏侧边栏？在 yaml 头中设置`jekyll-theme-WuK: default: sidebar: disable: true`即可！会覆盖`sidebar: open`的设置。
-
-<!-- .slide vertical=true -->
-
-这是一个仍在开发的特性（主要是找不到美观精致的[展示主题](https://github.com/hakimel/reveal.js/tree/master/css/theme)），如果有建议/需求欢迎 issue！
+这是一个仍在开发的特性（主要是找不到美观精致的[展示主题](https://github.com/hakimel/reveal.js/tree/master/css/theme)），如果有建议/需求欢迎 issue！如果你希望使用它来渲染主页之外的页面，可以在你的 markdown 的 yaml 头中设置`layout: home`即可！当然，如果你不希望使用它来渲染主页，你也可以将主页的 layout 设置成其他的。
 
 <!-- .slide vertical=true -->
 
@@ -235,7 +227,7 @@
 - [primer/css](https://github.com/primer/css)
 - [hakimel/reveal.js](https://github.com/hakimel/reveal.js)
 - [qr-merger/merger](https://github.com/qr-merger/merger)
-- [utterance/utterances](https://github.com/utterance/utterances)
+- [giscus/giscus](https://github.com/giscus/giscus)
 
 <!-- .slide vertical=true -->
 
@@ -252,6 +244,12 @@
 <!-- .slide -->
 
 ## 历程
+
+<!-- .slide vertical=true -->
+
+### 2025-01-08 v5.3.0
+
+- 更新捐赠页
 
 <!-- .slide vertical=true -->
 
