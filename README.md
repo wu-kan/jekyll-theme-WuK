@@ -136,7 +136,7 @@
 
 ### `layout: comments`
 
-基于`layout: page`的留言页，留言插件使用了[Valine](https://valine.js.org/)。
+基于`layout: page`的留言页，留言插件使用了[giscus/giscus](https://github.com/giscus/giscus)。
 
 示例：<https://wu-kan.cn/comments/>
 
@@ -249,6 +249,7 @@
 
 ### 2025-01-08 v5.3.0
 
+- 更新评论系统为 [giscus/giscus](https://github.com/giscus/giscus)
 - 更新捐赠页
 
 <!-- .slide vertical=true -->
