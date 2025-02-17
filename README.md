@@ -247,6 +247,12 @@
 
 <!-- .slide vertical=true -->
 
+### 2025-02-17 v5.4.0
+
+- 增加 History 页面
+
+<!-- .slide vertical=true -->
+
 ### 2025-01-08 v5.3.0
 
 - 更新评论系统为 [giscus/giscus](https://github.com/giscus/giscus)

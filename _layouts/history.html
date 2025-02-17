@@ -1,0 +1,70 @@
+---
+layout: page
+---
+
+{% if paginator.total_pages > 1 %}
+<ul>
+  {% if paginator.previous_page %}
+  <li>
+    <a
+      href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}"
+      ><- Newer Posts</a
+    >
+  </li>
+  {% endif %} {% if paginator.next_page %}
+  <li>
+    <a
+      href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}"
+      >Older Posts -></a
+    >
+  </li>
+  {% endif %}
+</ul>
+{% endif %}
+
+{% for page in paginator.posts %}
+<h2><a href="{{ post.url }}">{{ page.title }}</a></h2>
+<blockquote>
+{% if page.jekyll-theme-WuK.post.date.enable %}
+{{ page.jekyll-theme-WuK.post.date.prepend }}
+{{ page.date | date_to_string }}
+{% endif %}
+{% if page.jekyll-theme-WuK.post.wordcount.enable %}
+{{ page.jekyll-theme-WuK.post.wordcount.prepend }}
+{{ page.content | strip_html | strip_newlines | remove: " " | size }}{{ page.jekyll-theme-WuK.post.wordcount.unit }}
+{% endif %}
+{% if page.jekyll-theme-WuK.post.readtime.enable %}
+{{ page.jekyll-theme-WuK.post.readtime.prepend }}
+{{ page.content | strip_html | strip_newlines | remove: " " | size | divided_by:
+page.jekyll-theme-WuK.post.readtime.divided_by | plus: 1 }}{{ page.jekyll-theme-WuK.post.readtime.unit }}
+{% endif %}
+{% if page.jekyll-theme-WuK.post.tags.enable %}
+{% if page.tags.size > 0 %}
+{{ page.jekyll-theme-WuK.post.tags.prepend }}
+{{ page.tags | array_to_sentence_string }}
+{% endif %}
+{% endif %}
+</blockquote>
+{{ page.content | strip_html | truncateworkds:144 }}
+{% endfor %}
+
+
+{% if paginator.total_pages > 1 %}
+<ul>
+  {% if paginator.previous_page %}
+  <li>
+    <a
+      href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}"
+      ><- Newer Posts</a
+    >
+  </li>
+  {% endif %} {% if paginator.next_page %}
+  <li>
+    <a
+      href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}"
+      >Older Posts -></a
+    >
+  </li>
+  {% endif %}
+</ul>
+{% endif %}

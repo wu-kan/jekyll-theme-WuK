@@ -2,7 +2,7 @@
 layout: comments
 ---
 <div id="wrap-post">
-  <blockquote id="wrap-post-date">
+  <blockquote>
     {% if page.jekyll-theme-WuK.post.date.enable %}
     {{ page.jekyll-theme-WuK.post.date.prepend }}
     {{ page.date | date_to_string }}
@@ -23,18 +23,15 @@ layout: comments
     {% endif %}
     {% endif %}
     {{ page.jekyll-theme-WuK.post.copyright }}
-    {% if page.jekyll-theme-WuK.background_music %}
-    {{ page.jekyll-theme-WuK.background_music }}
-    {% endif %}
   </blockquote>
   {{ content }}
 </div>
 
 {% if page.jekyll-theme-WuK.post.related_posts.enable %}
 {% if site.related_posts.size >= 1 %}
-<blockquote id="wrap-related">
+<blockquote>
   <h2>Related posts</h2>
-  <ul id="wrap-related-posts">
+  <ul>
     {% for post in site.related_posts limit:3 %}
     <li>
       <a href="{{ site.baseurl }}{{ post.url }}">
