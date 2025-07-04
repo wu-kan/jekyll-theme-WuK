@@ -247,10 +247,9 @@
 
 <!-- .slide vertical=true -->
 
-### 2025-07-05 v5.5.0
+### 2025-07-05 v5.4.1
 
-- 页面 layout 调整为与 jekyll-theme-primer 相同
-- 修正首页 title
+- 页面 layout 微调
 
 <!-- .slide vertical=true -->
 
