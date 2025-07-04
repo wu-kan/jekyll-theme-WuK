@@ -13,9 +13,6 @@ layout: compress
 <html>
 
 <head>
-  {% if site.plugins contains 'jekyll-seo-tag' %}
-  {% seo title=false %}
-  {% else %}
   <title>
     {% if page.url == site.baseurl | append '/' %}
     {{ site.title }} &middot; {{ site.description }}
@@ -23,7 +20,7 @@ layout: compress
     {{ page.title }} &middot; {{ site.title }}
     {% endif %}
   </title>
-  {% endif %}
+  {% seo title=false %}
   <meta charset="utf-8">
   <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
