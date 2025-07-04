@@ -14,11 +14,11 @@ layout: compress
 
 <head>
   {% if site.plugins contains 'jekyll-seo-tag' %}
-  {% seo %}
+  {% seo title=false %}
   {% else %}
   <title>
-    {% if page.title == "Home" %}
-    {{ site.title }} &middot; {{ site.tagline }}
+    {% if page.url == site.baseurl | append '/' %}
+    {{ site.title }} &middot; {{ site.description }}
     {% else %}
     {{ page.title }} &middot; {{ site.title }}
     {% endif %}

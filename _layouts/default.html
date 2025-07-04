@@ -16,9 +16,7 @@ layout: compress
   {% if site.plugins contains 'jekyll-seo-tag' %}
   {% seo title=false %}
   {% endif %}
-  {% for node in page.jekyll-theme-WuK.default.append_to_head %}
-  {{ node }}
-  {% endfor %}
+  {% for node in page.jekyll-theme-WuK.default.append_to_head %}{{ node }}{% endfor %}
 </head>
 
 <body>
@@ -26,7 +24,7 @@ layout: compress
     <span class="loader"></span>
   </div>
 
-  <div id="wrap-menu" class="position-fixed right-0 m-5 z-3"
+  <div id="wrap-menu" class="position-fixed right-3 z-3"
     data-color-mode="{{ page.jekyll-theme-WuK.default.color-mode | default: 'auto'}}"
     data-light-theme="{{ page.jekyll-theme-WuK.default.light-theme | default: 'light'}}"
     data-dark-theme="{{ page.jekyll-theme-WuK.default.dark-theme | default: 'dark'}}">

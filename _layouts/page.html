@@ -4,21 +4,11 @@ layout: default
 {% for node in page.jekyll-theme-WuK.page.prepend %}
 {{ node }}
 {% endfor %}
-<div class="container-xl px-5 py-10 markdown-body">
+<div class="container-lg px-3 my-5 markdown-body">{% comment %}same with <https://github.com/pages-themes/primer/blob/v0.6.0/_layouts/default.html#L13>{% endcomment %}
   {% if page.jekyll-theme-WuK.page.title.enable %}
   <h1>{{ page.title }}</h1>
   {% endif %}
   {{ content }}
 </div>
-{% for p in page.jekyll-theme-WuK.page.plugin %}
-{% if p.enable == false %}{% continue %}{% endif %}
-{% if p.smart_include.enable %}
-{% unless content contains p.smart_include.key %}
-{% continue %}
-{% endunless %}
-{% endif %}
-{{ p.append }}
-{% endfor %}
-{% for node in page.jekyll-theme-WuK.page.append %}
-{{ node }}
-{% endfor %}
+{% for p in page.jekyll-theme-WuK.page.plugin %} {% if p.enable == false %}{% continue %}{% endif %} {% if p.smart_include.enable %}{% unless content contains p.smart_include.key %}{% continue %}{% endunless %}{% endif %} {{ p.append }} {% endfor %}
+{% for node in page.jekyll-theme-WuK.page.append %}{{ node }}{% endfor %}
